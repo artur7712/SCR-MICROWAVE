@@ -7,7 +7,7 @@ Artur Bogacki
 bdudek@student.agh.edu.pl
 abogacki@student.agh.edu.pl
 
-3. Opis modelowanego systemu
+3. Opis modelowanego systemu<br>
 Opis ogólny <br>
 Zamodelowany system to inteligentna mikrofalówka wyposażona w klasyczne funkcje podgrzewania, rozmrażania i grillowania, z dodatkowymi elementami bezpieczeństwa, czujnikami oraz interfejsem użytkownika. System uwzględnia detekcję obecności drzwi, monitorowanie temperatury, kontroli czasu pracy, a także uwzględnia możliwość zatrzymania pracy przez użytkownika w dowolnym momencie. <br>
 
