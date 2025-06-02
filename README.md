@@ -1,29 +1,33 @@
-1. Tytuł modelu:
+# Systemy czasu rzeczywistego
+
+## 1. Tytuł modelu:
 Mikrofalówka
 
-2. Dane studentów:
+## 2. Dane studentów:
+```
 Błażej Dudek
 Artur Bogacki
 bdudek@student.agh.edu.pl
 abogacki@student.agh.edu.pl
+```
 
-3. Opis modelowanego systemu<br>
-Opis ogólny <br>
-Zamodelowany system to inteligentna mikrofalówka wyposażona w klasyczne funkcje podgrzewania, rozmrażania i grillowania, z dodatkowymi elementami bezpieczeństwa, czujnikami oraz interfejsem użytkownika. System uwzględnia detekcję obecności drzwi, monitorowanie temperatury, kontroli czasu pracy, a także uwzględnia możliwość zatrzymania pracy przez użytkownika w dowolnym momencie. <br>
+## 3. Opis modelowanego systemu
+### Opis ogólny
+```Zamodelowany system to inteligentna mikrofalówka wyposażona w klasyczne funkcje podgrzewania, rozmrażania i grillowania, z dodatkowymi elementami bezpieczeństwa, czujnikami oraz interfejsem użytkownika. System uwzględnia detekcję obecności drzwi, monitorowanie temperatury, kontroli czasu pracy, a także uwzględnia możliwość zatrzymania pracy przez użytkownika w dowolnym momencie.```
 
-Opis szczegółowy <br>
-System umożliwia przygotowanie potraw w trzech trybach: podgrzewanie mikrofalowe, grillowanie oraz tryb mieszany (mikrofale + grill). Użytkownik może wybrać tryb, czas, moc i wagę potrawy z poziomu panelu dotykowego. Po zatwierdzeniu parametrów mikrofalówka uruchamia wybrany proces.
-Bezpieczeństwo zapewniają czujniki otwarcia drzwi, czujniki temperatury oraz detektory obecności jedzenia. Praca mikrofalówki zostanie natychmiast zatrzymana w przypadku otwarcia drzwi lub przegrzania. W sytuacjach awaryjnych, takich jak iskrzenie czy dym, aktywowany jest tryb awaryjny, który wyłącza wszystkie źródła energii i uruchamia wentylację.
-System posiada funkcję inteligentnego rozmrażania, która automatycznie dobiera czas i moc na podstawie masy produktu, a także czujnik pary, który pozwala zakończyć gotowanie w momencie uzyskania pożądanej wilgotności potrawy.
-Czas pracy kontrolowany jest przez osobny wątek, który może zostać nadpisany np. przez naciśnięcie przycisku STOP lub przez system bezpieczeństwa.
+### Opis szczegółowy
+```System umożliwia przygotowanie potraw w trzech trybach: podgrzewanie mikrofalowe, grillowanie oraz tryb mieszany (mikrofale + grill). Użytkownik może wybrać tryb, czas, moc i wagę potrawy z poziomu panelu dotykowego. Po zatwierdzeniu parametrów mikrofalówka uruchamia wybrany proces.```
+```Bezpieczeństwo zapewniają czujniki otwarcia drzwi, czujniki temperatury oraz detektory obecności jedzenia. Praca mikrofalówki zostanie natychmiast zatrzymana w przypadku otwarcia drzwi lub przegrzania. W sytuacjach awaryjnych, takich jak iskrzenie czy dym, aktywowany jest tryb awaryjny, który wyłącza wszystkie źródła energii i uruchamia wentylację.```
+```System posiada funkcję inteligentnego rozmrażania, która automatycznie dobiera czas i moc na podstawie masy produktu, a także czujnik pary, który pozwala zakończyć gotowanie w momencie uzyskania pożądanej wilgotności potrawy.```
+```Czas pracy kontrolowany jest przez osobny wątek, który może zostać nadpisany np. przez naciśnięcie przycisku STOP lub przez system bezpieczeństwa.```
 
-4. Komponenty systemu:
+## 4. Komponenty systemu:
 
-Główna logika sterująca
+### Główna logika sterująca
 
     system MicrowaveController – główny komponent zarządzający pracą mikrofalówki, koordynuje komunikację i reakcje urządzeń.
 
-Urządzenia fizyczne
+### Urządzenia fizyczne
 
     device MicrowaveEmitter – generator mikrofal odpowiedzialny za podgrzewanie jedzenia.
 
@@ -43,7 +47,7 @@ Urządzenia fizyczne
 
     device WeightSensor – czujnik masy potrawy (dla automatycznego doboru parametrów).
 
-Interfejs użytkownika
+### Interfejs użytkownika
 
     device TouchPanel – panel dotykowy do wprowadzania parametrów pracy.
 
@@ -55,7 +59,7 @@ Interfejs użytkownika
 
     device LEDIndicator – wskaźnik stanu (np. gotowe, praca, błąd).
 
-Funkcje i wątki pomocnicze
+### Funkcje i wątki pomocnicze
 
     thread CookingTimer – wątek odliczający czas pracy mikrofalówki.
 
@@ -67,6 +71,6 @@ Funkcje i wątki pomocnicze
 
     thread EmergencyShutdown – natychmiastowe zatrzymanie działania w przypadku awarii.
 
-Komunikacja
+### Komunikacja
 
     bus CommunicationBus – magistrala komunikacyjna łącząca wszystkie komponenty systemu.
