@@ -17,7 +17,7 @@ Bezpieczeństwo zapewniają czujniki otwarcia drzwi, czujniki temperatury oraz d
 System posiada funkcję inteligentnego rozmrażania, która automatycznie dobiera czas i moc na podstawie masy produktu, a także czujnik pary, który pozwala zakończyć gotowanie w momencie uzyskania pożądanej wilgotności potrawy.
 Czas pracy kontrolowany jest przez osobny wątek, który może zostać nadpisany np. przez naciśnięcie przycisku STOP lub przez system bezpieczeństwa.
 
-Komponenty systemu:
+4. Komponenty systemu:
 
 Główna logika sterująca
 
