@@ -8,10 +8,10 @@ bdudek@student.agh.edu.pl
 abogacki@student.agh.edu.pl
 
 3. Opis modelowanego systemu
-Opis ogólny
-Zamodelowany system to inteligentna mikrofalówka wyposażona w klasyczne funkcje podgrzewania, rozmrażania i grillowania, z dodatkowymi elementami bezpieczeństwa, czujnikami oraz interfejsem użytkownika. System uwzględnia detekcję obecności drzwi, monitorowanie temperatury, kontroli czasu pracy, a także uwzględnia możliwość zatrzymania pracy przez użytkownika w dowolnym momencie.
+Opis ogólny <br>
+Zamodelowany system to inteligentna mikrofalówka wyposażona w klasyczne funkcje podgrzewania, rozmrażania i grillowania, z dodatkowymi elementami bezpieczeństwa, czujnikami oraz interfejsem użytkownika. System uwzględnia detekcję obecności drzwi, monitorowanie temperatury, kontroli czasu pracy, a także uwzględnia możliwość zatrzymania pracy przez użytkownika w dowolnym momencie. <br>
 
-Opis szczegółowy
+Opis szczegółowy <br>
 System umożliwia przygotowanie potraw w trzech trybach: podgrzewanie mikrofalowe, grillowanie oraz tryb mieszany (mikrofale + grill). Użytkownik może wybrać tryb, czas, moc i wagę potrawy z poziomu panelu dotykowego. Po zatwierdzeniu parametrów mikrofalówka uruchamia wybrany proces.
 Bezpieczeństwo zapewniają czujniki otwarcia drzwi, czujniki temperatury oraz detektory obecności jedzenia. Praca mikrofalówki zostanie natychmiast zatrzymana w przypadku otwarcia drzwi lub przegrzania. W sytuacjach awaryjnych, takich jak iskrzenie czy dym, aktywowany jest tryb awaryjny, który wyłącza wszystkie źródła energii i uruchamia wentylację.
 System posiada funkcję inteligentnego rozmrażania, która automatycznie dobiera czas i moc na podstawie masy produktu, a także czujnik pary, który pozwala zakończyć gotowanie w momencie uzyskania pożądanej wilgotności potrawy.
