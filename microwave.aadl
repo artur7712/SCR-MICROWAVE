@@ -1,0 +1,155 @@
+package microwave
+public
+	
+system MicrowaveOven
+end MicrowaveOven;
+
+system implementation MicrowaveOven.impl
+    subcomponents
+        controller      : system MicrowaveController.impl;
+        microwave       : device MicrowaveEmitter;
+        grill           : device GrillElement;
+        turntable       : device TurntableMotor;
+        doorSensor      : device DoorSensor;
+        tempSensor      : device TemperatureSensor;
+        humiditySensor  : device HumiditySensor;
+        smokeDetector   : device SmokeDetector;
+        foodSensor      : device FoodPresenceSensor;
+        weightSensor    : device WeightSensor;
+        touchPanel      : device TouchPanel;
+        startButton     : device StartButton;
+        stopButton      : device StopButton;
+        display         : device DisplayScreen;
+        ledIndicator    : device LEDIndicator;
+        
+        cookingTimer    : thread CookingTimer.impl;
+        safetyMonitor   : thread SafetyMonitor.impl;
+        steamControl    : thread SteamDetectorControl.impl;
+        emergencyStop   : thread EmergencyShutdown.impl;
+        
+        commBus         : bus CommunicationBus;
+    connections
+        conn1 : port controller.commBus -> commBus;
+        conn2 : port microwave.commBus -> commBus;
+        conn3 : port grill.commBus -> commBus;
+        conn4 : port turntable.commBus -> commBus;
+        conn5 : port doorSensor.commBus -> commBus;
+        conn6 : port tempSensor.commBus -> commBus;
+        conn7 : port humiditySensor.commBus -> commBus;
+        conn8 : port smokeDetector.commBus -> commBus;
+        conn9 : port foodSensor.commBus -> commBus;
+        conn10 : port weightSensor.commBus -> commBus;
+        conn11 : port touchPanel.commBus -> commBus;
+        conn12 : port startButton.commBus -> commBus;
+        conn13 : port stopButton.commBus -> commBus;
+        conn14 : port display.commBus -> commBus;
+        conn15 : port ledIndicator.commBus -> commBus;
+end MicrowaveOven.impl;
+
+system MicrowaveController
+    features
+        commBus : requires bus access CommunicationBus;
+end MicrowaveController;
+
+system implementation MicrowaveController.impl
+    subcomponents
+end MicrowaveController.impl;
+
+device MicrowaveEmitter
+    features
+        commBus : requires bus access CommunicationBus;
+end MicrowaveEmitter;
+
+device GrillElement
+    features
+        commBus : requires bus access CommunicationBus;
+end GrillElement;
+
+device TurntableMotor
+    features
+        commBus : requires bus access CommunicationBus;
+end TurntableMotor;
+
+device DoorSensor
+    features
+        commBus : requires bus access CommunicationBus;
+end DoorSensor;
+
+device TemperatureSensor
+    features
+        commBus : requires bus access CommunicationBus;
+end TemperatureSensor;
+
+device HumiditySensor
+    features
+        commBus : requires bus access CommunicationBus;
+end HumiditySensor;
+
+device SmokeDetector
+    features
+        commBus : requires bus access CommunicationBus;
+end SmokeDetector;
+
+device FoodPresenceSensor
+    features
+        commBus : requires bus access CommunicationBus;
+end FoodPresenceSensor;
+
+device WeightSensor
+    features
+        commBus : requires bus access CommunicationBus;
+end WeightSensor;
+
+device TouchPanel
+    features
+        commBus : requires bus access CommunicationBus;
+end TouchPanel;
+
+device StartButton
+    features
+        commBus : requires bus access CommunicationBus;
+end StartButton;
+
+device StopButton
+    features
+        commBus : requires bus access CommunicationBus;
+end StopButton;
+
+device DisplayScreen
+    features
+        commBus : requires bus access CommunicationBus;
+end DisplayScreen;
+
+device LEDIndicator
+    features
+        commBus : requires bus access CommunicationBus;
+end LEDIndicator;
+
+thread CookingTimer
+end CookingTimer;
+
+thread implementation CookingTimer.impl
+end CookingTimer.impl;
+
+thread SafetyMonitor
+end SafetyMonitor;
+
+thread implementation SafetyMonitor.impl
+end SafetyMonitor.impl;
+
+thread SteamDetectorControl
+end SteamDetectorControl;
+
+thread implementation SteamDetectorControl.impl
+end SteamDetectorControl.impl;
+
+thread EmergencyShutdown
+end EmergencyShutdown;
+
+thread implementation EmergencyShutdown.impl
+end EmergencyShutdown.impl;
+
+bus CommunicationBus
+end CommunicationBus;
+
+end microwave;
