@@ -65,8 +65,6 @@ abogacki@student.agh.edu.pl
 
     thread SafetyMonitor – wątek stale monitorujący temperaturę, drzwi i inne czujniki.
 
-    thread AutoDefrostController – wątek automatyzujący rozmrażanie na podstawie wagi.
-
     thread SteamDetectorControl – kontrola zakończenia gotowania na podstawie pary.
 
     thread EmergencyShutdown – natychmiastowe zatrzymanie działania w przypadku awarii.
