@@ -4,7 +4,7 @@
 
 **Kuchenka mikrofalowa**
 
-## Dane studenta:
+## Dane studentów:
 
 Błażej Dudek - bdudek@student.agh.edu.pl
 Artur Bogacki - arturbogacki@student.agh.edu.pl
