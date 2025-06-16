@@ -1,0 +1,25 @@
+Bus load analysis of MicrowaveSystem_impl_Instance
+
+
+"Physical Bus","Capacity (KB/s)","Budget (KB/s)","Required Budget (KB/s)","Actual (KB/s)"
+"uiBus","12500.0","25.0","3.75","0.0"
+"heatBus","12500.0","25.0","3.875","0.0"
+
+"Bus uiBus has data overhead of 0 bytes"
+"Bound Virtual Bus/Connection","Capacity (KB/s)","Budget (KB/s)","Required Budget (KB/s)","Actual (KB/s)"
+"startButton.pressOut -> uiProcess.uiThread.startRequest","","0.125","","0.0"
+"timeSelector.timeOut -> uiProcess.uiThread.timeSelectIn","","0.625","","0.0"
+"stopButton.pressOut -> uiProcess.uiThread.stopRequest","","0.125","","0.0"
+"uiProcess.uiThread.displayOut -> display.displayIn","","2.5","","0.0"
+"uiProcess.uiThread.lightLampOut -> lightLamp.lightIn","","0.125","","0.0"
+"uiProcess.uiThread.doorLockOut -> doorLock.lockIn","","0.125","","0.0"
+"uiProcess.uiThread.buzzerOut -> buzzer.buzzerIn","","0.125","","0.0"
+
+"Bus heatBus has data overhead of 0 bytes"
+"Bound Virtual Bus/Connection","Capacity (KB/s)","Budget (KB/s)","Required Budget (KB/s)","Actual (KB/s)"
+"tempsensor.tempOut -> heatProcess.heatThread.tempIn","","1.25","","0.0"
+"doorSensor.doorOpen -> heatProcess.heatThread.doorStatus","","0.125","","0.0"
+"heatProcess.heatThread.magnetronOut -> magnetron.commandIn","","1.25","","0.0"
+"heatProcess.heatThread.turntableOut -> turntable.commandIn","","1.25","","0.0"
+
+

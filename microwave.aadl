@@ -1,155 +1,510 @@
 package microwave
 public
+	with Data_Model;
+	with SEI;
+
+	data MicrowaveCommand
+		properties
+			Data_Model::Data_Representation => String;
+	end MicrowaveCommand;
 	
-system MicrowaveOven
-end MicrowaveOven;
+	data TemperatureValue
+		properties
+			Data_Model::Data_Representation => Integer;
+	end TemperatureValue;
 
-system implementation MicrowaveOven.impl
-    subcomponents
-        controller      : system MicrowaveController.impl;
-        microwave       : device MicrowaveEmitter;
-        grill           : device GrillElement;
-        turntable       : device TurntableMotor;
-        doorSensor      : device DoorSensor;
-        tempSensor      : device TemperatureSensor;
-        humiditySensor  : device HumiditySensor;
-        smokeDetector   : device SmokeDetector;
-        foodSensor      : device FoodPresenceSensor;
-        weightSensor    : device WeightSensor;
-        touchPanel      : device TouchPanel;
-        startButton     : device StartButton;
-        stopButton      : device StopButton;
-        display         : device DisplayScreen;
-        ledIndicator    : device LEDIndicator;
-        
-        cookingTimer    : thread CookingTimer.impl;
-        safetyMonitor   : thread SafetyMonitor.impl;
-        steamControl    : thread SteamDetectorControl.impl;
-        emergencyStop   : thread EmergencyShutdown.impl;
-        
-        commBus         : bus CommunicationBus;
-    connections
-        conn1 : port controller.commBus -> commBus;
-        conn2 : port microwave.commBus -> commBus;
-        conn3 : port grill.commBus -> commBus;
-        conn4 : port turntable.commBus -> commBus;
-        conn5 : port doorSensor.commBus -> commBus;
-        conn6 : port tempSensor.commBus -> commBus;
-        conn7 : port humiditySensor.commBus -> commBus;
-        conn8 : port smokeDetector.commBus -> commBus;
-        conn9 : port foodSensor.commBus -> commBus;
-        conn10 : port weightSensor.commBus -> commBus;
-        conn11 : port touchPanel.commBus -> commBus;
-        conn12 : port startButton.commBus -> commBus;
-        conn13 : port stopButton.commBus -> commBus;
-        conn14 : port display.commBus -> commBus;
-        conn15 : port ledIndicator.commBus -> commBus;
-end MicrowaveOven.impl;
+	data DoorStatus
+		properties
+			Data_Model::Data_Representation => Boolean;
+	end DoorStatus;
 
-system MicrowaveController
-    features
-        commBus : requires bus access CommunicationBus;
-end MicrowaveController;
+	data TurntableCommand
+		properties
+			Data_Model::Enumerators => ("START", "STOP");
+	end TurntableCommand;
 
-system implementation MicrowaveController.impl
-    subcomponents
-end MicrowaveController.impl;
+	data MagnetronCommand
+		properties
+			Data_Model::Enumerators => ("ON", "OFF");
+	end MagnetronCommand;
 
-device MicrowaveEmitter
-    features
-        commBus : requires bus access CommunicationBus;
-end MicrowaveEmitter;
+	data TimeSetting
+		properties
+			Data_Model::Data_Representation => Integer;
+	end TimeSetting;
 
-device GrillElement
-    features
-        commBus : requires bus access CommunicationBus;
-end GrillElement;
+	data DisplayText
+		properties
+			Data_Model::Data_Representation => String;
+	end DisplayText;
 
-device TurntableMotor
-    features
-        commBus : requires bus access CommunicationBus;
-end TurntableMotor;
+	system MicrowaveSystem
+	end MicrowaveSystem;
 
-device DoorSensor
-    features
-        commBus : requires bus access CommunicationBus;
-end DoorSensor;
+	system implementation MicrowaveSystem.impl
+		subcomponents
+			uiSubsystem: system UI_Subsystem.impl;
+			heatingSubsystem: system Heating_Subsystem.impl;
 
-device TemperatureSensor
-    features
-        commBus : requires bus access CommunicationBus;
-end TemperatureSensor;
+		connections
+			c1: port uiSubsystem.sendStartCommand -> heatingSubsystem.receiveStartCommand
+			{
+		        SEI::BandwidthBudget => 0.01 Mbps;
+		    };
+			c2: port heatingSubsystem.statusOut -> uiSubsystem.statusIn
+			{
+		        SEI::BandwidthBudget => 0.01 Mbps;
+		    };
+			c3: port uiSubsystem.sendTimeCommand -> heatingSubsystem.receiveTimeCommand
+			{
+		        SEI::BandwidthBudget => 0.005 Mbps;
+		    };
+			c4: port uiSubsystem.sendStopCommand -> heatingSubsystem.stopCommand
+			{
+		        SEI::BandwidthBudget => 0.001 Mbps;
+		    };
+	end MicrowaveSystem.impl;
 
-device HumiditySensor
-    features
-        commBus : requires bus access CommunicationBus;
-end HumiditySensor;
+	system UI_Subsystem
+		features
+			sendStartCommand: out data port MicrowaveCommand;
+			sendTimeCommand: out data port MicrowaveCommand;
+			statusIn: in data port MicrowaveCommand;
+			sendStopCommand: out event port;
+	end UI_Subsystem;
 
-device SmokeDetector
-    features
-        commBus : requires bus access CommunicationBus;
-end SmokeDetector;
+	system implementation UI_Subsystem.impl
+		subcomponents
+			startButton: device StartButton.impl;
+			display: device Display.impl;
+			buzzer: device Buzzer.impl;
+			timeSelector: device TimeSelector.impl;
+			stopButton: device StopButton.impl;
+			lightLamp: device LightLamp.impl;
+			doorLock: device DoorLock.impl;
 
-device FoodPresenceSensor
-    features
-        commBus : requires bus access CommunicationBus;
-end FoodPresenceSensor;
+			uiCPU: processor UICPU.impl;
+			uiMem: memory UIMemory.impl;
+			uiBus: bus UIBus.impl;
 
-device WeightSensor
-    features
-        commBus : requires bus access CommunicationBus;
-end WeightSensor;
+			uiProcess: process UIController.impl;
 
-device TouchPanel
-    features
-        commBus : requires bus access CommunicationBus;
-end TouchPanel;
+		connections
+			c1: port startButton.pressOut -> uiProcess.startRequest
+			{
+        		Actual_Connection_Binding => (reference (uiBus));
+        		SEI::BandWidthBudget => 0.001 Mbps;
+    		};
+			c2: port uiProcess.displayOut -> display.displayIn
+			{
+		        SEI::BandwidthBudget => 0.02 Mbps;
+		    };
+			c3: port uiProcess.buzzerOut -> buzzer.buzzerIn
+			{
+		        SEI::BandwidthBudget => 0.001 Mbps;
+		    };
+			c4: port statusIn -> uiProcess.statusIn
+			{
+		        SEI::BandwidthBudget => 0.01 Mbps;
+		    };
+			c5: port uiProcess.sendStartCommand -> sendStartCommand
+			{
+		        SEI::BandwidthBudget => 0.01 Mbps;
+		    };
+			c6: port timeSelector.timeOut -> uiProcess.timeSelectIn
+			{
+		        SEI::BandwidthBudget => 0.005 Mbps;
+		    };
+			c7: port stopButton.pressOut -> uiProcess.stopRequest
+			{
+		        SEI::BandwidthBudget => 0.001 Mbps;
+		    };
+			c8: port uiProcess.sendTimeCommand -> sendTimeCommand
+			{
+		        SEI::BandwidthBudget => 0.005 Mbps;
+		    };
+			c9: port uiProcess.sendStopCommand -> sendStopCommand
+			{
+		        SEI::BandwidthBudget => 0.001 Mbps;
+		    };
+		    c10: port uiProcess.lightLampOut -> lightLamp.lightIn
+			{
+		        SEI::BandwidthBudget => 0.001 Mbps;
+		    };
+			c11: port uiProcess.doorLockOut -> doorLock.lockIn
+			{
+		        SEI::BandwidthBudget => 0.001 Mbps;
+		    };
 
-device StartButton
-    features
-        commBus : requires bus access CommunicationBus;
-end StartButton;
+			b1: bus access startButton.uiBus <-> uiBus;
+			b2: bus access display.uiBus <-> uiBus;
+			b3: bus access buzzer.uiBus <-> uiBus;
+			b4: bus access uiCPU.uiBus <-> uiBus;
+			b5: bus access uiMem.uiBus <-> uiBus;
+			b6: bus access timeSelector.uiBus <-> uiBus;
+			b7: bus access stopButton.uiBus <-> uiBus;
+			b8: bus access lightLamp.uiBus <-> uiBus;
+			b9: bus access doorLock.uiBus <-> uiBus;
 
-device StopButton
-    features
-        commBus : requires bus access CommunicationBus;
-end StopButton;
+		properties
+			Actual_Processor_Binding => (reference (uiCPU)) applies to uiProcess;
+			Actual_Memory_Binding => (reference (uiMem)) applies to uiProcess;
+	end UI_Subsystem.impl;
 
-device DisplayScreen
-    features
-        commBus : requires bus access CommunicationBus;
-end DisplayScreen;
+	system Heating_Subsystem
+		features
+			receiveStartCommand: in data port MicrowaveCommand;
+			receiveTimeCommand: in data port MicrowaveCommand;
+			statusOut: out data port MicrowaveCommand;
+			stopCommand: in event port;
+	end Heating_Subsystem;
 
-device LEDIndicator
-    features
-        commBus : requires bus access CommunicationBus;
-end LEDIndicator;
+	system implementation Heating_Subsystem.impl
+		subcomponents
+			magnetron: device Magnetron.impl;
+			turntable: device Turntable.impl;
+			tempsensor: device TempSensor.impl;
+			doorSensor: device DoorSensor.impl;
 
-thread CookingTimer
-end CookingTimer;
+			heatCPU: processor HeatingCPU.impl;
+			heatMem: memory HeatingMemory.impl;
+			heatBus: bus HeatingBus.impl;
 
-thread implementation CookingTimer.impl
-end CookingTimer.impl;
+			heatProcess: process HeatingController.impl;
 
-thread SafetyMonitor
-end SafetyMonitor;
+		connections
+			c1: port tempsensor.tempOut -> heatProcess.tempIn
+			{
+		        SEI::BandwidthBudget => 0.01 Mbps;
+		    };
+			c2: port doorSensor.doorOpen -> heatProcess.doorStatus
+			{
+		        SEI::BandwidthBudget => 0.001 Mbps;
+		    };
+			c3: port heatProcess.magnetronOut -> magnetron.commandIn
+			{
+		        SEI::BandwidthBudget => 0.01 Mbps;
+		    };
+			c4: port heatProcess.turntableOut -> turntable.commandIn
+			{
+		        SEI::BandwidthBudget => 0.01 Mbps;
+		    };
+			c5: port heatProcess.statusOut -> statusOut
+			{
+		        SEI::BandwidthBudget => 0.01 Mbps;
+		    };
+			c6: port receiveStartCommand -> heatProcess.receiveStartCommand
+			{
+		        SEI::BandwidthBudget => 0.01 Mbps;
+		    };
+			c7: port receiveTimeCommand -> heatProcess.receiveTimeCommand
+			{
+		        SEI::BandwidthBudget => 0.005 Mbps;
+		    };
+			c8: port stopCommand -> heatProcess.stopCommand
+			{
+		        SEI::BandwidthBudget => 0.001 Mbps;
+		    };
 
-thread implementation SafetyMonitor.impl
-end SafetyMonitor.impl;
+			b1: bus access magnetron.heatBus <-> heatBus;
+			b2: bus access turntable.heatBus <-> heatBus;
+			b3: bus access tempsensor.heatBus <-> heatBus;
+			b4: bus access doorSensor.heatBus <-> heatBus;
+			b5: bus access heatCPU.heatBus <-> heatBus;
+			b6: bus access heatMem.heatBus <-> heatBus;
 
-thread SteamDetectorControl
-end SteamDetectorControl;
+		properties
+			Actual_Processor_Binding => (reference (heatCPU)) applies to heatProcess;
+			Actual_Memory_Binding => (reference (heatMem)) applies to heatProcess;
+	end Heating_Subsystem.impl;
 
-thread implementation SteamDetectorControl.impl
-end SteamDetectorControl.impl;
+	process UIController
+		features
+			timeSelectIn: in data port TimeSetting;
+			displayOut: out data port DisplayText;
+			statusIn: in data port MicrowaveCommand;
+			sendStartCommand: out data port MicrowaveCommand;
+			sendTimeCommand: out data port MicrowaveCommand;
+			startRequest: in event port;
+			stopRequest: in event port;
+			buzzerOut: out event port;
+			sendStopCommand: out event port;
+			lightLampOut: out data port MicrowaveCommand;
+			doorLockOut: out data port MicrowaveCommand;
+	end UIController;
 
-thread EmergencyShutdown
-end EmergencyShutdown;
+	process implementation UIController.impl
+		subcomponents
+			uiThread: thread UIThread.impl;
 
-thread implementation EmergencyShutdown.impl
-end EmergencyShutdown.impl;
+		connections
+			c1: port startRequest -> uiThread.startRequest;
+			c2: port uiThread.displayOut -> displayOut;
+			c3: port uiThread.buzzerOut -> buzzerOut;
+			c4: port statusIn -> uiThread.statusIn;
+			c5: port uiThread.sendStartCommand -> sendStartCommand;
+			c6: port timeSelectIn -> uiThread.timeSelectIn;
+			c7: port stopRequest -> uiThread.stopRequest;
+			c8: port uiThread.sendTimeCommand -> sendTimeCommand;
+			c9: port uiThread.sendStopCommand -> sendStopCommand;
+			c10: port uiThread.lightLampOut -> lightLampOut;
+			c11: port uiThread.doorLockOut -> doorLockOut;
+	end UIController.impl;
 
-bus CommunicationBus
-end CommunicationBus;
+	thread UIThread
+		features
+			timeSelectIn: in data port TimeSetting;
+			displayOut: out data port DisplayText;
+			statusIn: in data port MicrowaveCommand;
+			sendStartCommand: out data port MicrowaveCommand;
+			sendTimeCommand: out data port MicrowaveCommand;
+			startRequest: in event port;
+			stopRequest: in event port;
+			buzzerOut: out event port;
+			sendStopCommand: out event port;
+			lightLampOut: out data port MicrowaveCommand;
+			doorLockOut: out data port MicrowaveCommand;
+	end UIThread;
+
+	thread implementation UIThread.impl
+		properties
+        	SEI::MIPSBudget => 5.0 MIPS;
+        	SEI::RAMBudget => 4.0 KByte;
+    		SEI::ROMBudget => 16.0 KByte;
+	end UIThread.impl;
+
+	process HeatingController
+		features
+			tempIn: in data port TemperatureValue;
+			magnetronOut: out data port MagnetronCommand;
+			turntableOut: out data port TurntableCommand;
+			statusOut: out data port MicrowaveCommand;
+			receiveStartCommand: in data port MicrowaveCommand;
+			receiveTimeCommand: in data port MicrowaveCommand;
+			stopCommand: in event port;
+			doorStatus: in data port DoorStatus;
+	end HeatingController;
+
+	process implementation HeatingController.impl
+		subcomponents
+			heatThread: thread HeatingThread.impl;
+
+		connections
+			c1: port tempIn -> heatThread.tempIn;
+			c2: port receiveStartCommand -> heatThread.receiveStartCommand;
+			c3: port doorStatus -> heatThread.doorStatus;
+			c4: port heatThread.magnetronOut -> magnetronOut;
+			c5: port heatThread.turntableOut -> turntableOut;
+			c6: port heatThread.statusOut -> statusOut;
+			c7: port receiveTimeCommand -> heatThread.receiveTimeCommand;
+			c8: port stopCommand -> heatThread.stopCommand;
+	end HeatingController.impl;
+
+	thread HeatingThread
+		features
+			tempIn: in data port TemperatureValue;
+			magnetronOut: out data port MagnetronCommand;
+			turntableOut: out data port TurntableCommand;
+			statusOut: out data port MicrowaveCommand;
+			receiveStartCommand: in data port MicrowaveCommand;
+			receiveTimeCommand: in data port MicrowaveCommand;
+			stopCommand: in event port;
+			doorStatus: in data port DoorStatus;
+	end HeatingThread;
+
+	thread implementation HeatingThread.impl
+		properties
+        	SEI::MIPSBudget => 10.0 MIPS;
+        	SEI::RAMBudget => 8.0 KByte;
+    		SEI::ROMBudget => 32.0 KByte;
+	end HeatingThread.impl;
+
+	device LightLamp
+		features
+			lightIn: in data port MicrowaveCommand;
+			uiBus: requires bus access UIBus;
+	end LightLamp;
+
+	device implementation LightLamp.impl
+		properties
+    		SEI::GrossWeight => 0.1 kg;
+	end LightLamp.impl;
+
+	device DoorLock
+		features
+			lockIn: in data port MicrowaveCommand;
+			uiBus: requires bus access UIBus;
+	end DoorLock;
+
+	device implementation DoorLock.impl
+		properties
+    		SEI::GrossWeight => 0.2 kg;
+	end DoorLock.impl;
+	
+	device StartButton
+		features
+			pressOut: out event port;
+			uiBus: requires bus access UIBus;
+	end StartButton;
+
+	device implementation StartButton.impl
+		properties
+    		SEI::GrossWeight => 0.05 kg;
+	end StartButton.impl;
+
+	device Display
+		features
+			displayIn: in data port DisplayText;
+			uiBus: requires bus access UIBus;
+	end Display;
+
+	device implementation Display.impl
+		properties
+    		SEI::GrossWeight => 0.15 kg;
+	end Display.impl;
+
+	device Buzzer
+		features
+			buzzerIn: in event port;
+			uiBus: requires bus access UIBus;
+	end Buzzer;
+
+	device implementation Buzzer.impl
+		properties
+    		SEI::GrossWeight => 0.05 kg;
+	end Buzzer.impl;
+
+	device Magnetron
+		features
+			commandIn: in data port MagnetronCommand;
+			heatBus: requires bus access HeatingBus;
+	end Magnetron;
+
+	device implementation Magnetron.impl
+		properties
+    		SEI::GrossWeight => 2.5 kg;
+	end Magnetron.impl;
+
+	device Turntable
+		features
+			commandIn: in data port TurntableCommand;
+			heatBus: requires bus access HeatingBus;
+	end Turntable;
+
+	device implementation Turntable.impl
+		properties
+    		SEI::GrossWeight => 0.8 kg;
+	end Turntable.impl;
+
+	device TempSensor
+		features
+			tempOut: out data port TemperatureValue;
+			heatBus: requires bus access HeatingBus;
+	end TempSensor;
+
+	device implementation TempSensor.impl
+		properties
+    		SEI::GrossWeight => 0.03 kg;
+	end TempSensor.impl;
+
+	device DoorSensor
+		features
+			doorOpen: out data port DoorStatus;
+			heatBus: requires bus access HeatingBus;
+	end DoorSensor;
+
+	device implementation DoorSensor.impl
+		properties
+    		SEI::GrossWeight => 0.04 kg;
+	end DoorSensor.impl;
+
+	device TimeSelector
+		features
+			timeOut: out data port TimeSetting;
+			uiBus: requires bus access UIBus;
+	end TimeSelector;
+
+	device implementation TimeSelector.impl
+		properties
+    		SEI::GrossWeight => 0.02 kg;
+	end TimeSelector.impl;
+
+	device StopButton
+		features
+			pressOut: out event port;
+			uiBus: requires bus access UIBus;
+	end StopButton;
+
+	device implementation StopButton.impl
+		properties
+    		SEI::GrossWeight => 0.05 kg;
+	end StopButton.impl;
+
+	processor UICPU
+		features
+			uiBus: requires bus access UIBus;
+	end UICPU;
+
+	processor implementation UICPU.impl
+		properties
+			SEI::MIPSCapacity => 50.0 MIPS;
+			SEI::GrossWeight => 0.05 kg;
+	end UICPU.impl;
+
+	processor HeatingCPU
+		features
+			heatBus: requires bus access HeatingBus;
+	end HeatingCPU;
+
+	processor implementation HeatingCPU.impl
+		properties
+			SEI::MIPSCapacity => 50.0 MIPS;
+			SEI::GrossWeight => 0.05 kg;
+	end HeatingCPU.impl;
+
+	memory UIMemory
+		features
+			uiBus: requires bus access UIBus;
+	end UIMemory;
+
+	memory implementation UIMemory.impl
+		properties
+		    SEI::RAMCapacity => 64.0 KByte;
+		    SEI::ROMCapacity => 256.0 KByte;
+    		SEI::GrossWeight => 0.02 kg;
+	end UIMemory.impl;
+
+	memory HeatingMemory
+		features
+			heatBus: requires bus access HeatingBus;
+	end HeatingMemory;
+
+	memory implementation HeatingMemory.impl
+		properties
+		    SEI::RAMCapacity => 64.0 KByte;
+		    SEI::ROMCapacity => 256.0 KByte;
+		    SEI::GrossWeight => 0.02 kg;
+	end HeatingMemory.impl;
+
+	bus UIBus
+	end UIBus;
+
+	bus implementation UIBus.impl
+		properties
+    		SEI::GrossWeight => 0.01 kg;
+    		SEI::BandwidthCapacity => 100.0 Mbps;
+    		SEI::BandwidthBudget => 0.2 Mbps;
+		    
+	end UIBus.impl;
+
+	bus HeatingBus
+	end HeatingBus;
+
+	bus implementation HeatingBus.impl
+		properties
+    		SEI::GrossWeight => 0.01 kg;
+    		SEI::BandwidthCapacity => 100.0 Mbps;
+    		SEI::BandwidthBudget => 0.2 Mbps;
+	end HeatingBus.impl;
 
 end microwave;

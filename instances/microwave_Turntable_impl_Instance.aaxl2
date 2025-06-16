@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="ASCII"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:aadl2="http://aadl.info/AADL/2.0" xmlns:instance="http://aadl.info/AADL/2.0/instance">
+  <instance:SystemInstance name="Turntable_impl_Instance" category="device">
+    <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+      <property href="platform:/plugin/org.osate.contribution.sei/resources/properties/SEI.aadl#SEI.GrossWeight"/>
+      <ownedValue>
+        <ownedValue xsi:type="aadl2:RealLiteral" value="0.8">
+          <unit href="platform:/plugin/org.osate.contribution.sei/resources/properties/SEI.aadl#/0/@ownedPropertyType.0/@ownedLiteral.0"/>
+        </ownedValue>
+      </ownedValue>
+      <propertyAssociation href="../microwave.aadl#/0/@ownedPublicSection/@ownedClassifier.34/@ownedPropertyAssociation.0"/>
+    </ownedPropertyAssociation>
+    <featureInstance name="commandIn" type="/1">
+      <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+        <property href="platform:/plugin/org.osate.contribution.sei/resources/properties/Data_Model.aadl#Data_Model.Enumerators"/>
+        <ownedValue>
+          <ownedValue xsi:type="aadl2:ListValue">
+            <ownedListElement xsi:type="aadl2:StringLiteral" value="START"/>
+            <ownedListElement xsi:type="aadl2:StringLiteral" value="STOP"/>
+          </ownedValue>
+        </ownedValue>
+        <propertyAssociation href="../microwave.aadl#/0/@ownedPublicSection/@ownedClassifier.3/@ownedPropertyAssociation.0"/>
+      </ownedPropertyAssociation>
+      <feature xsi:type="aadl2:DataPort" href="../microwave.aadl#/0/@ownedPublicSection/@ownedClassifier.33/@ownedDataPort.0"/>
+    </featureInstance>
+    <featureInstance name="heatBus" category="busAccess" type="/2">
+      <feature xsi:type="aadl2:BusAccess" href="../microwave.aadl#/0/@ownedPublicSection/@ownedClassifier.33/@ownedBusAccess.0"/>
+    </featureInstance>
+    <classifier xsi:type="aadl2:DeviceImplementation" href="../microwave.aadl#microwave.Turntable.impl"/>
+    <systemOperationMode name="No Modes"/>
+    <componentImplementation xsi:type="aadl2:DeviceImplementation" href="../microwave.aadl#microwave.Turntable.impl"/>
+  </instance:SystemInstance>
+  <instance:ComponentInstance name="microwave::TurntableCommand" category="data">
+    <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+      <property href="platform:/plugin/org.osate.contribution.sei/resources/properties/Data_Model.aadl#Data_Model.Enumerators"/>
+      <ownedValue>
+        <ownedValue xsi:type="aadl2:ListValue">
+          <ownedListElement xsi:type="aadl2:StringLiteral" value="START"/>
+          <ownedListElement xsi:type="aadl2:StringLiteral" value="STOP"/>
+        </ownedValue>
+      </ownedValue>
+      <propertyAssociation href="../microwave.aadl#/0/@ownedPublicSection/@ownedClassifier.3/@ownedPropertyAssociation.0"/>
+    </ownedPropertyAssociation>
+    <classifier xsi:type="aadl2:DataType" href="../microwave.aadl#microwave.TurntableCommand"/>
+  </instance:ComponentInstance>
+  <instance:ComponentInstance name="microwave::HeatingBus" category="bus">
+    <classifier xsi:type="aadl2:BusType" href="../microwave.aadl#microwave.HeatingBus"/>
+  </instance:ComponentInstance>
+</xmi:XMI>

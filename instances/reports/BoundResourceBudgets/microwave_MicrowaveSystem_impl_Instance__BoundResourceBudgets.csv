@@ -1,0 +1,52 @@
+Bound Resource Budget Analysis Report
+
+
+Processor Summary Report: 
+  Processor uiSubsystem.uiCPU: Total MIPS 5,000 MIPS of bound tasks within MIPS capacity 50,000 MIPS of uiSubsystem.uiCPU
+  Processor heatingSubsystem.heatCPU: Total MIPS 10,000 MIPS of bound tasks within MIPS capacity 50,000 MIPS of heatingSubsystem.heatCPU
+
+Memory Summary Report: 
+  Total RAM 0.0 KB of bound tasks within Memory capacity 64.0 KB of uiSubsystem.uiMem
+  Total ROM 0.0 KB of bound tasks within Memory capacity 256.0 KB of uiSubsystem.uiMem
+  Total RAM 0.0 KB of bound tasks within Memory capacity 64.0 KB of heatingSubsystem.heatMem
+  Total ROM 0.0 KB of bound tasks within Memory capacity 256.0 KB of heatingSubsystem.heatMem
+
+
+Detailed Workload Report:  for Processor uiSubsystem.uiCPU with Capacity 50,000 MIPS
+
+Component,Budget,Actual
+  thread uiSubsystem.uiProcess.uiThread,   5,000 MIPS,  0,000 MIPS,thread MicrowaveSystem_impl_Instance.uiSubsystem.uiProcess.uiThread total 0,000 MIPS below budget 5,000 MIPS (100,0 % slack)
+process uiSubsystem.uiProcess, 0,000 MIPS,5,000 MIPS,
+Total,,5,000 MIPS
+
+
+Detailed Workload Report:  for Processor heatingSubsystem.heatCPU with Capacity 50,000 MIPS
+
+Component,Budget,Actual
+  thread heatingSubsystem.heatProcess.heatThread,   10,000 MIPS,  0,000 MIPS,thread MicrowaveSystem_impl_Instance.heatingSubsystem.heatProcess.heatThread total 0,000 MIPS below budget 10,000 MIPS (100,0 % slack)
+process heatingSubsystem.heatProcess, 0,000 MIPS,10,000 MIPS,
+Total,,10,000 MIPS
+
+
+Detailed Workload Report:  for memory uiSubsystem.uiMem with Capacity 64,000 KBYTE
+
+Component,Budget,Actual
+Total, ,0,000 KBYTE,
+
+
+Detailed Workload Report:  for memory uiSubsystem.uiMem with Capacity 256,000 KBYTE
+
+Component,Budget,Actual
+Total, ,0,000 KBYTE,
+
+
+Detailed Workload Report:  for memory heatingSubsystem.heatMem with Capacity 64,000 KBYTE
+
+Component,Budget,Actual
+Total, ,0,000 KBYTE,
+
+
+Detailed Workload Report:  for memory heatingSubsystem.heatMem with Capacity 256,000 KBYTE
+
+Component,Budget,Actual
+Total, ,0,000 KBYTE,

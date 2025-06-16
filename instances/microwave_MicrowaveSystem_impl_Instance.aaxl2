@@ -1,0 +1,1886 @@
+<?xml version="1.0" encoding="ASCII"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:aadl2="http://aadl.info/AADL/2.0" xmlns:instance="http://aadl.info/AADL/2.0/instance">
+  <instance:SystemInstance name="MicrowaveSystem_impl_Instance" category="system">
+    <componentInstance name="uiSubsystem" category="system">
+      <featureInstance name="sendStartCommand" direction="out" type="/4">
+        <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+          <property href="platform:/plugin/org.osate.contribution.sei/resources/properties/Data_Model.aadl#Data_Model.Data_Representation"/>
+          <ownedValue>
+            <ownedValue xsi:type="aadl2:NamedValue">
+              <namedValue xsi:type="aadl2:EnumerationLiteral" href="platform:/plugin/org.osate.contribution.sei/resources/properties/Data_Model.aadl#/0/@ownedProperty.4/@ownedPropertyType/@ownedLiteral.7"/>
+            </ownedValue>
+          </ownedValue>
+          <propertyAssociation href="../microwave.aadl#/0/@ownedPublicSection/@ownedClassifier.0/@ownedPropertyAssociation.0"/>
+        </ownedPropertyAssociation>
+        <feature xsi:type="aadl2:DataPort" href="../microwave.aadl#/0/@ownedPublicSection/@ownedClassifier.9/@ownedDataPort.0"/>
+      </featureInstance>
+      <featureInstance name="sendTimeCommand" direction="out" type="/4">
+        <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+          <property href="platform:/plugin/org.osate.contribution.sei/resources/properties/Data_Model.aadl#Data_Model.Data_Representation"/>
+          <ownedValue>
+            <ownedValue xsi:type="aadl2:NamedValue">
+              <namedValue xsi:type="aadl2:EnumerationLiteral" href="platform:/plugin/org.osate.contribution.sei/resources/properties/Data_Model.aadl#/0/@ownedProperty.4/@ownedPropertyType/@ownedLiteral.7"/>
+            </ownedValue>
+          </ownedValue>
+          <propertyAssociation href="../microwave.aadl#/0/@ownedPublicSection/@ownedClassifier.0/@ownedPropertyAssociation.0"/>
+        </ownedPropertyAssociation>
+        <feature xsi:type="aadl2:DataPort" href="../microwave.aadl#/0/@ownedPublicSection/@ownedClassifier.9/@ownedDataPort.1"/>
+      </featureInstance>
+      <featureInstance name="statusIn" type="/4">
+        <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+          <property href="platform:/plugin/org.osate.contribution.sei/resources/properties/Data_Model.aadl#Data_Model.Data_Representation"/>
+          <ownedValue>
+            <ownedValue xsi:type="aadl2:NamedValue">
+              <namedValue xsi:type="aadl2:EnumerationLiteral" href="platform:/plugin/org.osate.contribution.sei/resources/properties/Data_Model.aadl#/0/@ownedProperty.4/@ownedPropertyType/@ownedLiteral.7"/>
+            </ownedValue>
+          </ownedValue>
+          <propertyAssociation href="../microwave.aadl#/0/@ownedPublicSection/@ownedClassifier.0/@ownedPropertyAssociation.0"/>
+        </ownedPropertyAssociation>
+        <feature xsi:type="aadl2:DataPort" href="../microwave.aadl#/0/@ownedPublicSection/@ownedClassifier.9/@ownedDataPort.2"/>
+      </featureInstance>
+      <featureInstance name="sendStopCommand" category="eventPort" direction="out">
+        <feature xsi:type="aadl2:EventPort" href="../microwave.aadl#/0/@ownedPublicSection/@ownedClassifier.9/@ownedEventPort.0"/>
+      </featureInstance>
+      <componentInstance name="uiBus" category="bus">
+        <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+          <property href="platform:/plugin/org.osate.contribution.sei/resources/properties/SEI.aadl#SEI.BandWidthBudget"/>
+          <ownedValue>
+            <ownedValue xsi:type="aadl2:RealLiteral" value="0.2">
+              <unit href="platform:/plugin/org.osate.aadl2.contrib/resources/properties/Predeclared_Property_Sets/AADL_Project.aadl#/0/@ownedPropertyType.17/@ownedLiteral.2"/>
+            </ownedValue>
+          </ownedValue>
+          <propertyAssociation href="../microwave.aadl#/0/@ownedPublicSection/@ownedClassifier.52/@ownedPropertyAssociation.2"/>
+        </ownedPropertyAssociation>
+        <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+          <property href="platform:/plugin/org.osate.contribution.sei/resources/properties/SEI.aadl#SEI.GrossWeight"/>
+          <ownedValue>
+            <ownedValue xsi:type="aadl2:RealLiteral" value="0.01">
+              <unit href="platform:/plugin/org.osate.contribution.sei/resources/properties/SEI.aadl#/0/@ownedPropertyType.0/@ownedLiteral.0"/>
+            </ownedValue>
+          </ownedValue>
+          <propertyAssociation href="../microwave.aadl#/0/@ownedPublicSection/@ownedClassifier.52/@ownedPropertyAssociation.0"/>
+        </ownedPropertyAssociation>
+        <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+          <property href="platform:/plugin/org.osate.contribution.sei/resources/properties/SEI.aadl#SEI.BandWidthCapacity"/>
+          <ownedValue>
+            <ownedValue xsi:type="aadl2:RealLiteral" value="100.0">
+              <unit href="platform:/plugin/org.osate.aadl2.contrib/resources/properties/Predeclared_Property_Sets/AADL_Project.aadl#/0/@ownedPropertyType.17/@ownedLiteral.2"/>
+            </ownedValue>
+          </ownedValue>
+          <propertyAssociation href="../microwave.aadl#/0/@ownedPublicSection/@ownedClassifier.52/@ownedPropertyAssociation.1"/>
+        </ownedPropertyAssociation>
+        <subcomponent xsi:type="aadl2:BusSubcomponent" href="../microwave.aadl#/0/@ownedPublicSection/@ownedClassifier.10/@ownedBusSubcomponent.0"/>
+        <index>0</index>
+        <classifier xsi:type="aadl2:BusImplementation" href="../microwave.aadl#microwave.UIBus.impl"/>
+      </componentInstance>
+      <componentInstance name="startButton" category="device">
+        <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+          <property href="platform:/plugin/org.osate.contribution.sei/resources/properties/SEI.aadl#SEI.GrossWeight"/>
+          <ownedValue>
+            <ownedValue xsi:type="aadl2:RealLiteral" value="0.05">
+              <unit href="platform:/plugin/org.osate.contribution.sei/resources/properties/SEI.aadl#/0/@ownedPropertyType.0/@ownedLiteral.0"/>
+            </ownedValue>
+          </ownedValue>
+          <propertyAssociation href="../microwave.aadl#/0/@ownedPublicSection/@ownedClassifier.26/@ownedPropertyAssociation.0"/>
+        </ownedPropertyAssociation>
+        <featureInstance name="pressOut" category="eventPort" direction="out">
+          <feature xsi:type="aadl2:EventPort" href="../microwave.aadl#/0/@ownedPublicSection/@ownedClassifier.25/@ownedEventPort.0"/>
+        </featureInstance>
+        <featureInstance name="uiBus" category="busAccess" type="/1">
+          <feature xsi:type="aadl2:BusAccess" href="../microwave.aadl#/0/@ownedPublicSection/@ownedClassifier.25/@ownedBusAccess.0"/>
+        </featureInstance>
+        <subcomponent xsi:type="aadl2:DeviceSubcomponent" href="../microwave.aadl#/0/@ownedPublicSection/@ownedClassifier.10/@ownedDeviceSubcomponent.0"/>
+        <index>0</index>
+        <classifier xsi:type="aadl2:DeviceImplementation" href="../microwave.aadl#microwave.StartButton.impl"/>
+      </componentInstance>
+      <componentInstance name="display" category="device">
+        <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+          <property href="platform:/plugin/org.osate.contribution.sei/resources/properties/SEI.aadl#SEI.GrossWeight"/>
+          <ownedValue>
+            <ownedValue xsi:type="aadl2:RealLiteral" value="0.15">
+              <unit href="platform:/plugin/org.osate.contribution.sei/resources/properties/SEI.aadl#/0/@ownedPropertyType.0/@ownedLiteral.0"/>
+            </ownedValue>
+          </ownedValue>
+          <propertyAssociation href="../microwave.aadl#/0/@ownedPublicSection/@ownedClassifier.28/@ownedPropertyAssociation.0"/>
+        </ownedPropertyAssociation>
+        <featureInstance name="displayIn" type="/2">
+          <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+            <property href="platform:/plugin/org.osate.contribution.sei/resources/properties/Data_Model.aadl#Data_Model.Data_Representation"/>
+            <ownedValue>
+              <ownedValue xsi:type="aadl2:NamedValue">
+                <namedValue xsi:type="aadl2:EnumerationLiteral" href="platform:/plugin/org.osate.contribution.sei/resources/properties/Data_Model.aadl#/0/@ownedProperty.4/@ownedPropertyType/@ownedLiteral.7"/>
+              </ownedValue>
+            </ownedValue>
+            <propertyAssociation href="../microwave.aadl#/0/@ownedPublicSection/@ownedClassifier.6/@ownedPropertyAssociation.0"/>
+          </ownedPropertyAssociation>
+          <feature xsi:type="aadl2:DataPort" href="../microwave.aadl#/0/@ownedPublicSection/@ownedClassifier.27/@ownedDataPort.0"/>
+        </featureInstance>
+        <featureInstance name="uiBus" category="busAccess" type="/1">
+          <feature xsi:type="aadl2:BusAccess" href="../microwave.aadl#/0/@ownedPublicSection/@ownedClassifier.27/@ownedBusAccess.0"/>
+        </featureInstance>
+        <subcomponent xsi:type="aadl2:DeviceSubcomponent" href="../microwave.aadl#/0/@ownedPublicSection/@ownedClassifier.10/@ownedDeviceSubcomponent.1"/>
+        <index>0</index>
+        <classifier xsi:type="aadl2:DeviceImplementation" href="../microwave.aadl#microwave.Display.impl"/>
+      </componentInstance>
+      <componentInstance name="buzzer" category="device">
+        <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+          <property href="platform:/plugin/org.osate.contribution.sei/resources/properties/SEI.aadl#SEI.GrossWeight"/>
+          <ownedValue>
+            <ownedValue xsi:type="aadl2:RealLiteral" value="0.05">
+              <unit href="platform:/plugin/org.osate.contribution.sei/resources/properties/SEI.aadl#/0/@ownedPropertyType.0/@ownedLiteral.0"/>
+            </ownedValue>
+          </ownedValue>
+          <propertyAssociation href="../microwave.aadl#/0/@ownedPublicSection/@ownedClassifier.30/@ownedPropertyAssociation.0"/>
+        </ownedPropertyAssociation>
+        <featureInstance name="buzzerIn" category="eventPort">
+          <feature xsi:type="aadl2:EventPort" href="../microwave.aadl#/0/@ownedPublicSection/@ownedClassifier.29/@ownedEventPort.0"/>
+        </featureInstance>
+        <featureInstance name="uiBus" category="busAccess" type="/1">
+          <feature xsi:type="aadl2:BusAccess" href="../microwave.aadl#/0/@ownedPublicSection/@ownedClassifier.29/@ownedBusAccess.0"/>
+        </featureInstance>
+        <subcomponent xsi:type="aadl2:DeviceSubcomponent" href="../microwave.aadl#/0/@ownedPublicSection/@ownedClassifier.10/@ownedDeviceSubcomponent.2"/>
+        <index>0</index>
+        <classifier xsi:type="aadl2:DeviceImplementation" href="../microwave.aadl#microwave.Buzzer.impl"/>
+      </componentInstance>
+      <componentInstance name="timeSelector" category="device">
+        <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+          <property href="platform:/plugin/org.osate.contribution.sei/resources/properties/SEI.aadl#SEI.GrossWeight"/>
+          <ownedValue>
+            <ownedValue xsi:type="aadl2:RealLiteral" value="0.02">
+              <unit href="platform:/plugin/org.osate.contribution.sei/resources/properties/SEI.aadl#/0/@ownedPropertyType.0/@ownedLiteral.0"/>
+            </ownedValue>
+          </ownedValue>
+          <propertyAssociation href="../microwave.aadl#/0/@ownedPublicSection/@ownedClassifier.40/@ownedPropertyAssociation.0"/>
+        </ownedPropertyAssociation>
+        <featureInstance name="timeOut" direction="out" type="/3">
+          <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+            <property href="platform:/plugin/org.osate.contribution.sei/resources/properties/Data_Model.aadl#Data_Model.Data_Representation"/>
+            <ownedValue>
+              <ownedValue xsi:type="aadl2:NamedValue">
+                <namedValue xsi:type="aadl2:EnumerationLiteral" href="platform:/plugin/org.osate.contribution.sei/resources/properties/Data_Model.aadl#/0/@ownedProperty.4/@ownedPropertyType/@ownedLiteral.6"/>
+              </ownedValue>
+            </ownedValue>
+            <propertyAssociation href="../microwave.aadl#/0/@ownedPublicSection/@ownedClassifier.5/@ownedPropertyAssociation.0"/>
+          </ownedPropertyAssociation>
+          <feature xsi:type="aadl2:DataPort" href="../microwave.aadl#/0/@ownedPublicSection/@ownedClassifier.39/@ownedDataPort.0"/>
+        </featureInstance>
+        <featureInstance name="uiBus" category="busAccess" type="/1">
+          <feature xsi:type="aadl2:BusAccess" href="../microwave.aadl#/0/@ownedPublicSection/@ownedClassifier.39/@ownedBusAccess.0"/>
+        </featureInstance>
+        <subcomponent xsi:type="aadl2:DeviceSubcomponent" href="../microwave.aadl#/0/@ownedPublicSection/@ownedClassifier.10/@ownedDeviceSubcomponent.3"/>
+        <index>0</index>
+        <classifier xsi:type="aadl2:DeviceImplementation" href="../microwave.aadl#microwave.TimeSelector.impl"/>
+      </componentInstance>
+      <componentInstance name="stopButton" category="device">
+        <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+          <property href="platform:/plugin/org.osate.contribution.sei/resources/properties/SEI.aadl#SEI.GrossWeight"/>
+          <ownedValue>
+            <ownedValue xsi:type="aadl2:RealLiteral" value="0.05">
+              <unit href="platform:/plugin/org.osate.contribution.sei/resources/properties/SEI.aadl#/0/@ownedPropertyType.0/@ownedLiteral.0"/>
+            </ownedValue>
+          </ownedValue>
+          <propertyAssociation href="../microwave.aadl#/0/@ownedPublicSection/@ownedClassifier.42/@ownedPropertyAssociation.0"/>
+        </ownedPropertyAssociation>
+        <featureInstance name="pressOut" category="eventPort" direction="out">
+          <feature xsi:type="aadl2:EventPort" href="../microwave.aadl#/0/@ownedPublicSection/@ownedClassifier.41/@ownedEventPort.0"/>
+        </featureInstance>
+        <featureInstance name="uiBus" category="busAccess" type="/1">
+          <feature xsi:type="aadl2:BusAccess" href="../microwave.aadl#/0/@ownedPublicSection/@ownedClassifier.41/@ownedBusAccess.0"/>
+        </featureInstance>
+        <subcomponent xsi:type="aadl2:DeviceSubcomponent" href="../microwave.aadl#/0/@ownedPublicSection/@ownedClassifier.10/@ownedDeviceSubcomponent.4"/>
+        <index>0</index>
+        <classifier xsi:type="aadl2:DeviceImplementation" href="../microwave.aadl#microwave.StopButton.impl"/>
+      </componentInstance>
+      <componentInstance name="lightLamp" category="device">
+        <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+          <property href="platform:/plugin/org.osate.contribution.sei/resources/properties/SEI.aadl#SEI.GrossWeight"/>
+          <ownedValue>
+            <ownedValue xsi:type="aadl2:RealLiteral" value="0.1">
+              <unit href="platform:/plugin/org.osate.contribution.sei/resources/properties/SEI.aadl#/0/@ownedPropertyType.0/@ownedLiteral.0"/>
+            </ownedValue>
+          </ownedValue>
+          <propertyAssociation href="../microwave.aadl#/0/@ownedPublicSection/@ownedClassifier.22/@ownedPropertyAssociation.0"/>
+        </ownedPropertyAssociation>
+        <featureInstance name="lightIn" type="/4">
+          <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+            <property href="platform:/plugin/org.osate.contribution.sei/resources/properties/Data_Model.aadl#Data_Model.Data_Representation"/>
+            <ownedValue>
+              <ownedValue xsi:type="aadl2:NamedValue">
+                <namedValue xsi:type="aadl2:EnumerationLiteral" href="platform:/plugin/org.osate.contribution.sei/resources/properties/Data_Model.aadl#/0/@ownedProperty.4/@ownedPropertyType/@ownedLiteral.7"/>
+              </ownedValue>
+            </ownedValue>
+            <propertyAssociation href="../microwave.aadl#/0/@ownedPublicSection/@ownedClassifier.0/@ownedPropertyAssociation.0"/>
+          </ownedPropertyAssociation>
+          <feature xsi:type="aadl2:DataPort" href="../microwave.aadl#/0/@ownedPublicSection/@ownedClassifier.21/@ownedDataPort.0"/>
+        </featureInstance>
+        <featureInstance name="uiBus" category="busAccess" type="/1">
+          <feature xsi:type="aadl2:BusAccess" href="../microwave.aadl#/0/@ownedPublicSection/@ownedClassifier.21/@ownedBusAccess.0"/>
+        </featureInstance>
+        <subcomponent xsi:type="aadl2:DeviceSubcomponent" href="../microwave.aadl#/0/@ownedPublicSection/@ownedClassifier.10/@ownedDeviceSubcomponent.5"/>
+        <index>0</index>
+        <classifier xsi:type="aadl2:DeviceImplementation" href="../microwave.aadl#microwave.LightLamp.impl"/>
+      </componentInstance>
+      <componentInstance name="doorLock" category="device">
+        <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+          <property href="platform:/plugin/org.osate.contribution.sei/resources/properties/SEI.aadl#SEI.GrossWeight"/>
+          <ownedValue>
+            <ownedValue xsi:type="aadl2:RealLiteral" value="0.2">
+              <unit href="platform:/plugin/org.osate.contribution.sei/resources/properties/SEI.aadl#/0/@ownedPropertyType.0/@ownedLiteral.0"/>
+            </ownedValue>
+          </ownedValue>
+          <propertyAssociation href="../microwave.aadl#/0/@ownedPublicSection/@ownedClassifier.24/@ownedPropertyAssociation.0"/>
+        </ownedPropertyAssociation>
+        <featureInstance name="lockIn" type="/4">
+          <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+            <property href="platform:/plugin/org.osate.contribution.sei/resources/properties/Data_Model.aadl#Data_Model.Data_Representation"/>
+            <ownedValue>
+              <ownedValue xsi:type="aadl2:NamedValue">
+                <namedValue xsi:type="aadl2:EnumerationLiteral" href="platform:/plugin/org.osate.contribution.sei/resources/properties/Data_Model.aadl#/0/@ownedProperty.4/@ownedPropertyType/@ownedLiteral.7"/>
+              </ownedValue>
+            </ownedValue>
+            <propertyAssociation href="../microwave.aadl#/0/@ownedPublicSection/@ownedClassifier.0/@ownedPropertyAssociation.0"/>
+          </ownedPropertyAssociation>
+          <feature xsi:type="aadl2:DataPort" href="../microwave.aadl#/0/@ownedPublicSection/@ownedClassifier.23/@ownedDataPort.0"/>
+        </featureInstance>
+        <featureInstance name="uiBus" category="busAccess" type="/1">
+          <feature xsi:type="aadl2:BusAccess" href="../microwave.aadl#/0/@ownedPublicSection/@ownedClassifier.23/@ownedBusAccess.0"/>
+        </featureInstance>
+        <subcomponent xsi:type="aadl2:DeviceSubcomponent" href="../microwave.aadl#/0/@ownedPublicSection/@ownedClassifier.10/@ownedDeviceSubcomponent.6"/>
+        <index>0</index>
+        <classifier xsi:type="aadl2:DeviceImplementation" href="../microwave.aadl#microwave.DoorLock.impl"/>
+      </componentInstance>
+      <componentInstance name="uiMem" category="memory">
+        <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+          <property href="platform:/plugin/org.osate.contribution.sei/resources/properties/SEI.aadl#SEI.GrossWeight"/>
+          <ownedValue>
+            <ownedValue xsi:type="aadl2:RealLiteral" value="0.02">
+              <unit href="platform:/plugin/org.osate.contribution.sei/resources/properties/SEI.aadl#/0/@ownedPropertyType.0/@ownedLiteral.0"/>
+            </ownedValue>
+          </ownedValue>
+          <propertyAssociation href="../microwave.aadl#/0/@ownedPublicSection/@ownedClassifier.48/@ownedPropertyAssociation.2"/>
+        </ownedPropertyAssociation>
+        <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+          <property href="platform:/plugin/org.osate.contribution.sei/resources/properties/SEI.aadl#SEI.RAMCapacity"/>
+          <ownedValue>
+            <ownedValue xsi:type="aadl2:RealLiteral" value="64.0">
+              <unit href="platform:/plugin/org.osate.aadl2.contrib/resources/properties/Predeclared_Property_Sets/AADL_Project.aadl#/0/@ownedPropertyType.15/@ownedLiteral.2"/>
+            </ownedValue>
+          </ownedValue>
+          <propertyAssociation href="../microwave.aadl#/0/@ownedPublicSection/@ownedClassifier.48/@ownedPropertyAssociation.0"/>
+        </ownedPropertyAssociation>
+        <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+          <property href="platform:/plugin/org.osate.contribution.sei/resources/properties/SEI.aadl#SEI.ROMCapacity"/>
+          <ownedValue>
+            <ownedValue xsi:type="aadl2:RealLiteral" value="256.0">
+              <unit href="platform:/plugin/org.osate.aadl2.contrib/resources/properties/Predeclared_Property_Sets/AADL_Project.aadl#/0/@ownedPropertyType.15/@ownedLiteral.2"/>
+            </ownedValue>
+          </ownedValue>
+          <propertyAssociation href="../microwave.aadl#/0/@ownedPublicSection/@ownedClassifier.48/@ownedPropertyAssociation.1"/>
+        </ownedPropertyAssociation>
+        <featureInstance name="uiBus" category="busAccess" type="/1">
+          <feature xsi:type="aadl2:BusAccess" href="../microwave.aadl#/0/@ownedPublicSection/@ownedClassifier.47/@ownedBusAccess.0"/>
+        </featureInstance>
+        <subcomponent xsi:type="aadl2:MemorySubcomponent" href="../microwave.aadl#/0/@ownedPublicSection/@ownedClassifier.10/@ownedMemorySubcomponent.0"/>
+        <index>0</index>
+        <classifier xsi:type="aadl2:MemoryImplementation" href="../microwave.aadl#microwave.UIMemory.impl"/>
+      </componentInstance>
+      <componentInstance name="uiProcess" category="process">
+        <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+          <property href="platform:/plugin/org.osate.aadl2.contrib/resources/properties/Predeclared_Property_Sets/Deployment_Properties.aadl#Deployment_Properties.Actual_Processor_Binding"/>
+          <ownedValue>
+            <ownedValue xsi:type="aadl2:ListValue">
+              <ownedListElement xsi:type="instance:InstanceReferenceValue" referencedInstanceObject="/0/@componentInstance.0/@componentInstance.10"/>
+            </ownedValue>
+          </ownedValue>
+          <propertyAssociation href="../microwave.aadl#/0/@ownedPublicSection/@ownedClassifier.10/@ownedPropertyAssociation.0"/>
+        </ownedPropertyAssociation>
+        <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+          <property href="platform:/plugin/org.osate.aadl2.contrib/resources/properties/Predeclared_Property_Sets/Deployment_Properties.aadl#Deployment_Properties.Actual_Memory_Binding"/>
+          <ownedValue>
+            <ownedValue xsi:type="aadl2:ListValue">
+              <ownedListElement xsi:type="instance:InstanceReferenceValue" referencedInstanceObject="/0/@componentInstance.0/@componentInstance.8"/>
+            </ownedValue>
+          </ownedValue>
+          <propertyAssociation href="../microwave.aadl#/0/@ownedPublicSection/@ownedClassifier.10/@ownedPropertyAssociation.1"/>
+        </ownedPropertyAssociation>
+        <featureInstance name="timeSelectIn" type="/3">
+          <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+            <property href="platform:/plugin/org.osate.aadl2.contrib/resources/properties/Predeclared_Property_Sets/Deployment_Properties.aadl#Deployment_Properties.Actual_Memory_Binding"/>
+            <ownedValue>
+              <ownedValue xsi:type="aadl2:ListValue">
+                <ownedListElement xsi:type="instance:InstanceReferenceValue" referencedInstanceObject="/0/@componentInstance.0/@componentInstance.8"/>
+              </ownedValue>
+            </ownedValue>
+            <propertyAssociation href="../microwave.aadl#/0/@ownedPublicSection/@ownedClassifier.10/@ownedPropertyAssociation.1"/>
+          </ownedPropertyAssociation>
+          <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+            <property href="platform:/plugin/org.osate.contribution.sei/resources/properties/Data_Model.aadl#Data_Model.Data_Representation"/>
+            <ownedValue>
+              <ownedValue xsi:type="aadl2:NamedValue">
+                <namedValue xsi:type="aadl2:EnumerationLiteral" href="platform:/plugin/org.osate.contribution.sei/resources/properties/Data_Model.aadl#/0/@ownedProperty.4/@ownedPropertyType/@ownedLiteral.6"/>
+              </ownedValue>
+            </ownedValue>
+            <propertyAssociation href="../microwave.aadl#/0/@ownedPublicSection/@ownedClassifier.5/@ownedPropertyAssociation.0"/>
+          </ownedPropertyAssociation>
+          <feature xsi:type="aadl2:DataPort" href="../microwave.aadl#/0/@ownedPublicSection/@ownedClassifier.13/@ownedDataPort.0"/>
+        </featureInstance>
+        <featureInstance name="displayOut" direction="out" type="/2">
+          <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+            <property href="platform:/plugin/org.osate.aadl2.contrib/resources/properties/Predeclared_Property_Sets/Deployment_Properties.aadl#Deployment_Properties.Actual_Memory_Binding"/>
+            <ownedValue>
+              <ownedValue xsi:type="aadl2:ListValue">
+                <ownedListElement xsi:type="instance:InstanceReferenceValue" referencedInstanceObject="/0/@componentInstance.0/@componentInstance.8"/>
+              </ownedValue>
+            </ownedValue>
+            <propertyAssociation href="../microwave.aadl#/0/@ownedPublicSection/@ownedClassifier.10/@ownedPropertyAssociation.1"/>
+          </ownedPropertyAssociation>
+          <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+            <property href="platform:/plugin/org.osate.contribution.sei/resources/properties/Data_Model.aadl#Data_Model.Data_Representation"/>
+            <ownedValue>
+              <ownedValue xsi:type="aadl2:NamedValue">
+                <namedValue xsi:type="aadl2:EnumerationLiteral" href="platform:/plugin/org.osate.contribution.sei/resources/properties/Data_Model.aadl#/0/@ownedProperty.4/@ownedPropertyType/@ownedLiteral.7"/>
+              </ownedValue>
+            </ownedValue>
+            <propertyAssociation href="../microwave.aadl#/0/@ownedPublicSection/@ownedClassifier.6/@ownedPropertyAssociation.0"/>
+          </ownedPropertyAssociation>
+          <feature xsi:type="aadl2:DataPort" href="../microwave.aadl#/0/@ownedPublicSection/@ownedClassifier.13/@ownedDataPort.1"/>
+        </featureInstance>
+        <featureInstance name="statusIn" type="/4">
+          <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+            <property href="platform:/plugin/org.osate.aadl2.contrib/resources/properties/Predeclared_Property_Sets/Deployment_Properties.aadl#Deployment_Properties.Actual_Memory_Binding"/>
+            <ownedValue>
+              <ownedValue xsi:type="aadl2:ListValue">
+                <ownedListElement xsi:type="instance:InstanceReferenceValue" referencedInstanceObject="/0/@componentInstance.0/@componentInstance.8"/>
+              </ownedValue>
+            </ownedValue>
+            <propertyAssociation href="../microwave.aadl#/0/@ownedPublicSection/@ownedClassifier.10/@ownedPropertyAssociation.1"/>
+          </ownedPropertyAssociation>
+          <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+            <property href="platform:/plugin/org.osate.contribution.sei/resources/properties/Data_Model.aadl#Data_Model.Data_Representation"/>
+            <ownedValue>
+              <ownedValue xsi:type="aadl2:NamedValue">
+                <namedValue xsi:type="aadl2:EnumerationLiteral" href="platform:/plugin/org.osate.contribution.sei/resources/properties/Data_Model.aadl#/0/@ownedProperty.4/@ownedPropertyType/@ownedLiteral.7"/>
+              </ownedValue>
+            </ownedValue>
+            <propertyAssociation href="../microwave.aadl#/0/@ownedPublicSection/@ownedClassifier.0/@ownedPropertyAssociation.0"/>
+          </ownedPropertyAssociation>
+          <feature xsi:type="aadl2:DataPort" href="../microwave.aadl#/0/@ownedPublicSection/@ownedClassifier.13/@ownedDataPort.2"/>
+        </featureInstance>
+        <featureInstance name="sendStartCommand" direction="out" type="/4">
+          <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+            <property href="platform:/plugin/org.osate.aadl2.contrib/resources/properties/Predeclared_Property_Sets/Deployment_Properties.aadl#Deployment_Properties.Actual_Memory_Binding"/>
+            <ownedValue>
+              <ownedValue xsi:type="aadl2:ListValue">
+                <ownedListElement xsi:type="instance:InstanceReferenceValue" referencedInstanceObject="/0/@componentInstance.0/@componentInstance.8"/>
+              </ownedValue>
+            </ownedValue>
+            <propertyAssociation href="../microwave.aadl#/0/@ownedPublicSection/@ownedClassifier.10/@ownedPropertyAssociation.1"/>
+          </ownedPropertyAssociation>
+          <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+            <property href="platform:/plugin/org.osate.contribution.sei/resources/properties/Data_Model.aadl#Data_Model.Data_Representation"/>
+            <ownedValue>
+              <ownedValue xsi:type="aadl2:NamedValue">
+                <namedValue xsi:type="aadl2:EnumerationLiteral" href="platform:/plugin/org.osate.contribution.sei/resources/properties/Data_Model.aadl#/0/@ownedProperty.4/@ownedPropertyType/@ownedLiteral.7"/>
+              </ownedValue>
+            </ownedValue>
+            <propertyAssociation href="../microwave.aadl#/0/@ownedPublicSection/@ownedClassifier.0/@ownedPropertyAssociation.0"/>
+          </ownedPropertyAssociation>
+          <feature xsi:type="aadl2:DataPort" href="../microwave.aadl#/0/@ownedPublicSection/@ownedClassifier.13/@ownedDataPort.3"/>
+        </featureInstance>
+        <featureInstance name="sendTimeCommand" direction="out" type="/4">
+          <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+            <property href="platform:/plugin/org.osate.aadl2.contrib/resources/properties/Predeclared_Property_Sets/Deployment_Properties.aadl#Deployment_Properties.Actual_Memory_Binding"/>
+            <ownedValue>
+              <ownedValue xsi:type="aadl2:ListValue">
+                <ownedListElement xsi:type="instance:InstanceReferenceValue" referencedInstanceObject="/0/@componentInstance.0/@componentInstance.8"/>
+              </ownedValue>
+            </ownedValue>
+            <propertyAssociation href="../microwave.aadl#/0/@ownedPublicSection/@ownedClassifier.10/@ownedPropertyAssociation.1"/>
+          </ownedPropertyAssociation>
+          <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+            <property href="platform:/plugin/org.osate.contribution.sei/resources/properties/Data_Model.aadl#Data_Model.Data_Representation"/>
+            <ownedValue>
+              <ownedValue xsi:type="aadl2:NamedValue">
+                <namedValue xsi:type="aadl2:EnumerationLiteral" href="platform:/plugin/org.osate.contribution.sei/resources/properties/Data_Model.aadl#/0/@ownedProperty.4/@ownedPropertyType/@ownedLiteral.7"/>
+              </ownedValue>
+            </ownedValue>
+            <propertyAssociation href="../microwave.aadl#/0/@ownedPublicSection/@ownedClassifier.0/@ownedPropertyAssociation.0"/>
+          </ownedPropertyAssociation>
+          <feature xsi:type="aadl2:DataPort" href="../microwave.aadl#/0/@ownedPublicSection/@ownedClassifier.13/@ownedDataPort.4"/>
+        </featureInstance>
+        <featureInstance name="lightLampOut" direction="out" type="/4">
+          <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+            <property href="platform:/plugin/org.osate.aadl2.contrib/resources/properties/Predeclared_Property_Sets/Deployment_Properties.aadl#Deployment_Properties.Actual_Memory_Binding"/>
+            <ownedValue>
+              <ownedValue xsi:type="aadl2:ListValue">
+                <ownedListElement xsi:type="instance:InstanceReferenceValue" referencedInstanceObject="/0/@componentInstance.0/@componentInstance.8"/>
+              </ownedValue>
+            </ownedValue>
+            <propertyAssociation href="../microwave.aadl#/0/@ownedPublicSection/@ownedClassifier.10/@ownedPropertyAssociation.1"/>
+          </ownedPropertyAssociation>
+          <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+            <property href="platform:/plugin/org.osate.contribution.sei/resources/properties/Data_Model.aadl#Data_Model.Data_Representation"/>
+            <ownedValue>
+              <ownedValue xsi:type="aadl2:NamedValue">
+                <namedValue xsi:type="aadl2:EnumerationLiteral" href="platform:/plugin/org.osate.contribution.sei/resources/properties/Data_Model.aadl#/0/@ownedProperty.4/@ownedPropertyType/@ownedLiteral.7"/>
+              </ownedValue>
+            </ownedValue>
+            <propertyAssociation href="../microwave.aadl#/0/@ownedPublicSection/@ownedClassifier.0/@ownedPropertyAssociation.0"/>
+          </ownedPropertyAssociation>
+          <feature xsi:type="aadl2:DataPort" href="../microwave.aadl#/0/@ownedPublicSection/@ownedClassifier.13/@ownedDataPort.5"/>
+        </featureInstance>
+        <featureInstance name="doorLockOut" direction="out" type="/4">
+          <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+            <property href="platform:/plugin/org.osate.aadl2.contrib/resources/properties/Predeclared_Property_Sets/Deployment_Properties.aadl#Deployment_Properties.Actual_Memory_Binding"/>
+            <ownedValue>
+              <ownedValue xsi:type="aadl2:ListValue">
+                <ownedListElement xsi:type="instance:InstanceReferenceValue" referencedInstanceObject="/0/@componentInstance.0/@componentInstance.8"/>
+              </ownedValue>
+            </ownedValue>
+            <propertyAssociation href="../microwave.aadl#/0/@ownedPublicSection/@ownedClassifier.10/@ownedPropertyAssociation.1"/>
+          </ownedPropertyAssociation>
+          <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+            <property href="platform:/plugin/org.osate.contribution.sei/resources/properties/Data_Model.aadl#Data_Model.Data_Representation"/>
+            <ownedValue>
+              <ownedValue xsi:type="aadl2:NamedValue">
+                <namedValue xsi:type="aadl2:EnumerationLiteral" href="platform:/plugin/org.osate.contribution.sei/resources/properties/Data_Model.aadl#/0/@ownedProperty.4/@ownedPropertyType/@ownedLiteral.7"/>
+              </ownedValue>
+            </ownedValue>
+            <propertyAssociation href="../microwave.aadl#/0/@ownedPublicSection/@ownedClassifier.0/@ownedPropertyAssociation.0"/>
+          </ownedPropertyAssociation>
+          <feature xsi:type="aadl2:DataPort" href="../microwave.aadl#/0/@ownedPublicSection/@ownedClassifier.13/@ownedDataPort.6"/>
+        </featureInstance>
+        <featureInstance name="startRequest" category="eventPort">
+          <feature xsi:type="aadl2:EventPort" href="../microwave.aadl#/0/@ownedPublicSection/@ownedClassifier.13/@ownedEventPort.0"/>
+        </featureInstance>
+        <featureInstance name="stopRequest" category="eventPort">
+          <feature xsi:type="aadl2:EventPort" href="../microwave.aadl#/0/@ownedPublicSection/@ownedClassifier.13/@ownedEventPort.1"/>
+        </featureInstance>
+        <featureInstance name="buzzerOut" category="eventPort" direction="out">
+          <feature xsi:type="aadl2:EventPort" href="../microwave.aadl#/0/@ownedPublicSection/@ownedClassifier.13/@ownedEventPort.2"/>
+        </featureInstance>
+        <featureInstance name="sendStopCommand" category="eventPort" direction="out">
+          <feature xsi:type="aadl2:EventPort" href="../microwave.aadl#/0/@ownedPublicSection/@ownedClassifier.13/@ownedEventPort.3"/>
+        </featureInstance>
+        <componentInstance name="uiThread" category="thread">
+          <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+            <property href="platform:/plugin/org.osate.aadl2.contrib/resources/properties/Predeclared_Property_Sets/Deployment_Properties.aadl#Deployment_Properties.Actual_Processor_Binding"/>
+            <ownedValue>
+              <ownedValue xsi:type="aadl2:ListValue">
+                <ownedListElement xsi:type="instance:InstanceReferenceValue" referencedInstanceObject="/0/@componentInstance.0/@componentInstance.10"/>
+              </ownedValue>
+            </ownedValue>
+            <propertyAssociation href="../microwave.aadl#/0/@ownedPublicSection/@ownedClassifier.10/@ownedPropertyAssociation.0"/>
+          </ownedPropertyAssociation>
+          <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+            <property href="platform:/plugin/org.osate.aadl2.contrib/resources/properties/Predeclared_Property_Sets/Deployment_Properties.aadl#Deployment_Properties.Actual_Memory_Binding"/>
+            <ownedValue>
+              <ownedValue xsi:type="aadl2:ListValue">
+                <ownedListElement xsi:type="instance:InstanceReferenceValue" referencedInstanceObject="/0/@componentInstance.0/@componentInstance.8"/>
+              </ownedValue>
+            </ownedValue>
+            <propertyAssociation href="../microwave.aadl#/0/@ownedPublicSection/@ownedClassifier.10/@ownedPropertyAssociation.1"/>
+          </ownedPropertyAssociation>
+          <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+            <property href="platform:/plugin/org.osate.contribution.sei/resources/properties/SEI.aadl#SEI.MIPSBudget"/>
+            <ownedValue>
+              <ownedValue xsi:type="aadl2:RealLiteral" value="5.0">
+                <unit href="platform:/plugin/org.osate.contribution.sei/resources/properties/SEI.aadl#/0/@ownedPropertyType.4/@ownedLiteral.1"/>
+              </ownedValue>
+            </ownedValue>
+            <propertyAssociation href="../microwave.aadl#/0/@ownedPublicSection/@ownedClassifier.16/@ownedPropertyAssociation.0"/>
+          </ownedPropertyAssociation>
+          <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+            <property href="platform:/plugin/org.osate.contribution.sei/resources/properties/SEI.aadl#SEI.RAMBudget"/>
+            <ownedValue>
+              <ownedValue xsi:type="aadl2:RealLiteral" value="4.0">
+                <unit href="platform:/plugin/org.osate.aadl2.contrib/resources/properties/Predeclared_Property_Sets/AADL_Project.aadl#/0/@ownedPropertyType.15/@ownedLiteral.2"/>
+              </ownedValue>
+            </ownedValue>
+            <propertyAssociation href="../microwave.aadl#/0/@ownedPublicSection/@ownedClassifier.16/@ownedPropertyAssociation.1"/>
+          </ownedPropertyAssociation>
+          <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+            <property href="platform:/plugin/org.osate.contribution.sei/resources/properties/SEI.aadl#SEI.ROMBudget"/>
+            <ownedValue>
+              <ownedValue xsi:type="aadl2:RealLiteral" value="16.0">
+                <unit href="platform:/plugin/org.osate.aadl2.contrib/resources/properties/Predeclared_Property_Sets/AADL_Project.aadl#/0/@ownedPropertyType.15/@ownedLiteral.2"/>
+              </ownedValue>
+            </ownedValue>
+            <propertyAssociation href="../microwave.aadl#/0/@ownedPublicSection/@ownedClassifier.16/@ownedPropertyAssociation.2"/>
+          </ownedPropertyAssociation>
+          <featureInstance name="timeSelectIn" type="/3">
+            <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+              <property href="platform:/plugin/org.osate.aadl2.contrib/resources/properties/Predeclared_Property_Sets/Deployment_Properties.aadl#Deployment_Properties.Actual_Memory_Binding"/>
+              <ownedValue>
+                <ownedValue xsi:type="aadl2:ListValue">
+                  <ownedListElement xsi:type="instance:InstanceReferenceValue" referencedInstanceObject="/0/@componentInstance.0/@componentInstance.8"/>
+                </ownedValue>
+              </ownedValue>
+              <propertyAssociation href="../microwave.aadl#/0/@ownedPublicSection/@ownedClassifier.10/@ownedPropertyAssociation.1"/>
+            </ownedPropertyAssociation>
+            <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+              <property href="platform:/plugin/org.osate.contribution.sei/resources/properties/Data_Model.aadl#Data_Model.Data_Representation"/>
+              <ownedValue>
+                <ownedValue xsi:type="aadl2:NamedValue">
+                  <namedValue xsi:type="aadl2:EnumerationLiteral" href="platform:/plugin/org.osate.contribution.sei/resources/properties/Data_Model.aadl#/0/@ownedProperty.4/@ownedPropertyType/@ownedLiteral.6"/>
+                </ownedValue>
+              </ownedValue>
+              <propertyAssociation href="../microwave.aadl#/0/@ownedPublicSection/@ownedClassifier.5/@ownedPropertyAssociation.0"/>
+            </ownedPropertyAssociation>
+            <feature xsi:type="aadl2:DataPort" href="../microwave.aadl#/0/@ownedPublicSection/@ownedClassifier.15/@ownedDataPort.0"/>
+          </featureInstance>
+          <featureInstance name="displayOut" direction="out" type="/2">
+            <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+              <property href="platform:/plugin/org.osate.aadl2.contrib/resources/properties/Predeclared_Property_Sets/Deployment_Properties.aadl#Deployment_Properties.Actual_Memory_Binding"/>
+              <ownedValue>
+                <ownedValue xsi:type="aadl2:ListValue">
+                  <ownedListElement xsi:type="instance:InstanceReferenceValue" referencedInstanceObject="/0/@componentInstance.0/@componentInstance.8"/>
+                </ownedValue>
+              </ownedValue>
+              <propertyAssociation href="../microwave.aadl#/0/@ownedPublicSection/@ownedClassifier.10/@ownedPropertyAssociation.1"/>
+            </ownedPropertyAssociation>
+            <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+              <property href="platform:/plugin/org.osate.contribution.sei/resources/properties/Data_Model.aadl#Data_Model.Data_Representation"/>
+              <ownedValue>
+                <ownedValue xsi:type="aadl2:NamedValue">
+                  <namedValue xsi:type="aadl2:EnumerationLiteral" href="platform:/plugin/org.osate.contribution.sei/resources/properties/Data_Model.aadl#/0/@ownedProperty.4/@ownedPropertyType/@ownedLiteral.7"/>
+                </ownedValue>
+              </ownedValue>
+              <propertyAssociation href="../microwave.aadl#/0/@ownedPublicSection/@ownedClassifier.6/@ownedPropertyAssociation.0"/>
+            </ownedPropertyAssociation>
+            <feature xsi:type="aadl2:DataPort" href="../microwave.aadl#/0/@ownedPublicSection/@ownedClassifier.15/@ownedDataPort.1"/>
+          </featureInstance>
+          <featureInstance name="statusIn" type="/4">
+            <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+              <property href="platform:/plugin/org.osate.aadl2.contrib/resources/properties/Predeclared_Property_Sets/Deployment_Properties.aadl#Deployment_Properties.Actual_Memory_Binding"/>
+              <ownedValue>
+                <ownedValue xsi:type="aadl2:ListValue">
+                  <ownedListElement xsi:type="instance:InstanceReferenceValue" referencedInstanceObject="/0/@componentInstance.0/@componentInstance.8"/>
+                </ownedValue>
+              </ownedValue>
+              <propertyAssociation href="../microwave.aadl#/0/@ownedPublicSection/@ownedClassifier.10/@ownedPropertyAssociation.1"/>
+            </ownedPropertyAssociation>
+            <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+              <property href="platform:/plugin/org.osate.contribution.sei/resources/properties/Data_Model.aadl#Data_Model.Data_Representation"/>
+              <ownedValue>
+                <ownedValue xsi:type="aadl2:NamedValue">
+                  <namedValue xsi:type="aadl2:EnumerationLiteral" href="platform:/plugin/org.osate.contribution.sei/resources/properties/Data_Model.aadl#/0/@ownedProperty.4/@ownedPropertyType/@ownedLiteral.7"/>
+                </ownedValue>
+              </ownedValue>
+              <propertyAssociation href="../microwave.aadl#/0/@ownedPublicSection/@ownedClassifier.0/@ownedPropertyAssociation.0"/>
+            </ownedPropertyAssociation>
+            <feature xsi:type="aadl2:DataPort" href="../microwave.aadl#/0/@ownedPublicSection/@ownedClassifier.15/@ownedDataPort.2"/>
+          </featureInstance>
+          <featureInstance name="sendStartCommand" direction="out" type="/4">
+            <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+              <property href="platform:/plugin/org.osate.aadl2.contrib/resources/properties/Predeclared_Property_Sets/Deployment_Properties.aadl#Deployment_Properties.Actual_Memory_Binding"/>
+              <ownedValue>
+                <ownedValue xsi:type="aadl2:ListValue">
+                  <ownedListElement xsi:type="instance:InstanceReferenceValue" referencedInstanceObject="/0/@componentInstance.0/@componentInstance.8"/>
+                </ownedValue>
+              </ownedValue>
+              <propertyAssociation href="../microwave.aadl#/0/@ownedPublicSection/@ownedClassifier.10/@ownedPropertyAssociation.1"/>
+            </ownedPropertyAssociation>
+            <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+              <property href="platform:/plugin/org.osate.contribution.sei/resources/properties/Data_Model.aadl#Data_Model.Data_Representation"/>
+              <ownedValue>
+                <ownedValue xsi:type="aadl2:NamedValue">
+                  <namedValue xsi:type="aadl2:EnumerationLiteral" href="platform:/plugin/org.osate.contribution.sei/resources/properties/Data_Model.aadl#/0/@ownedProperty.4/@ownedPropertyType/@ownedLiteral.7"/>
+                </ownedValue>
+              </ownedValue>
+              <propertyAssociation href="../microwave.aadl#/0/@ownedPublicSection/@ownedClassifier.0/@ownedPropertyAssociation.0"/>
+            </ownedPropertyAssociation>
+            <feature xsi:type="aadl2:DataPort" href="../microwave.aadl#/0/@ownedPublicSection/@ownedClassifier.15/@ownedDataPort.3"/>
+          </featureInstance>
+          <featureInstance name="sendTimeCommand" direction="out" type="/4">
+            <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+              <property href="platform:/plugin/org.osate.aadl2.contrib/resources/properties/Predeclared_Property_Sets/Deployment_Properties.aadl#Deployment_Properties.Actual_Memory_Binding"/>
+              <ownedValue>
+                <ownedValue xsi:type="aadl2:ListValue">
+                  <ownedListElement xsi:type="instance:InstanceReferenceValue" referencedInstanceObject="/0/@componentInstance.0/@componentInstance.8"/>
+                </ownedValue>
+              </ownedValue>
+              <propertyAssociation href="../microwave.aadl#/0/@ownedPublicSection/@ownedClassifier.10/@ownedPropertyAssociation.1"/>
+            </ownedPropertyAssociation>
+            <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+              <property href="platform:/plugin/org.osate.contribution.sei/resources/properties/Data_Model.aadl#Data_Model.Data_Representation"/>
+              <ownedValue>
+                <ownedValue xsi:type="aadl2:NamedValue">
+                  <namedValue xsi:type="aadl2:EnumerationLiteral" href="platform:/plugin/org.osate.contribution.sei/resources/properties/Data_Model.aadl#/0/@ownedProperty.4/@ownedPropertyType/@ownedLiteral.7"/>
+                </ownedValue>
+              </ownedValue>
+              <propertyAssociation href="../microwave.aadl#/0/@ownedPublicSection/@ownedClassifier.0/@ownedPropertyAssociation.0"/>
+            </ownedPropertyAssociation>
+            <feature xsi:type="aadl2:DataPort" href="../microwave.aadl#/0/@ownedPublicSection/@ownedClassifier.15/@ownedDataPort.4"/>
+          </featureInstance>
+          <featureInstance name="lightLampOut" direction="out" type="/4">
+            <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+              <property href="platform:/plugin/org.osate.aadl2.contrib/resources/properties/Predeclared_Property_Sets/Deployment_Properties.aadl#Deployment_Properties.Actual_Memory_Binding"/>
+              <ownedValue>
+                <ownedValue xsi:type="aadl2:ListValue">
+                  <ownedListElement xsi:type="instance:InstanceReferenceValue" referencedInstanceObject="/0/@componentInstance.0/@componentInstance.8"/>
+                </ownedValue>
+              </ownedValue>
+              <propertyAssociation href="../microwave.aadl#/0/@ownedPublicSection/@ownedClassifier.10/@ownedPropertyAssociation.1"/>
+            </ownedPropertyAssociation>
+            <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+              <property href="platform:/plugin/org.osate.contribution.sei/resources/properties/Data_Model.aadl#Data_Model.Data_Representation"/>
+              <ownedValue>
+                <ownedValue xsi:type="aadl2:NamedValue">
+                  <namedValue xsi:type="aadl2:EnumerationLiteral" href="platform:/plugin/org.osate.contribution.sei/resources/properties/Data_Model.aadl#/0/@ownedProperty.4/@ownedPropertyType/@ownedLiteral.7"/>
+                </ownedValue>
+              </ownedValue>
+              <propertyAssociation href="../microwave.aadl#/0/@ownedPublicSection/@ownedClassifier.0/@ownedPropertyAssociation.0"/>
+            </ownedPropertyAssociation>
+            <feature xsi:type="aadl2:DataPort" href="../microwave.aadl#/0/@ownedPublicSection/@ownedClassifier.15/@ownedDataPort.5"/>
+          </featureInstance>
+          <featureInstance name="doorLockOut" direction="out" type="/4">
+            <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+              <property href="platform:/plugin/org.osate.aadl2.contrib/resources/properties/Predeclared_Property_Sets/Deployment_Properties.aadl#Deployment_Properties.Actual_Memory_Binding"/>
+              <ownedValue>
+                <ownedValue xsi:type="aadl2:ListValue">
+                  <ownedListElement xsi:type="instance:InstanceReferenceValue" referencedInstanceObject="/0/@componentInstance.0/@componentInstance.8"/>
+                </ownedValue>
+              </ownedValue>
+              <propertyAssociation href="../microwave.aadl#/0/@ownedPublicSection/@ownedClassifier.10/@ownedPropertyAssociation.1"/>
+            </ownedPropertyAssociation>
+            <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+              <property href="platform:/plugin/org.osate.contribution.sei/resources/properties/Data_Model.aadl#Data_Model.Data_Representation"/>
+              <ownedValue>
+                <ownedValue xsi:type="aadl2:NamedValue">
+                  <namedValue xsi:type="aadl2:EnumerationLiteral" href="platform:/plugin/org.osate.contribution.sei/resources/properties/Data_Model.aadl#/0/@ownedProperty.4/@ownedPropertyType/@ownedLiteral.7"/>
+                </ownedValue>
+              </ownedValue>
+              <propertyAssociation href="../microwave.aadl#/0/@ownedPublicSection/@ownedClassifier.0/@ownedPropertyAssociation.0"/>
+            </ownedPropertyAssociation>
+            <feature xsi:type="aadl2:DataPort" href="../microwave.aadl#/0/@ownedPublicSection/@ownedClassifier.15/@ownedDataPort.6"/>
+          </featureInstance>
+          <featureInstance name="startRequest" category="eventPort">
+            <feature xsi:type="aadl2:EventPort" href="../microwave.aadl#/0/@ownedPublicSection/@ownedClassifier.15/@ownedEventPort.0"/>
+          </featureInstance>
+          <featureInstance name="stopRequest" category="eventPort">
+            <feature xsi:type="aadl2:EventPort" href="../microwave.aadl#/0/@ownedPublicSection/@ownedClassifier.15/@ownedEventPort.1"/>
+          </featureInstance>
+          <featureInstance name="buzzerOut" category="eventPort" direction="out">
+            <feature xsi:type="aadl2:EventPort" href="../microwave.aadl#/0/@ownedPublicSection/@ownedClassifier.15/@ownedEventPort.2"/>
+          </featureInstance>
+          <featureInstance name="sendStopCommand" category="eventPort" direction="out">
+            <feature xsi:type="aadl2:EventPort" href="../microwave.aadl#/0/@ownedPublicSection/@ownedClassifier.15/@ownedEventPort.3"/>
+          </featureInstance>
+          <subcomponent xsi:type="aadl2:ThreadSubcomponent" href="../microwave.aadl#/0/@ownedPublicSection/@ownedClassifier.14/@ownedThreadSubcomponent.0"/>
+          <index>0</index>
+          <classifier xsi:type="aadl2:ThreadImplementation" href="../microwave.aadl#microwave.UIThread.impl"/>
+        </componentInstance>
+        <subcomponent xsi:type="aadl2:ProcessSubcomponent" href="../microwave.aadl#/0/@ownedPublicSection/@ownedClassifier.10/@ownedProcessSubcomponent.0"/>
+        <index>0</index>
+        <classifier xsi:type="aadl2:ProcessImplementation" href="../microwave.aadl#microwave.UIController.impl"/>
+      </componentInstance>
+      <componentInstance name="uiCPU" category="processor">
+        <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+          <property href="platform:/plugin/org.osate.contribution.sei/resources/properties/SEI.aadl#SEI.GrossWeight"/>
+          <ownedValue>
+            <ownedValue xsi:type="aadl2:RealLiteral" value="0.05">
+              <unit href="platform:/plugin/org.osate.contribution.sei/resources/properties/SEI.aadl#/0/@ownedPropertyType.0/@ownedLiteral.0"/>
+            </ownedValue>
+          </ownedValue>
+          <propertyAssociation href="../microwave.aadl#/0/@ownedPublicSection/@ownedClassifier.44/@ownedPropertyAssociation.1"/>
+        </ownedPropertyAssociation>
+        <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+          <property href="platform:/plugin/org.osate.contribution.sei/resources/properties/SEI.aadl#SEI.MIPSCapacity"/>
+          <ownedValue>
+            <ownedValue xsi:type="aadl2:RealLiteral" value="50.0">
+              <unit href="platform:/plugin/org.osate.contribution.sei/resources/properties/SEI.aadl#/0/@ownedPropertyType.4/@ownedLiteral.1"/>
+            </ownedValue>
+          </ownedValue>
+          <propertyAssociation href="../microwave.aadl#/0/@ownedPublicSection/@ownedClassifier.44/@ownedPropertyAssociation.0"/>
+        </ownedPropertyAssociation>
+        <featureInstance name="uiBus" category="busAccess" type="/1">
+          <feature xsi:type="aadl2:BusAccess" href="../microwave.aadl#/0/@ownedPublicSection/@ownedClassifier.43/@ownedBusAccess.0"/>
+        </featureInstance>
+        <subcomponent xsi:type="aadl2:ProcessorSubcomponent" href="../microwave.aadl#/0/@ownedPublicSection/@ownedClassifier.10/@ownedProcessorSubcomponent.0"/>
+        <index>0</index>
+        <classifier xsi:type="aadl2:ProcessorImplementation" href="../microwave.aadl#microwave.UICPU.impl"/>
+      </componentInstance>
+      <connectionInstance name="uiBus -> startButton.uiBus" complete="true" kind="accessConnection" destination="/0/@componentInstance.0/@componentInstance.1/@featureInstance.1" source="/0/@componentInstance.0/@componentInstance.0">
+        <connectionReference context="/0/@componentInstance.0" source="/0/@componentInstance.0/@componentInstance.0" destination="/0/@componentInstance.0/@componentInstance.1/@featureInstance.1" reverse="true">
+          <connection xsi:type="aadl2:AccessConnection" href="../microwave.aadl#/0/@ownedPublicSection/@ownedClassifier.10/@ownedAccessConnection.0"/>
+        </connectionReference>
+      </connectionInstance>
+      <connectionInstance name="uiBus -> display.uiBus" complete="true" kind="accessConnection" destination="/0/@componentInstance.0/@componentInstance.2/@featureInstance.1" source="/0/@componentInstance.0/@componentInstance.0">
+        <connectionReference context="/0/@componentInstance.0" source="/0/@componentInstance.0/@componentInstance.0" destination="/0/@componentInstance.0/@componentInstance.2/@featureInstance.1" reverse="true">
+          <connection xsi:type="aadl2:AccessConnection" href="../microwave.aadl#/0/@ownedPublicSection/@ownedClassifier.10/@ownedAccessConnection.1"/>
+        </connectionReference>
+      </connectionInstance>
+      <connectionInstance name="uiBus -> buzzer.uiBus" complete="true" kind="accessConnection" destination="/0/@componentInstance.0/@componentInstance.3/@featureInstance.1" source="/0/@componentInstance.0/@componentInstance.0">
+        <connectionReference context="/0/@componentInstance.0" source="/0/@componentInstance.0/@componentInstance.0" destination="/0/@componentInstance.0/@componentInstance.3/@featureInstance.1" reverse="true">
+          <connection xsi:type="aadl2:AccessConnection" href="../microwave.aadl#/0/@ownedPublicSection/@ownedClassifier.10/@ownedAccessConnection.2"/>
+        </connectionReference>
+      </connectionInstance>
+      <connectionInstance name="uiBus -> uiCPU.uiBus" complete="true" kind="accessConnection" destination="/0/@componentInstance.0/@componentInstance.10/@featureInstance.0" source="/0/@componentInstance.0/@componentInstance.0">
+        <connectionReference context="/0/@componentInstance.0" source="/0/@componentInstance.0/@componentInstance.0" destination="/0/@componentInstance.0/@componentInstance.10/@featureInstance.0" reverse="true">
+          <connection xsi:type="aadl2:AccessConnection" href="../microwave.aadl#/0/@ownedPublicSection/@ownedClassifier.10/@ownedAccessConnection.3"/>
+        </connectionReference>
+      </connectionInstance>
+      <connectionInstance name="uiBus -> uiMem.uiBus" complete="true" kind="accessConnection" destination="/0/@componentInstance.0/@componentInstance.8/@featureInstance.0" source="/0/@componentInstance.0/@componentInstance.0">
+        <connectionReference context="/0/@componentInstance.0" source="/0/@componentInstance.0/@componentInstance.0" destination="/0/@componentInstance.0/@componentInstance.8/@featureInstance.0" reverse="true">
+          <connection xsi:type="aadl2:AccessConnection" href="../microwave.aadl#/0/@ownedPublicSection/@ownedClassifier.10/@ownedAccessConnection.4"/>
+        </connectionReference>
+      </connectionInstance>
+      <connectionInstance name="uiBus -> timeSelector.uiBus" complete="true" kind="accessConnection" destination="/0/@componentInstance.0/@componentInstance.4/@featureInstance.1" source="/0/@componentInstance.0/@componentInstance.0">
+        <connectionReference context="/0/@componentInstance.0" source="/0/@componentInstance.0/@componentInstance.0" destination="/0/@componentInstance.0/@componentInstance.4/@featureInstance.1" reverse="true">
+          <connection xsi:type="aadl2:AccessConnection" href="../microwave.aadl#/0/@ownedPublicSection/@ownedClassifier.10/@ownedAccessConnection.5"/>
+        </connectionReference>
+      </connectionInstance>
+      <connectionInstance name="uiBus -> stopButton.uiBus" complete="true" kind="accessConnection" destination="/0/@componentInstance.0/@componentInstance.5/@featureInstance.1" source="/0/@componentInstance.0/@componentInstance.0">
+        <connectionReference context="/0/@componentInstance.0" source="/0/@componentInstance.0/@componentInstance.0" destination="/0/@componentInstance.0/@componentInstance.5/@featureInstance.1" reverse="true">
+          <connection xsi:type="aadl2:AccessConnection" href="../microwave.aadl#/0/@ownedPublicSection/@ownedClassifier.10/@ownedAccessConnection.6"/>
+        </connectionReference>
+      </connectionInstance>
+      <connectionInstance name="uiBus -> lightLamp.uiBus" complete="true" kind="accessConnection" destination="/0/@componentInstance.0/@componentInstance.6/@featureInstance.1" source="/0/@componentInstance.0/@componentInstance.0">
+        <connectionReference context="/0/@componentInstance.0" source="/0/@componentInstance.0/@componentInstance.0" destination="/0/@componentInstance.0/@componentInstance.6/@featureInstance.1" reverse="true">
+          <connection xsi:type="aadl2:AccessConnection" href="../microwave.aadl#/0/@ownedPublicSection/@ownedClassifier.10/@ownedAccessConnection.7"/>
+        </connectionReference>
+      </connectionInstance>
+      <connectionInstance name="uiBus -> doorLock.uiBus" complete="true" kind="accessConnection" destination="/0/@componentInstance.0/@componentInstance.7/@featureInstance.1" source="/0/@componentInstance.0/@componentInstance.0">
+        <connectionReference context="/0/@componentInstance.0" source="/0/@componentInstance.0/@componentInstance.0" destination="/0/@componentInstance.0/@componentInstance.7/@featureInstance.1" reverse="true">
+          <connection xsi:type="aadl2:AccessConnection" href="../microwave.aadl#/0/@ownedPublicSection/@ownedClassifier.10/@ownedAccessConnection.8"/>
+        </connectionReference>
+      </connectionInstance>
+      <connectionInstance name="startButton.pressOut -> uiProcess.uiThread.startRequest" complete="true" kind="portConnection" destination="/0/@componentInstance.0/@componentInstance.9/@componentInstance.0/@featureInstance.7" source="/0/@componentInstance.0/@componentInstance.1/@featureInstance.0">
+        <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+          <property href="platform:/plugin/org.osate.contribution.sei/resources/properties/SEI.aadl#SEI.BandWidthBudget"/>
+          <ownedValue>
+            <ownedValue xsi:type="aadl2:RealLiteral" value="0.001">
+              <unit href="platform:/plugin/org.osate.aadl2.contrib/resources/properties/Predeclared_Property_Sets/AADL_Project.aadl#/0/@ownedPropertyType.17/@ownedLiteral.2"/>
+            </ownedValue>
+          </ownedValue>
+          <propertyAssociation href="../microwave.aadl#/0/@ownedPublicSection/@ownedClassifier.10/@ownedPortConnection.0/@ownedPropertyAssociation.1"/>
+        </ownedPropertyAssociation>
+        <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+          <property href="platform:/plugin/org.osate.aadl2.contrib/resources/properties/Predeclared_Property_Sets/Deployment_Properties.aadl#Deployment_Properties.Actual_Connection_Binding"/>
+          <ownedValue>
+            <ownedValue xsi:type="aadl2:ListValue">
+              <ownedListElement xsi:type="instance:InstanceReferenceValue" referencedInstanceObject="/0/@componentInstance.0/@componentInstance.0"/>
+            </ownedValue>
+          </ownedValue>
+          <propertyAssociation href="../microwave.aadl#/0/@ownedPublicSection/@ownedClassifier.10/@ownedPortConnection.0/@ownedPropertyAssociation.0"/>
+        </ownedPropertyAssociation>
+        <connectionReference context="/0/@componentInstance.0" source="/0/@componentInstance.0/@componentInstance.1/@featureInstance.0" destination="/0/@componentInstance.0/@componentInstance.9/@featureInstance.7">
+          <connection xsi:type="aadl2:PortConnection" href="../microwave.aadl#/0/@ownedPublicSection/@ownedClassifier.10/@ownedPortConnection.0"/>
+        </connectionReference>
+        <connectionReference context="/0/@componentInstance.0/@componentInstance.9" source="/0/@componentInstance.0/@componentInstance.9/@featureInstance.7" destination="/0/@componentInstance.0/@componentInstance.9/@componentInstance.0/@featureInstance.7">
+          <connection xsi:type="aadl2:PortConnection" href="../microwave.aadl#/0/@ownedPublicSection/@ownedClassifier.14/@ownedPortConnection.0"/>
+        </connectionReference>
+      </connectionInstance>
+      <connectionInstance name="startButton.uiBus -> uiBus" complete="true" kind="accessConnection" destination="/0/@componentInstance.0/@componentInstance.0" source="/0/@componentInstance.0/@componentInstance.1/@featureInstance.1">
+        <connectionReference context="/0/@componentInstance.0" source="/0/@componentInstance.0/@componentInstance.1/@featureInstance.1" destination="/0/@componentInstance.0/@componentInstance.0">
+          <connection xsi:type="aadl2:AccessConnection" href="../microwave.aadl#/0/@ownedPublicSection/@ownedClassifier.10/@ownedAccessConnection.0"/>
+        </connectionReference>
+      </connectionInstance>
+      <connectionInstance name="display.uiBus -> uiBus" complete="true" kind="accessConnection" destination="/0/@componentInstance.0/@componentInstance.0" source="/0/@componentInstance.0/@componentInstance.2/@featureInstance.1">
+        <connectionReference context="/0/@componentInstance.0" source="/0/@componentInstance.0/@componentInstance.2/@featureInstance.1" destination="/0/@componentInstance.0/@componentInstance.0">
+          <connection xsi:type="aadl2:AccessConnection" href="../microwave.aadl#/0/@ownedPublicSection/@ownedClassifier.10/@ownedAccessConnection.1"/>
+        </connectionReference>
+      </connectionInstance>
+      <connectionInstance name="buzzer.uiBus -> uiBus" complete="true" kind="accessConnection" destination="/0/@componentInstance.0/@componentInstance.0" source="/0/@componentInstance.0/@componentInstance.3/@featureInstance.1">
+        <connectionReference context="/0/@componentInstance.0" source="/0/@componentInstance.0/@componentInstance.3/@featureInstance.1" destination="/0/@componentInstance.0/@componentInstance.0">
+          <connection xsi:type="aadl2:AccessConnection" href="../microwave.aadl#/0/@ownedPublicSection/@ownedClassifier.10/@ownedAccessConnection.2"/>
+        </connectionReference>
+      </connectionInstance>
+      <connectionInstance name="timeSelector.timeOut -> uiProcess.uiThread.timeSelectIn" complete="true" kind="portConnection" destination="/0/@componentInstance.0/@componentInstance.9/@componentInstance.0/@featureInstance.0" source="/0/@componentInstance.0/@componentInstance.4/@featureInstance.0">
+        <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+          <property href="platform:/plugin/org.osate.contribution.sei/resources/properties/SEI.aadl#SEI.BandWidthBudget"/>
+          <ownedValue>
+            <ownedValue xsi:type="aadl2:RealLiteral" value="0.005">
+              <unit href="platform:/plugin/org.osate.aadl2.contrib/resources/properties/Predeclared_Property_Sets/AADL_Project.aadl#/0/@ownedPropertyType.17/@ownedLiteral.2"/>
+            </ownedValue>
+          </ownedValue>
+          <propertyAssociation href="../microwave.aadl#/0/@ownedPublicSection/@ownedClassifier.10/@ownedPortConnection.5/@ownedPropertyAssociation.0"/>
+        </ownedPropertyAssociation>
+        <connectionReference context="/0/@componentInstance.0" source="/0/@componentInstance.0/@componentInstance.4/@featureInstance.0" destination="/0/@componentInstance.0/@componentInstance.9/@featureInstance.0">
+          <connection xsi:type="aadl2:PortConnection" href="../microwave.aadl#/0/@ownedPublicSection/@ownedClassifier.10/@ownedPortConnection.5"/>
+        </connectionReference>
+        <connectionReference context="/0/@componentInstance.0/@componentInstance.9" source="/0/@componentInstance.0/@componentInstance.9/@featureInstance.0" destination="/0/@componentInstance.0/@componentInstance.9/@componentInstance.0/@featureInstance.0">
+          <connection xsi:type="aadl2:PortConnection" href="../microwave.aadl#/0/@ownedPublicSection/@ownedClassifier.14/@ownedPortConnection.5"/>
+        </connectionReference>
+      </connectionInstance>
+      <connectionInstance name="timeSelector.uiBus -> uiBus" complete="true" kind="accessConnection" destination="/0/@componentInstance.0/@componentInstance.0" source="/0/@componentInstance.0/@componentInstance.4/@featureInstance.1">
+        <connectionReference context="/0/@componentInstance.0" source="/0/@componentInstance.0/@componentInstance.4/@featureInstance.1" destination="/0/@componentInstance.0/@componentInstance.0">
+          <connection xsi:type="aadl2:AccessConnection" href="../microwave.aadl#/0/@ownedPublicSection/@ownedClassifier.10/@ownedAccessConnection.5"/>
+        </connectionReference>
+      </connectionInstance>
+      <connectionInstance name="stopButton.pressOut -> uiProcess.uiThread.stopRequest" complete="true" kind="portConnection" destination="/0/@componentInstance.0/@componentInstance.9/@componentInstance.0/@featureInstance.8" source="/0/@componentInstance.0/@componentInstance.5/@featureInstance.0">
+        <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+          <property href="platform:/plugin/org.osate.contribution.sei/resources/properties/SEI.aadl#SEI.BandWidthBudget"/>
+          <ownedValue>
+            <ownedValue xsi:type="aadl2:RealLiteral" value="0.001">
+              <unit href="platform:/plugin/org.osate.aadl2.contrib/resources/properties/Predeclared_Property_Sets/AADL_Project.aadl#/0/@ownedPropertyType.17/@ownedLiteral.2"/>
+            </ownedValue>
+          </ownedValue>
+          <propertyAssociation href="../microwave.aadl#/0/@ownedPublicSection/@ownedClassifier.10/@ownedPortConnection.6/@ownedPropertyAssociation.0"/>
+        </ownedPropertyAssociation>
+        <connectionReference context="/0/@componentInstance.0" source="/0/@componentInstance.0/@componentInstance.5/@featureInstance.0" destination="/0/@componentInstance.0/@componentInstance.9/@featureInstance.8">
+          <connection xsi:type="aadl2:PortConnection" href="../microwave.aadl#/0/@ownedPublicSection/@ownedClassifier.10/@ownedPortConnection.6"/>
+        </connectionReference>
+        <connectionReference context="/0/@componentInstance.0/@componentInstance.9" source="/0/@componentInstance.0/@componentInstance.9/@featureInstance.8" destination="/0/@componentInstance.0/@componentInstance.9/@componentInstance.0/@featureInstance.8">
+          <connection xsi:type="aadl2:PortConnection" href="../microwave.aadl#/0/@ownedPublicSection/@ownedClassifier.14/@ownedPortConnection.6"/>
+        </connectionReference>
+      </connectionInstance>
+      <connectionInstance name="stopButton.uiBus -> uiBus" complete="true" kind="accessConnection" destination="/0/@componentInstance.0/@componentInstance.0" source="/0/@componentInstance.0/@componentInstance.5/@featureInstance.1">
+        <connectionReference context="/0/@componentInstance.0" source="/0/@componentInstance.0/@componentInstance.5/@featureInstance.1" destination="/0/@componentInstance.0/@componentInstance.0">
+          <connection xsi:type="aadl2:AccessConnection" href="../microwave.aadl#/0/@ownedPublicSection/@ownedClassifier.10/@ownedAccessConnection.6"/>
+        </connectionReference>
+      </connectionInstance>
+      <connectionInstance name="lightLamp.uiBus -> uiBus" complete="true" kind="accessConnection" destination="/0/@componentInstance.0/@componentInstance.0" source="/0/@componentInstance.0/@componentInstance.6/@featureInstance.1">
+        <connectionReference context="/0/@componentInstance.0" source="/0/@componentInstance.0/@componentInstance.6/@featureInstance.1" destination="/0/@componentInstance.0/@componentInstance.0">
+          <connection xsi:type="aadl2:AccessConnection" href="../microwave.aadl#/0/@ownedPublicSection/@ownedClassifier.10/@ownedAccessConnection.7"/>
+        </connectionReference>
+      </connectionInstance>
+      <connectionInstance name="doorLock.uiBus -> uiBus" complete="true" kind="accessConnection" destination="/0/@componentInstance.0/@componentInstance.0" source="/0/@componentInstance.0/@componentInstance.7/@featureInstance.1">
+        <connectionReference context="/0/@componentInstance.0" source="/0/@componentInstance.0/@componentInstance.7/@featureInstance.1" destination="/0/@componentInstance.0/@componentInstance.0">
+          <connection xsi:type="aadl2:AccessConnection" href="../microwave.aadl#/0/@ownedPublicSection/@ownedClassifier.10/@ownedAccessConnection.8"/>
+        </connectionReference>
+      </connectionInstance>
+      <connectionInstance name="uiMem.uiBus -> uiBus" complete="true" kind="accessConnection" destination="/0/@componentInstance.0/@componentInstance.0" source="/0/@componentInstance.0/@componentInstance.8/@featureInstance.0">
+        <connectionReference context="/0/@componentInstance.0" source="/0/@componentInstance.0/@componentInstance.8/@featureInstance.0" destination="/0/@componentInstance.0/@componentInstance.0">
+          <connection xsi:type="aadl2:AccessConnection" href="../microwave.aadl#/0/@ownedPublicSection/@ownedClassifier.10/@ownedAccessConnection.4"/>
+        </connectionReference>
+      </connectionInstance>
+      <connectionInstance name="uiProcess.uiThread.displayOut -> display.displayIn" complete="true" kind="portConnection" destination="/0/@componentInstance.0/@componentInstance.2/@featureInstance.0" source="/0/@componentInstance.0/@componentInstance.9/@componentInstance.0/@featureInstance.1">
+        <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+          <property href="platform:/plugin/org.osate.contribution.sei/resources/properties/SEI.aadl#SEI.BandWidthBudget"/>
+          <ownedValue>
+            <ownedValue xsi:type="aadl2:RealLiteral" value="0.02">
+              <unit href="platform:/plugin/org.osate.aadl2.contrib/resources/properties/Predeclared_Property_Sets/AADL_Project.aadl#/0/@ownedPropertyType.17/@ownedLiteral.2"/>
+            </ownedValue>
+          </ownedValue>
+          <propertyAssociation href="../microwave.aadl#/0/@ownedPublicSection/@ownedClassifier.10/@ownedPortConnection.1/@ownedPropertyAssociation.0"/>
+        </ownedPropertyAssociation>
+        <connectionReference context="/0/@componentInstance.0/@componentInstance.9" source="/0/@componentInstance.0/@componentInstance.9/@componentInstance.0/@featureInstance.1" destination="/0/@componentInstance.0/@componentInstance.9/@featureInstance.1">
+          <connection xsi:type="aadl2:PortConnection" href="../microwave.aadl#/0/@ownedPublicSection/@ownedClassifier.14/@ownedPortConnection.1"/>
+        </connectionReference>
+        <connectionReference context="/0/@componentInstance.0" source="/0/@componentInstance.0/@componentInstance.9/@featureInstance.1" destination="/0/@componentInstance.0/@componentInstance.2/@featureInstance.0">
+          <connection xsi:type="aadl2:PortConnection" href="../microwave.aadl#/0/@ownedPublicSection/@ownedClassifier.10/@ownedPortConnection.1"/>
+        </connectionReference>
+      </connectionInstance>
+      <connectionInstance name="uiProcess.uiThread.lightLampOut -> lightLamp.lightIn" complete="true" kind="portConnection" destination="/0/@componentInstance.0/@componentInstance.6/@featureInstance.0" source="/0/@componentInstance.0/@componentInstance.9/@componentInstance.0/@featureInstance.5">
+        <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+          <property href="platform:/plugin/org.osate.contribution.sei/resources/properties/SEI.aadl#SEI.BandWidthBudget"/>
+          <ownedValue>
+            <ownedValue xsi:type="aadl2:RealLiteral" value="0.001">
+              <unit href="platform:/plugin/org.osate.aadl2.contrib/resources/properties/Predeclared_Property_Sets/AADL_Project.aadl#/0/@ownedPropertyType.17/@ownedLiteral.2"/>
+            </ownedValue>
+          </ownedValue>
+          <propertyAssociation href="../microwave.aadl#/0/@ownedPublicSection/@ownedClassifier.10/@ownedPortConnection.9/@ownedPropertyAssociation.0"/>
+        </ownedPropertyAssociation>
+        <connectionReference context="/0/@componentInstance.0/@componentInstance.9" source="/0/@componentInstance.0/@componentInstance.9/@componentInstance.0/@featureInstance.5" destination="/0/@componentInstance.0/@componentInstance.9/@featureInstance.5">
+          <connection xsi:type="aadl2:PortConnection" href="../microwave.aadl#/0/@ownedPublicSection/@ownedClassifier.14/@ownedPortConnection.9"/>
+        </connectionReference>
+        <connectionReference context="/0/@componentInstance.0" source="/0/@componentInstance.0/@componentInstance.9/@featureInstance.5" destination="/0/@componentInstance.0/@componentInstance.6/@featureInstance.0">
+          <connection xsi:type="aadl2:PortConnection" href="../microwave.aadl#/0/@ownedPublicSection/@ownedClassifier.10/@ownedPortConnection.9"/>
+        </connectionReference>
+      </connectionInstance>
+      <connectionInstance name="uiProcess.uiThread.doorLockOut -> doorLock.lockIn" complete="true" kind="portConnection" destination="/0/@componentInstance.0/@componentInstance.7/@featureInstance.0" source="/0/@componentInstance.0/@componentInstance.9/@componentInstance.0/@featureInstance.6">
+        <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+          <property href="platform:/plugin/org.osate.contribution.sei/resources/properties/SEI.aadl#SEI.BandWidthBudget"/>
+          <ownedValue>
+            <ownedValue xsi:type="aadl2:RealLiteral" value="0.001">
+              <unit href="platform:/plugin/org.osate.aadl2.contrib/resources/properties/Predeclared_Property_Sets/AADL_Project.aadl#/0/@ownedPropertyType.17/@ownedLiteral.2"/>
+            </ownedValue>
+          </ownedValue>
+          <propertyAssociation href="../microwave.aadl#/0/@ownedPublicSection/@ownedClassifier.10/@ownedPortConnection.10/@ownedPropertyAssociation.0"/>
+        </ownedPropertyAssociation>
+        <connectionReference context="/0/@componentInstance.0/@componentInstance.9" source="/0/@componentInstance.0/@componentInstance.9/@componentInstance.0/@featureInstance.6" destination="/0/@componentInstance.0/@componentInstance.9/@featureInstance.6">
+          <connection xsi:type="aadl2:PortConnection" href="../microwave.aadl#/0/@ownedPublicSection/@ownedClassifier.14/@ownedPortConnection.10"/>
+        </connectionReference>
+        <connectionReference context="/0/@componentInstance.0" source="/0/@componentInstance.0/@componentInstance.9/@featureInstance.6" destination="/0/@componentInstance.0/@componentInstance.7/@featureInstance.0">
+          <connection xsi:type="aadl2:PortConnection" href="../microwave.aadl#/0/@ownedPublicSection/@ownedClassifier.10/@ownedPortConnection.10"/>
+        </connectionReference>
+      </connectionInstance>
+      <connectionInstance name="uiProcess.uiThread.buzzerOut -> buzzer.buzzerIn" complete="true" kind="portConnection" destination="/0/@componentInstance.0/@componentInstance.3/@featureInstance.0" source="/0/@componentInstance.0/@componentInstance.9/@componentInstance.0/@featureInstance.9">
+        <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+          <property href="platform:/plugin/org.osate.contribution.sei/resources/properties/SEI.aadl#SEI.BandWidthBudget"/>
+          <ownedValue>
+            <ownedValue xsi:type="aadl2:RealLiteral" value="0.001">
+              <unit href="platform:/plugin/org.osate.aadl2.contrib/resources/properties/Predeclared_Property_Sets/AADL_Project.aadl#/0/@ownedPropertyType.17/@ownedLiteral.2"/>
+            </ownedValue>
+          </ownedValue>
+          <propertyAssociation href="../microwave.aadl#/0/@ownedPublicSection/@ownedClassifier.10/@ownedPortConnection.2/@ownedPropertyAssociation.0"/>
+        </ownedPropertyAssociation>
+        <connectionReference context="/0/@componentInstance.0/@componentInstance.9" source="/0/@componentInstance.0/@componentInstance.9/@componentInstance.0/@featureInstance.9" destination="/0/@componentInstance.0/@componentInstance.9/@featureInstance.9">
+          <connection xsi:type="aadl2:PortConnection" href="../microwave.aadl#/0/@ownedPublicSection/@ownedClassifier.14/@ownedPortConnection.2"/>
+        </connectionReference>
+        <connectionReference context="/0/@componentInstance.0" source="/0/@componentInstance.0/@componentInstance.9/@featureInstance.9" destination="/0/@componentInstance.0/@componentInstance.3/@featureInstance.0">
+          <connection xsi:type="aadl2:PortConnection" href="../microwave.aadl#/0/@ownedPublicSection/@ownedClassifier.10/@ownedPortConnection.2"/>
+        </connectionReference>
+      </connectionInstance>
+      <connectionInstance name="uiCPU.uiBus -> uiBus" complete="true" kind="accessConnection" destination="/0/@componentInstance.0/@componentInstance.0" source="/0/@componentInstance.0/@componentInstance.10/@featureInstance.0">
+        <connectionReference context="/0/@componentInstance.0" source="/0/@componentInstance.0/@componentInstance.10/@featureInstance.0" destination="/0/@componentInstance.0/@componentInstance.0">
+          <connection xsi:type="aadl2:AccessConnection" href="../microwave.aadl#/0/@ownedPublicSection/@ownedClassifier.10/@ownedAccessConnection.3"/>
+        </connectionReference>
+      </connectionInstance>
+      <subcomponent xsi:type="aadl2:SystemSubcomponent" href="../microwave.aadl#/0/@ownedPublicSection/@ownedClassifier.8/@ownedSystemSubcomponent.0"/>
+      <index>0</index>
+      <classifier xsi:type="aadl2:SystemImplementation" href="../microwave.aadl#microwave.UI_Subsystem.impl"/>
+    </componentInstance>
+    <componentInstance name="heatingSubsystem" category="system">
+      <featureInstance name="receiveStartCommand" type="/4">
+        <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+          <property href="platform:/plugin/org.osate.contribution.sei/resources/properties/Data_Model.aadl#Data_Model.Data_Representation"/>
+          <ownedValue>
+            <ownedValue xsi:type="aadl2:NamedValue">
+              <namedValue xsi:type="aadl2:EnumerationLiteral" href="platform:/plugin/org.osate.contribution.sei/resources/properties/Data_Model.aadl#/0/@ownedProperty.4/@ownedPropertyType/@ownedLiteral.7"/>
+            </ownedValue>
+          </ownedValue>
+          <propertyAssociation href="../microwave.aadl#/0/@ownedPublicSection/@ownedClassifier.0/@ownedPropertyAssociation.0"/>
+        </ownedPropertyAssociation>
+        <feature xsi:type="aadl2:DataPort" href="../microwave.aadl#/0/@ownedPublicSection/@ownedClassifier.11/@ownedDataPort.0"/>
+      </featureInstance>
+      <featureInstance name="receiveTimeCommand" type="/4">
+        <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+          <property href="platform:/plugin/org.osate.contribution.sei/resources/properties/Data_Model.aadl#Data_Model.Data_Representation"/>
+          <ownedValue>
+            <ownedValue xsi:type="aadl2:NamedValue">
+              <namedValue xsi:type="aadl2:EnumerationLiteral" href="platform:/plugin/org.osate.contribution.sei/resources/properties/Data_Model.aadl#/0/@ownedProperty.4/@ownedPropertyType/@ownedLiteral.7"/>
+            </ownedValue>
+          </ownedValue>
+          <propertyAssociation href="../microwave.aadl#/0/@ownedPublicSection/@ownedClassifier.0/@ownedPropertyAssociation.0"/>
+        </ownedPropertyAssociation>
+        <feature xsi:type="aadl2:DataPort" href="../microwave.aadl#/0/@ownedPublicSection/@ownedClassifier.11/@ownedDataPort.1"/>
+      </featureInstance>
+      <featureInstance name="statusOut" direction="out" type="/4">
+        <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+          <property href="platform:/plugin/org.osate.contribution.sei/resources/properties/Data_Model.aadl#Data_Model.Data_Representation"/>
+          <ownedValue>
+            <ownedValue xsi:type="aadl2:NamedValue">
+              <namedValue xsi:type="aadl2:EnumerationLiteral" href="platform:/plugin/org.osate.contribution.sei/resources/properties/Data_Model.aadl#/0/@ownedProperty.4/@ownedPropertyType/@ownedLiteral.7"/>
+            </ownedValue>
+          </ownedValue>
+          <propertyAssociation href="../microwave.aadl#/0/@ownedPublicSection/@ownedClassifier.0/@ownedPropertyAssociation.0"/>
+        </ownedPropertyAssociation>
+        <feature xsi:type="aadl2:DataPort" href="../microwave.aadl#/0/@ownedPublicSection/@ownedClassifier.11/@ownedDataPort.2"/>
+      </featureInstance>
+      <featureInstance name="stopCommand" category="eventPort">
+        <feature xsi:type="aadl2:EventPort" href="../microwave.aadl#/0/@ownedPublicSection/@ownedClassifier.11/@ownedEventPort.0"/>
+      </featureInstance>
+      <componentInstance name="heatBus" category="bus">
+        <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+          <property href="platform:/plugin/org.osate.contribution.sei/resources/properties/SEI.aadl#SEI.BandWidthBudget"/>
+          <ownedValue>
+            <ownedValue xsi:type="aadl2:RealLiteral" value="0.2">
+              <unit href="platform:/plugin/org.osate.aadl2.contrib/resources/properties/Predeclared_Property_Sets/AADL_Project.aadl#/0/@ownedPropertyType.17/@ownedLiteral.2"/>
+            </ownedValue>
+          </ownedValue>
+          <propertyAssociation href="../microwave.aadl#/0/@ownedPublicSection/@ownedClassifier.54/@ownedPropertyAssociation.2"/>
+        </ownedPropertyAssociation>
+        <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+          <property href="platform:/plugin/org.osate.contribution.sei/resources/properties/SEI.aadl#SEI.GrossWeight"/>
+          <ownedValue>
+            <ownedValue xsi:type="aadl2:RealLiteral" value="0.01">
+              <unit href="platform:/plugin/org.osate.contribution.sei/resources/properties/SEI.aadl#/0/@ownedPropertyType.0/@ownedLiteral.0"/>
+            </ownedValue>
+          </ownedValue>
+          <propertyAssociation href="../microwave.aadl#/0/@ownedPublicSection/@ownedClassifier.54/@ownedPropertyAssociation.0"/>
+        </ownedPropertyAssociation>
+        <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+          <property href="platform:/plugin/org.osate.contribution.sei/resources/properties/SEI.aadl#SEI.BandWidthCapacity"/>
+          <ownedValue>
+            <ownedValue xsi:type="aadl2:RealLiteral" value="100.0">
+              <unit href="platform:/plugin/org.osate.aadl2.contrib/resources/properties/Predeclared_Property_Sets/AADL_Project.aadl#/0/@ownedPropertyType.17/@ownedLiteral.2"/>
+            </ownedValue>
+          </ownedValue>
+          <propertyAssociation href="../microwave.aadl#/0/@ownedPublicSection/@ownedClassifier.54/@ownedPropertyAssociation.1"/>
+        </ownedPropertyAssociation>
+        <subcomponent xsi:type="aadl2:BusSubcomponent" href="../microwave.aadl#/0/@ownedPublicSection/@ownedClassifier.12/@ownedBusSubcomponent.0"/>
+        <index>0</index>
+        <classifier xsi:type="aadl2:BusImplementation" href="../microwave.aadl#microwave.HeatingBus.impl"/>
+      </componentInstance>
+      <componentInstance name="magnetron" category="device">
+        <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+          <property href="platform:/plugin/org.osate.contribution.sei/resources/properties/SEI.aadl#SEI.GrossWeight"/>
+          <ownedValue>
+            <ownedValue xsi:type="aadl2:RealLiteral" value="2.5">
+              <unit href="platform:/plugin/org.osate.contribution.sei/resources/properties/SEI.aadl#/0/@ownedPropertyType.0/@ownedLiteral.0"/>
+            </ownedValue>
+          </ownedValue>
+          <propertyAssociation href="../microwave.aadl#/0/@ownedPublicSection/@ownedClassifier.32/@ownedPropertyAssociation.0"/>
+        </ownedPropertyAssociation>
+        <featureInstance name="commandIn" type="/5">
+          <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+            <property href="platform:/plugin/org.osate.contribution.sei/resources/properties/Data_Model.aadl#Data_Model.Enumerators"/>
+            <ownedValue>
+              <ownedValue xsi:type="aadl2:ListValue">
+                <ownedListElement xsi:type="aadl2:StringLiteral" value="ON"/>
+                <ownedListElement xsi:type="aadl2:StringLiteral" value="OFF"/>
+              </ownedValue>
+            </ownedValue>
+            <propertyAssociation href="../microwave.aadl#/0/@ownedPublicSection/@ownedClassifier.4/@ownedPropertyAssociation.0"/>
+          </ownedPropertyAssociation>
+          <feature xsi:type="aadl2:DataPort" href="../microwave.aadl#/0/@ownedPublicSection/@ownedClassifier.31/@ownedDataPort.0"/>
+        </featureInstance>
+        <featureInstance name="heatBus" category="busAccess" type="/6">
+          <feature xsi:type="aadl2:BusAccess" href="../microwave.aadl#/0/@ownedPublicSection/@ownedClassifier.31/@ownedBusAccess.0"/>
+        </featureInstance>
+        <subcomponent xsi:type="aadl2:DeviceSubcomponent" href="../microwave.aadl#/0/@ownedPublicSection/@ownedClassifier.12/@ownedDeviceSubcomponent.0"/>
+        <index>0</index>
+        <classifier xsi:type="aadl2:DeviceImplementation" href="../microwave.aadl#microwave.Magnetron.impl"/>
+      </componentInstance>
+      <componentInstance name="turntable" category="device">
+        <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+          <property href="platform:/plugin/org.osate.contribution.sei/resources/properties/SEI.aadl#SEI.GrossWeight"/>
+          <ownedValue>
+            <ownedValue xsi:type="aadl2:RealLiteral" value="0.8">
+              <unit href="platform:/plugin/org.osate.contribution.sei/resources/properties/SEI.aadl#/0/@ownedPropertyType.0/@ownedLiteral.0"/>
+            </ownedValue>
+          </ownedValue>
+          <propertyAssociation href="../microwave.aadl#/0/@ownedPublicSection/@ownedClassifier.34/@ownedPropertyAssociation.0"/>
+        </ownedPropertyAssociation>
+        <featureInstance name="commandIn" type="/7">
+          <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+            <property href="platform:/plugin/org.osate.contribution.sei/resources/properties/Data_Model.aadl#Data_Model.Enumerators"/>
+            <ownedValue>
+              <ownedValue xsi:type="aadl2:ListValue">
+                <ownedListElement xsi:type="aadl2:StringLiteral" value="START"/>
+                <ownedListElement xsi:type="aadl2:StringLiteral" value="STOP"/>
+              </ownedValue>
+            </ownedValue>
+            <propertyAssociation href="../microwave.aadl#/0/@ownedPublicSection/@ownedClassifier.3/@ownedPropertyAssociation.0"/>
+          </ownedPropertyAssociation>
+          <feature xsi:type="aadl2:DataPort" href="../microwave.aadl#/0/@ownedPublicSection/@ownedClassifier.33/@ownedDataPort.0"/>
+        </featureInstance>
+        <featureInstance name="heatBus" category="busAccess" type="/6">
+          <feature xsi:type="aadl2:BusAccess" href="../microwave.aadl#/0/@ownedPublicSection/@ownedClassifier.33/@ownedBusAccess.0"/>
+        </featureInstance>
+        <subcomponent xsi:type="aadl2:DeviceSubcomponent" href="../microwave.aadl#/0/@ownedPublicSection/@ownedClassifier.12/@ownedDeviceSubcomponent.1"/>
+        <index>0</index>
+        <classifier xsi:type="aadl2:DeviceImplementation" href="../microwave.aadl#microwave.Turntable.impl"/>
+      </componentInstance>
+      <componentInstance name="tempsensor" category="device">
+        <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+          <property href="platform:/plugin/org.osate.contribution.sei/resources/properties/SEI.aadl#SEI.GrossWeight"/>
+          <ownedValue>
+            <ownedValue xsi:type="aadl2:RealLiteral" value="0.03">
+              <unit href="platform:/plugin/org.osate.contribution.sei/resources/properties/SEI.aadl#/0/@ownedPropertyType.0/@ownedLiteral.0"/>
+            </ownedValue>
+          </ownedValue>
+          <propertyAssociation href="../microwave.aadl#/0/@ownedPublicSection/@ownedClassifier.36/@ownedPropertyAssociation.0"/>
+        </ownedPropertyAssociation>
+        <featureInstance name="tempOut" direction="out" type="/8">
+          <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+            <property href="platform:/plugin/org.osate.contribution.sei/resources/properties/Data_Model.aadl#Data_Model.Data_Representation"/>
+            <ownedValue>
+              <ownedValue xsi:type="aadl2:NamedValue">
+                <namedValue xsi:type="aadl2:EnumerationLiteral" href="platform:/plugin/org.osate.contribution.sei/resources/properties/Data_Model.aadl#/0/@ownedProperty.4/@ownedPropertyType/@ownedLiteral.6"/>
+              </ownedValue>
+            </ownedValue>
+            <propertyAssociation href="../microwave.aadl#/0/@ownedPublicSection/@ownedClassifier.1/@ownedPropertyAssociation.0"/>
+          </ownedPropertyAssociation>
+          <feature xsi:type="aadl2:DataPort" href="../microwave.aadl#/0/@ownedPublicSection/@ownedClassifier.35/@ownedDataPort.0"/>
+        </featureInstance>
+        <featureInstance name="heatBus" category="busAccess" type="/6">
+          <feature xsi:type="aadl2:BusAccess" href="../microwave.aadl#/0/@ownedPublicSection/@ownedClassifier.35/@ownedBusAccess.0"/>
+        </featureInstance>
+        <subcomponent xsi:type="aadl2:DeviceSubcomponent" href="../microwave.aadl#/0/@ownedPublicSection/@ownedClassifier.12/@ownedDeviceSubcomponent.2"/>
+        <index>0</index>
+        <classifier xsi:type="aadl2:DeviceImplementation" href="../microwave.aadl#microwave.TempSensor.impl"/>
+      </componentInstance>
+      <componentInstance name="doorSensor" category="device">
+        <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+          <property href="platform:/plugin/org.osate.contribution.sei/resources/properties/SEI.aadl#SEI.GrossWeight"/>
+          <ownedValue>
+            <ownedValue xsi:type="aadl2:RealLiteral" value="0.04">
+              <unit href="platform:/plugin/org.osate.contribution.sei/resources/properties/SEI.aadl#/0/@ownedPropertyType.0/@ownedLiteral.0"/>
+            </ownedValue>
+          </ownedValue>
+          <propertyAssociation href="../microwave.aadl#/0/@ownedPublicSection/@ownedClassifier.38/@ownedPropertyAssociation.0"/>
+        </ownedPropertyAssociation>
+        <featureInstance name="doorOpen" direction="out" type="/9">
+          <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+            <property href="platform:/plugin/org.osate.contribution.sei/resources/properties/Data_Model.aadl#Data_Model.Data_Representation"/>
+            <ownedValue>
+              <ownedValue xsi:type="aadl2:NamedValue">
+                <namedValue xsi:type="aadl2:EnumerationLiteral" href="platform:/plugin/org.osate.contribution.sei/resources/properties/Data_Model.aadl#/0/@ownedProperty.4/@ownedPropertyType/@ownedLiteral.1"/>
+              </ownedValue>
+            </ownedValue>
+            <propertyAssociation href="../microwave.aadl#/0/@ownedPublicSection/@ownedClassifier.2/@ownedPropertyAssociation.0"/>
+          </ownedPropertyAssociation>
+          <feature xsi:type="aadl2:DataPort" href="../microwave.aadl#/0/@ownedPublicSection/@ownedClassifier.37/@ownedDataPort.0"/>
+        </featureInstance>
+        <featureInstance name="heatBus" category="busAccess" type="/6">
+          <feature xsi:type="aadl2:BusAccess" href="../microwave.aadl#/0/@ownedPublicSection/@ownedClassifier.37/@ownedBusAccess.0"/>
+        </featureInstance>
+        <subcomponent xsi:type="aadl2:DeviceSubcomponent" href="../microwave.aadl#/0/@ownedPublicSection/@ownedClassifier.12/@ownedDeviceSubcomponent.3"/>
+        <index>0</index>
+        <classifier xsi:type="aadl2:DeviceImplementation" href="../microwave.aadl#microwave.DoorSensor.impl"/>
+      </componentInstance>
+      <componentInstance name="heatMem" category="memory">
+        <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+          <property href="platform:/plugin/org.osate.contribution.sei/resources/properties/SEI.aadl#SEI.GrossWeight"/>
+          <ownedValue>
+            <ownedValue xsi:type="aadl2:RealLiteral" value="0.02">
+              <unit href="platform:/plugin/org.osate.contribution.sei/resources/properties/SEI.aadl#/0/@ownedPropertyType.0/@ownedLiteral.0"/>
+            </ownedValue>
+          </ownedValue>
+          <propertyAssociation href="../microwave.aadl#/0/@ownedPublicSection/@ownedClassifier.50/@ownedPropertyAssociation.2"/>
+        </ownedPropertyAssociation>
+        <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+          <property href="platform:/plugin/org.osate.contribution.sei/resources/properties/SEI.aadl#SEI.RAMCapacity"/>
+          <ownedValue>
+            <ownedValue xsi:type="aadl2:RealLiteral" value="64.0">
+              <unit href="platform:/plugin/org.osate.aadl2.contrib/resources/properties/Predeclared_Property_Sets/AADL_Project.aadl#/0/@ownedPropertyType.15/@ownedLiteral.2"/>
+            </ownedValue>
+          </ownedValue>
+          <propertyAssociation href="../microwave.aadl#/0/@ownedPublicSection/@ownedClassifier.50/@ownedPropertyAssociation.0"/>
+        </ownedPropertyAssociation>
+        <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+          <property href="platform:/plugin/org.osate.contribution.sei/resources/properties/SEI.aadl#SEI.ROMCapacity"/>
+          <ownedValue>
+            <ownedValue xsi:type="aadl2:RealLiteral" value="256.0">
+              <unit href="platform:/plugin/org.osate.aadl2.contrib/resources/properties/Predeclared_Property_Sets/AADL_Project.aadl#/0/@ownedPropertyType.15/@ownedLiteral.2"/>
+            </ownedValue>
+          </ownedValue>
+          <propertyAssociation href="../microwave.aadl#/0/@ownedPublicSection/@ownedClassifier.50/@ownedPropertyAssociation.1"/>
+        </ownedPropertyAssociation>
+        <featureInstance name="heatBus" category="busAccess" type="/6">
+          <feature xsi:type="aadl2:BusAccess" href="../microwave.aadl#/0/@ownedPublicSection/@ownedClassifier.49/@ownedBusAccess.0"/>
+        </featureInstance>
+        <subcomponent xsi:type="aadl2:MemorySubcomponent" href="../microwave.aadl#/0/@ownedPublicSection/@ownedClassifier.12/@ownedMemorySubcomponent.0"/>
+        <index>0</index>
+        <classifier xsi:type="aadl2:MemoryImplementation" href="../microwave.aadl#microwave.HeatingMemory.impl"/>
+      </componentInstance>
+      <componentInstance name="heatProcess" category="process">
+        <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+          <property href="platform:/plugin/org.osate.aadl2.contrib/resources/properties/Predeclared_Property_Sets/Deployment_Properties.aadl#Deployment_Properties.Actual_Processor_Binding"/>
+          <ownedValue>
+            <ownedValue xsi:type="aadl2:ListValue">
+              <ownedListElement xsi:type="instance:InstanceReferenceValue" referencedInstanceObject="/0/@componentInstance.1/@componentInstance.7"/>
+            </ownedValue>
+          </ownedValue>
+          <propertyAssociation href="../microwave.aadl#/0/@ownedPublicSection/@ownedClassifier.12/@ownedPropertyAssociation.0"/>
+        </ownedPropertyAssociation>
+        <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+          <property href="platform:/plugin/org.osate.aadl2.contrib/resources/properties/Predeclared_Property_Sets/Deployment_Properties.aadl#Deployment_Properties.Actual_Memory_Binding"/>
+          <ownedValue>
+            <ownedValue xsi:type="aadl2:ListValue">
+              <ownedListElement xsi:type="instance:InstanceReferenceValue" referencedInstanceObject="/0/@componentInstance.1/@componentInstance.5"/>
+            </ownedValue>
+          </ownedValue>
+          <propertyAssociation href="../microwave.aadl#/0/@ownedPublicSection/@ownedClassifier.12/@ownedPropertyAssociation.1"/>
+        </ownedPropertyAssociation>
+        <featureInstance name="tempIn" type="/8">
+          <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+            <property href="platform:/plugin/org.osate.aadl2.contrib/resources/properties/Predeclared_Property_Sets/Deployment_Properties.aadl#Deployment_Properties.Actual_Memory_Binding"/>
+            <ownedValue>
+              <ownedValue xsi:type="aadl2:ListValue">
+                <ownedListElement xsi:type="instance:InstanceReferenceValue" referencedInstanceObject="/0/@componentInstance.1/@componentInstance.5"/>
+              </ownedValue>
+            </ownedValue>
+            <propertyAssociation href="../microwave.aadl#/0/@ownedPublicSection/@ownedClassifier.12/@ownedPropertyAssociation.1"/>
+          </ownedPropertyAssociation>
+          <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+            <property href="platform:/plugin/org.osate.contribution.sei/resources/properties/Data_Model.aadl#Data_Model.Data_Representation"/>
+            <ownedValue>
+              <ownedValue xsi:type="aadl2:NamedValue">
+                <namedValue xsi:type="aadl2:EnumerationLiteral" href="platform:/plugin/org.osate.contribution.sei/resources/properties/Data_Model.aadl#/0/@ownedProperty.4/@ownedPropertyType/@ownedLiteral.6"/>
+              </ownedValue>
+            </ownedValue>
+            <propertyAssociation href="../microwave.aadl#/0/@ownedPublicSection/@ownedClassifier.1/@ownedPropertyAssociation.0"/>
+          </ownedPropertyAssociation>
+          <feature xsi:type="aadl2:DataPort" href="../microwave.aadl#/0/@ownedPublicSection/@ownedClassifier.17/@ownedDataPort.0"/>
+        </featureInstance>
+        <featureInstance name="magnetronOut" direction="out" type="/5">
+          <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+            <property href="platform:/plugin/org.osate.aadl2.contrib/resources/properties/Predeclared_Property_Sets/Deployment_Properties.aadl#Deployment_Properties.Actual_Memory_Binding"/>
+            <ownedValue>
+              <ownedValue xsi:type="aadl2:ListValue">
+                <ownedListElement xsi:type="instance:InstanceReferenceValue" referencedInstanceObject="/0/@componentInstance.1/@componentInstance.5"/>
+              </ownedValue>
+            </ownedValue>
+            <propertyAssociation href="../microwave.aadl#/0/@ownedPublicSection/@ownedClassifier.12/@ownedPropertyAssociation.1"/>
+          </ownedPropertyAssociation>
+          <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+            <property href="platform:/plugin/org.osate.contribution.sei/resources/properties/Data_Model.aadl#Data_Model.Enumerators"/>
+            <ownedValue>
+              <ownedValue xsi:type="aadl2:ListValue">
+                <ownedListElement xsi:type="aadl2:StringLiteral" value="ON"/>
+                <ownedListElement xsi:type="aadl2:StringLiteral" value="OFF"/>
+              </ownedValue>
+            </ownedValue>
+            <propertyAssociation href="../microwave.aadl#/0/@ownedPublicSection/@ownedClassifier.4/@ownedPropertyAssociation.0"/>
+          </ownedPropertyAssociation>
+          <feature xsi:type="aadl2:DataPort" href="../microwave.aadl#/0/@ownedPublicSection/@ownedClassifier.17/@ownedDataPort.1"/>
+        </featureInstance>
+        <featureInstance name="turntableOut" direction="out" type="/7">
+          <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+            <property href="platform:/plugin/org.osate.aadl2.contrib/resources/properties/Predeclared_Property_Sets/Deployment_Properties.aadl#Deployment_Properties.Actual_Memory_Binding"/>
+            <ownedValue>
+              <ownedValue xsi:type="aadl2:ListValue">
+                <ownedListElement xsi:type="instance:InstanceReferenceValue" referencedInstanceObject="/0/@componentInstance.1/@componentInstance.5"/>
+              </ownedValue>
+            </ownedValue>
+            <propertyAssociation href="../microwave.aadl#/0/@ownedPublicSection/@ownedClassifier.12/@ownedPropertyAssociation.1"/>
+          </ownedPropertyAssociation>
+          <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+            <property href="platform:/plugin/org.osate.contribution.sei/resources/properties/Data_Model.aadl#Data_Model.Enumerators"/>
+            <ownedValue>
+              <ownedValue xsi:type="aadl2:ListValue">
+                <ownedListElement xsi:type="aadl2:StringLiteral" value="START"/>
+                <ownedListElement xsi:type="aadl2:StringLiteral" value="STOP"/>
+              </ownedValue>
+            </ownedValue>
+            <propertyAssociation href="../microwave.aadl#/0/@ownedPublicSection/@ownedClassifier.3/@ownedPropertyAssociation.0"/>
+          </ownedPropertyAssociation>
+          <feature xsi:type="aadl2:DataPort" href="../microwave.aadl#/0/@ownedPublicSection/@ownedClassifier.17/@ownedDataPort.2"/>
+        </featureInstance>
+        <featureInstance name="statusOut" direction="out" type="/4">
+          <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+            <property href="platform:/plugin/org.osate.aadl2.contrib/resources/properties/Predeclared_Property_Sets/Deployment_Properties.aadl#Deployment_Properties.Actual_Memory_Binding"/>
+            <ownedValue>
+              <ownedValue xsi:type="aadl2:ListValue">
+                <ownedListElement xsi:type="instance:InstanceReferenceValue" referencedInstanceObject="/0/@componentInstance.1/@componentInstance.5"/>
+              </ownedValue>
+            </ownedValue>
+            <propertyAssociation href="../microwave.aadl#/0/@ownedPublicSection/@ownedClassifier.12/@ownedPropertyAssociation.1"/>
+          </ownedPropertyAssociation>
+          <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+            <property href="platform:/plugin/org.osate.contribution.sei/resources/properties/Data_Model.aadl#Data_Model.Data_Representation"/>
+            <ownedValue>
+              <ownedValue xsi:type="aadl2:NamedValue">
+                <namedValue xsi:type="aadl2:EnumerationLiteral" href="platform:/plugin/org.osate.contribution.sei/resources/properties/Data_Model.aadl#/0/@ownedProperty.4/@ownedPropertyType/@ownedLiteral.7"/>
+              </ownedValue>
+            </ownedValue>
+            <propertyAssociation href="../microwave.aadl#/0/@ownedPublicSection/@ownedClassifier.0/@ownedPropertyAssociation.0"/>
+          </ownedPropertyAssociation>
+          <feature xsi:type="aadl2:DataPort" href="../microwave.aadl#/0/@ownedPublicSection/@ownedClassifier.17/@ownedDataPort.3"/>
+        </featureInstance>
+        <featureInstance name="receiveStartCommand" type="/4">
+          <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+            <property href="platform:/plugin/org.osate.aadl2.contrib/resources/properties/Predeclared_Property_Sets/Deployment_Properties.aadl#Deployment_Properties.Actual_Memory_Binding"/>
+            <ownedValue>
+              <ownedValue xsi:type="aadl2:ListValue">
+                <ownedListElement xsi:type="instance:InstanceReferenceValue" referencedInstanceObject="/0/@componentInstance.1/@componentInstance.5"/>
+              </ownedValue>
+            </ownedValue>
+            <propertyAssociation href="../microwave.aadl#/0/@ownedPublicSection/@ownedClassifier.12/@ownedPropertyAssociation.1"/>
+          </ownedPropertyAssociation>
+          <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+            <property href="platform:/plugin/org.osate.contribution.sei/resources/properties/Data_Model.aadl#Data_Model.Data_Representation"/>
+            <ownedValue>
+              <ownedValue xsi:type="aadl2:NamedValue">
+                <namedValue xsi:type="aadl2:EnumerationLiteral" href="platform:/plugin/org.osate.contribution.sei/resources/properties/Data_Model.aadl#/0/@ownedProperty.4/@ownedPropertyType/@ownedLiteral.7"/>
+              </ownedValue>
+            </ownedValue>
+            <propertyAssociation href="../microwave.aadl#/0/@ownedPublicSection/@ownedClassifier.0/@ownedPropertyAssociation.0"/>
+          </ownedPropertyAssociation>
+          <feature xsi:type="aadl2:DataPort" href="../microwave.aadl#/0/@ownedPublicSection/@ownedClassifier.17/@ownedDataPort.4"/>
+        </featureInstance>
+        <featureInstance name="receiveTimeCommand" type="/4">
+          <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+            <property href="platform:/plugin/org.osate.aadl2.contrib/resources/properties/Predeclared_Property_Sets/Deployment_Properties.aadl#Deployment_Properties.Actual_Memory_Binding"/>
+            <ownedValue>
+              <ownedValue xsi:type="aadl2:ListValue">
+                <ownedListElement xsi:type="instance:InstanceReferenceValue" referencedInstanceObject="/0/@componentInstance.1/@componentInstance.5"/>
+              </ownedValue>
+            </ownedValue>
+            <propertyAssociation href="../microwave.aadl#/0/@ownedPublicSection/@ownedClassifier.12/@ownedPropertyAssociation.1"/>
+          </ownedPropertyAssociation>
+          <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+            <property href="platform:/plugin/org.osate.contribution.sei/resources/properties/Data_Model.aadl#Data_Model.Data_Representation"/>
+            <ownedValue>
+              <ownedValue xsi:type="aadl2:NamedValue">
+                <namedValue xsi:type="aadl2:EnumerationLiteral" href="platform:/plugin/org.osate.contribution.sei/resources/properties/Data_Model.aadl#/0/@ownedProperty.4/@ownedPropertyType/@ownedLiteral.7"/>
+              </ownedValue>
+            </ownedValue>
+            <propertyAssociation href="../microwave.aadl#/0/@ownedPublicSection/@ownedClassifier.0/@ownedPropertyAssociation.0"/>
+          </ownedPropertyAssociation>
+          <feature xsi:type="aadl2:DataPort" href="../microwave.aadl#/0/@ownedPublicSection/@ownedClassifier.17/@ownedDataPort.5"/>
+        </featureInstance>
+        <featureInstance name="doorStatus" type="/9">
+          <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+            <property href="platform:/plugin/org.osate.aadl2.contrib/resources/properties/Predeclared_Property_Sets/Deployment_Properties.aadl#Deployment_Properties.Actual_Memory_Binding"/>
+            <ownedValue>
+              <ownedValue xsi:type="aadl2:ListValue">
+                <ownedListElement xsi:type="instance:InstanceReferenceValue" referencedInstanceObject="/0/@componentInstance.1/@componentInstance.5"/>
+              </ownedValue>
+            </ownedValue>
+            <propertyAssociation href="../microwave.aadl#/0/@ownedPublicSection/@ownedClassifier.12/@ownedPropertyAssociation.1"/>
+          </ownedPropertyAssociation>
+          <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+            <property href="platform:/plugin/org.osate.contribution.sei/resources/properties/Data_Model.aadl#Data_Model.Data_Representation"/>
+            <ownedValue>
+              <ownedValue xsi:type="aadl2:NamedValue">
+                <namedValue xsi:type="aadl2:EnumerationLiteral" href="platform:/plugin/org.osate.contribution.sei/resources/properties/Data_Model.aadl#/0/@ownedProperty.4/@ownedPropertyType/@ownedLiteral.1"/>
+              </ownedValue>
+            </ownedValue>
+            <propertyAssociation href="../microwave.aadl#/0/@ownedPublicSection/@ownedClassifier.2/@ownedPropertyAssociation.0"/>
+          </ownedPropertyAssociation>
+          <feature xsi:type="aadl2:DataPort" href="../microwave.aadl#/0/@ownedPublicSection/@ownedClassifier.17/@ownedDataPort.6"/>
+        </featureInstance>
+        <featureInstance name="stopCommand" category="eventPort">
+          <feature xsi:type="aadl2:EventPort" href="../microwave.aadl#/0/@ownedPublicSection/@ownedClassifier.17/@ownedEventPort.0"/>
+        </featureInstance>
+        <componentInstance name="heatThread" category="thread">
+          <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+            <property href="platform:/plugin/org.osate.aadl2.contrib/resources/properties/Predeclared_Property_Sets/Deployment_Properties.aadl#Deployment_Properties.Actual_Processor_Binding"/>
+            <ownedValue>
+              <ownedValue xsi:type="aadl2:ListValue">
+                <ownedListElement xsi:type="instance:InstanceReferenceValue" referencedInstanceObject="/0/@componentInstance.1/@componentInstance.7"/>
+              </ownedValue>
+            </ownedValue>
+            <propertyAssociation href="../microwave.aadl#/0/@ownedPublicSection/@ownedClassifier.12/@ownedPropertyAssociation.0"/>
+          </ownedPropertyAssociation>
+          <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+            <property href="platform:/plugin/org.osate.aadl2.contrib/resources/properties/Predeclared_Property_Sets/Deployment_Properties.aadl#Deployment_Properties.Actual_Memory_Binding"/>
+            <ownedValue>
+              <ownedValue xsi:type="aadl2:ListValue">
+                <ownedListElement xsi:type="instance:InstanceReferenceValue" referencedInstanceObject="/0/@componentInstance.1/@componentInstance.5"/>
+              </ownedValue>
+            </ownedValue>
+            <propertyAssociation href="../microwave.aadl#/0/@ownedPublicSection/@ownedClassifier.12/@ownedPropertyAssociation.1"/>
+          </ownedPropertyAssociation>
+          <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+            <property href="platform:/plugin/org.osate.contribution.sei/resources/properties/SEI.aadl#SEI.MIPSBudget"/>
+            <ownedValue>
+              <ownedValue xsi:type="aadl2:RealLiteral" value="10.0">
+                <unit href="platform:/plugin/org.osate.contribution.sei/resources/properties/SEI.aadl#/0/@ownedPropertyType.4/@ownedLiteral.1"/>
+              </ownedValue>
+            </ownedValue>
+            <propertyAssociation href="../microwave.aadl#/0/@ownedPublicSection/@ownedClassifier.20/@ownedPropertyAssociation.0"/>
+          </ownedPropertyAssociation>
+          <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+            <property href="platform:/plugin/org.osate.contribution.sei/resources/properties/SEI.aadl#SEI.RAMBudget"/>
+            <ownedValue>
+              <ownedValue xsi:type="aadl2:RealLiteral" value="8.0">
+                <unit href="platform:/plugin/org.osate.aadl2.contrib/resources/properties/Predeclared_Property_Sets/AADL_Project.aadl#/0/@ownedPropertyType.15/@ownedLiteral.2"/>
+              </ownedValue>
+            </ownedValue>
+            <propertyAssociation href="../microwave.aadl#/0/@ownedPublicSection/@ownedClassifier.20/@ownedPropertyAssociation.1"/>
+          </ownedPropertyAssociation>
+          <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+            <property href="platform:/plugin/org.osate.contribution.sei/resources/properties/SEI.aadl#SEI.ROMBudget"/>
+            <ownedValue>
+              <ownedValue xsi:type="aadl2:RealLiteral" value="32.0">
+                <unit href="platform:/plugin/org.osate.aadl2.contrib/resources/properties/Predeclared_Property_Sets/AADL_Project.aadl#/0/@ownedPropertyType.15/@ownedLiteral.2"/>
+              </ownedValue>
+            </ownedValue>
+            <propertyAssociation href="../microwave.aadl#/0/@ownedPublicSection/@ownedClassifier.20/@ownedPropertyAssociation.2"/>
+          </ownedPropertyAssociation>
+          <featureInstance name="tempIn" type="/8">
+            <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+              <property href="platform:/plugin/org.osate.aadl2.contrib/resources/properties/Predeclared_Property_Sets/Deployment_Properties.aadl#Deployment_Properties.Actual_Memory_Binding"/>
+              <ownedValue>
+                <ownedValue xsi:type="aadl2:ListValue">
+                  <ownedListElement xsi:type="instance:InstanceReferenceValue" referencedInstanceObject="/0/@componentInstance.1/@componentInstance.5"/>
+                </ownedValue>
+              </ownedValue>
+              <propertyAssociation href="../microwave.aadl#/0/@ownedPublicSection/@ownedClassifier.12/@ownedPropertyAssociation.1"/>
+            </ownedPropertyAssociation>
+            <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+              <property href="platform:/plugin/org.osate.contribution.sei/resources/properties/Data_Model.aadl#Data_Model.Data_Representation"/>
+              <ownedValue>
+                <ownedValue xsi:type="aadl2:NamedValue">
+                  <namedValue xsi:type="aadl2:EnumerationLiteral" href="platform:/plugin/org.osate.contribution.sei/resources/properties/Data_Model.aadl#/0/@ownedProperty.4/@ownedPropertyType/@ownedLiteral.6"/>
+                </ownedValue>
+              </ownedValue>
+              <propertyAssociation href="../microwave.aadl#/0/@ownedPublicSection/@ownedClassifier.1/@ownedPropertyAssociation.0"/>
+            </ownedPropertyAssociation>
+            <feature xsi:type="aadl2:DataPort" href="../microwave.aadl#/0/@ownedPublicSection/@ownedClassifier.19/@ownedDataPort.0"/>
+          </featureInstance>
+          <featureInstance name="magnetronOut" direction="out" type="/5">
+            <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+              <property href="platform:/plugin/org.osate.aadl2.contrib/resources/properties/Predeclared_Property_Sets/Deployment_Properties.aadl#Deployment_Properties.Actual_Memory_Binding"/>
+              <ownedValue>
+                <ownedValue xsi:type="aadl2:ListValue">
+                  <ownedListElement xsi:type="instance:InstanceReferenceValue" referencedInstanceObject="/0/@componentInstance.1/@componentInstance.5"/>
+                </ownedValue>
+              </ownedValue>
+              <propertyAssociation href="../microwave.aadl#/0/@ownedPublicSection/@ownedClassifier.12/@ownedPropertyAssociation.1"/>
+            </ownedPropertyAssociation>
+            <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+              <property href="platform:/plugin/org.osate.contribution.sei/resources/properties/Data_Model.aadl#Data_Model.Enumerators"/>
+              <ownedValue>
+                <ownedValue xsi:type="aadl2:ListValue">
+                  <ownedListElement xsi:type="aadl2:StringLiteral" value="ON"/>
+                  <ownedListElement xsi:type="aadl2:StringLiteral" value="OFF"/>
+                </ownedValue>
+              </ownedValue>
+              <propertyAssociation href="../microwave.aadl#/0/@ownedPublicSection/@ownedClassifier.4/@ownedPropertyAssociation.0"/>
+            </ownedPropertyAssociation>
+            <feature xsi:type="aadl2:DataPort" href="../microwave.aadl#/0/@ownedPublicSection/@ownedClassifier.19/@ownedDataPort.1"/>
+          </featureInstance>
+          <featureInstance name="turntableOut" direction="out" type="/7">
+            <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+              <property href="platform:/plugin/org.osate.aadl2.contrib/resources/properties/Predeclared_Property_Sets/Deployment_Properties.aadl#Deployment_Properties.Actual_Memory_Binding"/>
+              <ownedValue>
+                <ownedValue xsi:type="aadl2:ListValue">
+                  <ownedListElement xsi:type="instance:InstanceReferenceValue" referencedInstanceObject="/0/@componentInstance.1/@componentInstance.5"/>
+                </ownedValue>
+              </ownedValue>
+              <propertyAssociation href="../microwave.aadl#/0/@ownedPublicSection/@ownedClassifier.12/@ownedPropertyAssociation.1"/>
+            </ownedPropertyAssociation>
+            <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+              <property href="platform:/plugin/org.osate.contribution.sei/resources/properties/Data_Model.aadl#Data_Model.Enumerators"/>
+              <ownedValue>
+                <ownedValue xsi:type="aadl2:ListValue">
+                  <ownedListElement xsi:type="aadl2:StringLiteral" value="START"/>
+                  <ownedListElement xsi:type="aadl2:StringLiteral" value="STOP"/>
+                </ownedValue>
+              </ownedValue>
+              <propertyAssociation href="../microwave.aadl#/0/@ownedPublicSection/@ownedClassifier.3/@ownedPropertyAssociation.0"/>
+            </ownedPropertyAssociation>
+            <feature xsi:type="aadl2:DataPort" href="../microwave.aadl#/0/@ownedPublicSection/@ownedClassifier.19/@ownedDataPort.2"/>
+          </featureInstance>
+          <featureInstance name="statusOut" direction="out" type="/4">
+            <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+              <property href="platform:/plugin/org.osate.aadl2.contrib/resources/properties/Predeclared_Property_Sets/Deployment_Properties.aadl#Deployment_Properties.Actual_Memory_Binding"/>
+              <ownedValue>
+                <ownedValue xsi:type="aadl2:ListValue">
+                  <ownedListElement xsi:type="instance:InstanceReferenceValue" referencedInstanceObject="/0/@componentInstance.1/@componentInstance.5"/>
+                </ownedValue>
+              </ownedValue>
+              <propertyAssociation href="../microwave.aadl#/0/@ownedPublicSection/@ownedClassifier.12/@ownedPropertyAssociation.1"/>
+            </ownedPropertyAssociation>
+            <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+              <property href="platform:/plugin/org.osate.contribution.sei/resources/properties/Data_Model.aadl#Data_Model.Data_Representation"/>
+              <ownedValue>
+                <ownedValue xsi:type="aadl2:NamedValue">
+                  <namedValue xsi:type="aadl2:EnumerationLiteral" href="platform:/plugin/org.osate.contribution.sei/resources/properties/Data_Model.aadl#/0/@ownedProperty.4/@ownedPropertyType/@ownedLiteral.7"/>
+                </ownedValue>
+              </ownedValue>
+              <propertyAssociation href="../microwave.aadl#/0/@ownedPublicSection/@ownedClassifier.0/@ownedPropertyAssociation.0"/>
+            </ownedPropertyAssociation>
+            <feature xsi:type="aadl2:DataPort" href="../microwave.aadl#/0/@ownedPublicSection/@ownedClassifier.19/@ownedDataPort.3"/>
+          </featureInstance>
+          <featureInstance name="receiveStartCommand" type="/4">
+            <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+              <property href="platform:/plugin/org.osate.aadl2.contrib/resources/properties/Predeclared_Property_Sets/Deployment_Properties.aadl#Deployment_Properties.Actual_Memory_Binding"/>
+              <ownedValue>
+                <ownedValue xsi:type="aadl2:ListValue">
+                  <ownedListElement xsi:type="instance:InstanceReferenceValue" referencedInstanceObject="/0/@componentInstance.1/@componentInstance.5"/>
+                </ownedValue>
+              </ownedValue>
+              <propertyAssociation href="../microwave.aadl#/0/@ownedPublicSection/@ownedClassifier.12/@ownedPropertyAssociation.1"/>
+            </ownedPropertyAssociation>
+            <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+              <property href="platform:/plugin/org.osate.contribution.sei/resources/properties/Data_Model.aadl#Data_Model.Data_Representation"/>
+              <ownedValue>
+                <ownedValue xsi:type="aadl2:NamedValue">
+                  <namedValue xsi:type="aadl2:EnumerationLiteral" href="platform:/plugin/org.osate.contribution.sei/resources/properties/Data_Model.aadl#/0/@ownedProperty.4/@ownedPropertyType/@ownedLiteral.7"/>
+                </ownedValue>
+              </ownedValue>
+              <propertyAssociation href="../microwave.aadl#/0/@ownedPublicSection/@ownedClassifier.0/@ownedPropertyAssociation.0"/>
+            </ownedPropertyAssociation>
+            <feature xsi:type="aadl2:DataPort" href="../microwave.aadl#/0/@ownedPublicSection/@ownedClassifier.19/@ownedDataPort.4"/>
+          </featureInstance>
+          <featureInstance name="receiveTimeCommand" type="/4">
+            <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+              <property href="platform:/plugin/org.osate.aadl2.contrib/resources/properties/Predeclared_Property_Sets/Deployment_Properties.aadl#Deployment_Properties.Actual_Memory_Binding"/>
+              <ownedValue>
+                <ownedValue xsi:type="aadl2:ListValue">
+                  <ownedListElement xsi:type="instance:InstanceReferenceValue" referencedInstanceObject="/0/@componentInstance.1/@componentInstance.5"/>
+                </ownedValue>
+              </ownedValue>
+              <propertyAssociation href="../microwave.aadl#/0/@ownedPublicSection/@ownedClassifier.12/@ownedPropertyAssociation.1"/>
+            </ownedPropertyAssociation>
+            <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+              <property href="platform:/plugin/org.osate.contribution.sei/resources/properties/Data_Model.aadl#Data_Model.Data_Representation"/>
+              <ownedValue>
+                <ownedValue xsi:type="aadl2:NamedValue">
+                  <namedValue xsi:type="aadl2:EnumerationLiteral" href="platform:/plugin/org.osate.contribution.sei/resources/properties/Data_Model.aadl#/0/@ownedProperty.4/@ownedPropertyType/@ownedLiteral.7"/>
+                </ownedValue>
+              </ownedValue>
+              <propertyAssociation href="../microwave.aadl#/0/@ownedPublicSection/@ownedClassifier.0/@ownedPropertyAssociation.0"/>
+            </ownedPropertyAssociation>
+            <feature xsi:type="aadl2:DataPort" href="../microwave.aadl#/0/@ownedPublicSection/@ownedClassifier.19/@ownedDataPort.5"/>
+          </featureInstance>
+          <featureInstance name="doorStatus" type="/9">
+            <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+              <property href="platform:/plugin/org.osate.aadl2.contrib/resources/properties/Predeclared_Property_Sets/Deployment_Properties.aadl#Deployment_Properties.Actual_Memory_Binding"/>
+              <ownedValue>
+                <ownedValue xsi:type="aadl2:ListValue">
+                  <ownedListElement xsi:type="instance:InstanceReferenceValue" referencedInstanceObject="/0/@componentInstance.1/@componentInstance.5"/>
+                </ownedValue>
+              </ownedValue>
+              <propertyAssociation href="../microwave.aadl#/0/@ownedPublicSection/@ownedClassifier.12/@ownedPropertyAssociation.1"/>
+            </ownedPropertyAssociation>
+            <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+              <property href="platform:/plugin/org.osate.contribution.sei/resources/properties/Data_Model.aadl#Data_Model.Data_Representation"/>
+              <ownedValue>
+                <ownedValue xsi:type="aadl2:NamedValue">
+                  <namedValue xsi:type="aadl2:EnumerationLiteral" href="platform:/plugin/org.osate.contribution.sei/resources/properties/Data_Model.aadl#/0/@ownedProperty.4/@ownedPropertyType/@ownedLiteral.1"/>
+                </ownedValue>
+              </ownedValue>
+              <propertyAssociation href="../microwave.aadl#/0/@ownedPublicSection/@ownedClassifier.2/@ownedPropertyAssociation.0"/>
+            </ownedPropertyAssociation>
+            <feature xsi:type="aadl2:DataPort" href="../microwave.aadl#/0/@ownedPublicSection/@ownedClassifier.19/@ownedDataPort.6"/>
+          </featureInstance>
+          <featureInstance name="stopCommand" category="eventPort">
+            <feature xsi:type="aadl2:EventPort" href="../microwave.aadl#/0/@ownedPublicSection/@ownedClassifier.19/@ownedEventPort.0"/>
+          </featureInstance>
+          <subcomponent xsi:type="aadl2:ThreadSubcomponent" href="../microwave.aadl#/0/@ownedPublicSection/@ownedClassifier.18/@ownedThreadSubcomponent.0"/>
+          <index>0</index>
+          <classifier xsi:type="aadl2:ThreadImplementation" href="../microwave.aadl#microwave.HeatingThread.impl"/>
+        </componentInstance>
+        <subcomponent xsi:type="aadl2:ProcessSubcomponent" href="../microwave.aadl#/0/@ownedPublicSection/@ownedClassifier.12/@ownedProcessSubcomponent.0"/>
+        <index>0</index>
+        <classifier xsi:type="aadl2:ProcessImplementation" href="../microwave.aadl#microwave.HeatingController.impl"/>
+      </componentInstance>
+      <componentInstance name="heatCPU" category="processor">
+        <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+          <property href="platform:/plugin/org.osate.contribution.sei/resources/properties/SEI.aadl#SEI.GrossWeight"/>
+          <ownedValue>
+            <ownedValue xsi:type="aadl2:RealLiteral" value="0.05">
+              <unit href="platform:/plugin/org.osate.contribution.sei/resources/properties/SEI.aadl#/0/@ownedPropertyType.0/@ownedLiteral.0"/>
+            </ownedValue>
+          </ownedValue>
+          <propertyAssociation href="../microwave.aadl#/0/@ownedPublicSection/@ownedClassifier.46/@ownedPropertyAssociation.1"/>
+        </ownedPropertyAssociation>
+        <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+          <property href="platform:/plugin/org.osate.contribution.sei/resources/properties/SEI.aadl#SEI.MIPSCapacity"/>
+          <ownedValue>
+            <ownedValue xsi:type="aadl2:RealLiteral" value="50.0">
+              <unit href="platform:/plugin/org.osate.contribution.sei/resources/properties/SEI.aadl#/0/@ownedPropertyType.4/@ownedLiteral.1"/>
+            </ownedValue>
+          </ownedValue>
+          <propertyAssociation href="../microwave.aadl#/0/@ownedPublicSection/@ownedClassifier.46/@ownedPropertyAssociation.0"/>
+        </ownedPropertyAssociation>
+        <featureInstance name="heatBus" category="busAccess" type="/6">
+          <feature xsi:type="aadl2:BusAccess" href="../microwave.aadl#/0/@ownedPublicSection/@ownedClassifier.45/@ownedBusAccess.0"/>
+        </featureInstance>
+        <subcomponent xsi:type="aadl2:ProcessorSubcomponent" href="../microwave.aadl#/0/@ownedPublicSection/@ownedClassifier.12/@ownedProcessorSubcomponent.0"/>
+        <index>0</index>
+        <classifier xsi:type="aadl2:ProcessorImplementation" href="../microwave.aadl#microwave.HeatingCPU.impl"/>
+      </componentInstance>
+      <connectionInstance name="heatBus -> magnetron.heatBus" complete="true" kind="accessConnection" destination="/0/@componentInstance.1/@componentInstance.1/@featureInstance.1" source="/0/@componentInstance.1/@componentInstance.0">
+        <connectionReference context="/0/@componentInstance.1" source="/0/@componentInstance.1/@componentInstance.0" destination="/0/@componentInstance.1/@componentInstance.1/@featureInstance.1" reverse="true">
+          <connection xsi:type="aadl2:AccessConnection" href="../microwave.aadl#/0/@ownedPublicSection/@ownedClassifier.12/@ownedAccessConnection.0"/>
+        </connectionReference>
+      </connectionInstance>
+      <connectionInstance name="heatBus -> turntable.heatBus" complete="true" kind="accessConnection" destination="/0/@componentInstance.1/@componentInstance.2/@featureInstance.1" source="/0/@componentInstance.1/@componentInstance.0">
+        <connectionReference context="/0/@componentInstance.1" source="/0/@componentInstance.1/@componentInstance.0" destination="/0/@componentInstance.1/@componentInstance.2/@featureInstance.1" reverse="true">
+          <connection xsi:type="aadl2:AccessConnection" href="../microwave.aadl#/0/@ownedPublicSection/@ownedClassifier.12/@ownedAccessConnection.1"/>
+        </connectionReference>
+      </connectionInstance>
+      <connectionInstance name="heatBus -> tempsensor.heatBus" complete="true" kind="accessConnection" destination="/0/@componentInstance.1/@componentInstance.3/@featureInstance.1" source="/0/@componentInstance.1/@componentInstance.0">
+        <connectionReference context="/0/@componentInstance.1" source="/0/@componentInstance.1/@componentInstance.0" destination="/0/@componentInstance.1/@componentInstance.3/@featureInstance.1" reverse="true">
+          <connection xsi:type="aadl2:AccessConnection" href="../microwave.aadl#/0/@ownedPublicSection/@ownedClassifier.12/@ownedAccessConnection.2"/>
+        </connectionReference>
+      </connectionInstance>
+      <connectionInstance name="heatBus -> doorSensor.heatBus" complete="true" kind="accessConnection" destination="/0/@componentInstance.1/@componentInstance.4/@featureInstance.1" source="/0/@componentInstance.1/@componentInstance.0">
+        <connectionReference context="/0/@componentInstance.1" source="/0/@componentInstance.1/@componentInstance.0" destination="/0/@componentInstance.1/@componentInstance.4/@featureInstance.1" reverse="true">
+          <connection xsi:type="aadl2:AccessConnection" href="../microwave.aadl#/0/@ownedPublicSection/@ownedClassifier.12/@ownedAccessConnection.3"/>
+        </connectionReference>
+      </connectionInstance>
+      <connectionInstance name="heatBus -> heatCPU.heatBus" complete="true" kind="accessConnection" destination="/0/@componentInstance.1/@componentInstance.7/@featureInstance.0" source="/0/@componentInstance.1/@componentInstance.0">
+        <connectionReference context="/0/@componentInstance.1" source="/0/@componentInstance.1/@componentInstance.0" destination="/0/@componentInstance.1/@componentInstance.7/@featureInstance.0" reverse="true">
+          <connection xsi:type="aadl2:AccessConnection" href="../microwave.aadl#/0/@ownedPublicSection/@ownedClassifier.12/@ownedAccessConnection.4"/>
+        </connectionReference>
+      </connectionInstance>
+      <connectionInstance name="heatBus -> heatMem.heatBus" complete="true" kind="accessConnection" destination="/0/@componentInstance.1/@componentInstance.5/@featureInstance.0" source="/0/@componentInstance.1/@componentInstance.0">
+        <connectionReference context="/0/@componentInstance.1" source="/0/@componentInstance.1/@componentInstance.0" destination="/0/@componentInstance.1/@componentInstance.5/@featureInstance.0" reverse="true">
+          <connection xsi:type="aadl2:AccessConnection" href="../microwave.aadl#/0/@ownedPublicSection/@ownedClassifier.12/@ownedAccessConnection.5"/>
+        </connectionReference>
+      </connectionInstance>
+      <connectionInstance name="magnetron.heatBus -> heatBus" complete="true" kind="accessConnection" destination="/0/@componentInstance.1/@componentInstance.0" source="/0/@componentInstance.1/@componentInstance.1/@featureInstance.1">
+        <connectionReference context="/0/@componentInstance.1" source="/0/@componentInstance.1/@componentInstance.1/@featureInstance.1" destination="/0/@componentInstance.1/@componentInstance.0">
+          <connection xsi:type="aadl2:AccessConnection" href="../microwave.aadl#/0/@ownedPublicSection/@ownedClassifier.12/@ownedAccessConnection.0"/>
+        </connectionReference>
+      </connectionInstance>
+      <connectionInstance name="turntable.heatBus -> heatBus" complete="true" kind="accessConnection" destination="/0/@componentInstance.1/@componentInstance.0" source="/0/@componentInstance.1/@componentInstance.2/@featureInstance.1">
+        <connectionReference context="/0/@componentInstance.1" source="/0/@componentInstance.1/@componentInstance.2/@featureInstance.1" destination="/0/@componentInstance.1/@componentInstance.0">
+          <connection xsi:type="aadl2:AccessConnection" href="../microwave.aadl#/0/@ownedPublicSection/@ownedClassifier.12/@ownedAccessConnection.1"/>
+        </connectionReference>
+      </connectionInstance>
+      <connectionInstance name="tempsensor.tempOut -> heatProcess.heatThread.tempIn" complete="true" kind="portConnection" destination="/0/@componentInstance.1/@componentInstance.6/@componentInstance.0/@featureInstance.0" source="/0/@componentInstance.1/@componentInstance.3/@featureInstance.0">
+        <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+          <property href="platform:/plugin/org.osate.contribution.sei/resources/properties/SEI.aadl#SEI.BandWidthBudget"/>
+          <ownedValue>
+            <ownedValue xsi:type="aadl2:RealLiteral" value="0.01">
+              <unit href="platform:/plugin/org.osate.aadl2.contrib/resources/properties/Predeclared_Property_Sets/AADL_Project.aadl#/0/@ownedPropertyType.17/@ownedLiteral.2"/>
+            </ownedValue>
+          </ownedValue>
+          <propertyAssociation href="../microwave.aadl#/0/@ownedPublicSection/@ownedClassifier.12/@ownedPortConnection.0/@ownedPropertyAssociation.0"/>
+        </ownedPropertyAssociation>
+        <connectionReference context="/0/@componentInstance.1" source="/0/@componentInstance.1/@componentInstance.3/@featureInstance.0" destination="/0/@componentInstance.1/@componentInstance.6/@featureInstance.0">
+          <connection xsi:type="aadl2:PortConnection" href="../microwave.aadl#/0/@ownedPublicSection/@ownedClassifier.12/@ownedPortConnection.0"/>
+        </connectionReference>
+        <connectionReference context="/0/@componentInstance.1/@componentInstance.6" source="/0/@componentInstance.1/@componentInstance.6/@featureInstance.0" destination="/0/@componentInstance.1/@componentInstance.6/@componentInstance.0/@featureInstance.0">
+          <connection xsi:type="aadl2:PortConnection" href="../microwave.aadl#/0/@ownedPublicSection/@ownedClassifier.18/@ownedPortConnection.0"/>
+        </connectionReference>
+      </connectionInstance>
+      <connectionInstance name="tempsensor.heatBus -> heatBus" complete="true" kind="accessConnection" destination="/0/@componentInstance.1/@componentInstance.0" source="/0/@componentInstance.1/@componentInstance.3/@featureInstance.1">
+        <connectionReference context="/0/@componentInstance.1" source="/0/@componentInstance.1/@componentInstance.3/@featureInstance.1" destination="/0/@componentInstance.1/@componentInstance.0">
+          <connection xsi:type="aadl2:AccessConnection" href="../microwave.aadl#/0/@ownedPublicSection/@ownedClassifier.12/@ownedAccessConnection.2"/>
+        </connectionReference>
+      </connectionInstance>
+      <connectionInstance name="doorSensor.doorOpen -> heatProcess.heatThread.doorStatus" complete="true" kind="portConnection" destination="/0/@componentInstance.1/@componentInstance.6/@componentInstance.0/@featureInstance.6" source="/0/@componentInstance.1/@componentInstance.4/@featureInstance.0">
+        <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+          <property href="platform:/plugin/org.osate.contribution.sei/resources/properties/SEI.aadl#SEI.BandWidthBudget"/>
+          <ownedValue>
+            <ownedValue xsi:type="aadl2:RealLiteral" value="0.001">
+              <unit href="platform:/plugin/org.osate.aadl2.contrib/resources/properties/Predeclared_Property_Sets/AADL_Project.aadl#/0/@ownedPropertyType.17/@ownedLiteral.2"/>
+            </ownedValue>
+          </ownedValue>
+          <propertyAssociation href="../microwave.aadl#/0/@ownedPublicSection/@ownedClassifier.12/@ownedPortConnection.1/@ownedPropertyAssociation.0"/>
+        </ownedPropertyAssociation>
+        <connectionReference context="/0/@componentInstance.1" source="/0/@componentInstance.1/@componentInstance.4/@featureInstance.0" destination="/0/@componentInstance.1/@componentInstance.6/@featureInstance.6">
+          <connection xsi:type="aadl2:PortConnection" href="../microwave.aadl#/0/@ownedPublicSection/@ownedClassifier.12/@ownedPortConnection.1"/>
+        </connectionReference>
+        <connectionReference context="/0/@componentInstance.1/@componentInstance.6" source="/0/@componentInstance.1/@componentInstance.6/@featureInstance.6" destination="/0/@componentInstance.1/@componentInstance.6/@componentInstance.0/@featureInstance.6">
+          <connection xsi:type="aadl2:PortConnection" href="../microwave.aadl#/0/@ownedPublicSection/@ownedClassifier.18/@ownedPortConnection.2"/>
+        </connectionReference>
+      </connectionInstance>
+      <connectionInstance name="doorSensor.heatBus -> heatBus" complete="true" kind="accessConnection" destination="/0/@componentInstance.1/@componentInstance.0" source="/0/@componentInstance.1/@componentInstance.4/@featureInstance.1">
+        <connectionReference context="/0/@componentInstance.1" source="/0/@componentInstance.1/@componentInstance.4/@featureInstance.1" destination="/0/@componentInstance.1/@componentInstance.0">
+          <connection xsi:type="aadl2:AccessConnection" href="../microwave.aadl#/0/@ownedPublicSection/@ownedClassifier.12/@ownedAccessConnection.3"/>
+        </connectionReference>
+      </connectionInstance>
+      <connectionInstance name="heatMem.heatBus -> heatBus" complete="true" kind="accessConnection" destination="/0/@componentInstance.1/@componentInstance.0" source="/0/@componentInstance.1/@componentInstance.5/@featureInstance.0">
+        <connectionReference context="/0/@componentInstance.1" source="/0/@componentInstance.1/@componentInstance.5/@featureInstance.0" destination="/0/@componentInstance.1/@componentInstance.0">
+          <connection xsi:type="aadl2:AccessConnection" href="../microwave.aadl#/0/@ownedPublicSection/@ownedClassifier.12/@ownedAccessConnection.5"/>
+        </connectionReference>
+      </connectionInstance>
+      <connectionInstance name="heatProcess.heatThread.magnetronOut -> magnetron.commandIn" complete="true" kind="portConnection" destination="/0/@componentInstance.1/@componentInstance.1/@featureInstance.0" source="/0/@componentInstance.1/@componentInstance.6/@componentInstance.0/@featureInstance.1">
+        <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+          <property href="platform:/plugin/org.osate.contribution.sei/resources/properties/SEI.aadl#SEI.BandWidthBudget"/>
+          <ownedValue>
+            <ownedValue xsi:type="aadl2:RealLiteral" value="0.01">
+              <unit href="platform:/plugin/org.osate.aadl2.contrib/resources/properties/Predeclared_Property_Sets/AADL_Project.aadl#/0/@ownedPropertyType.17/@ownedLiteral.2"/>
+            </ownedValue>
+          </ownedValue>
+          <propertyAssociation href="../microwave.aadl#/0/@ownedPublicSection/@ownedClassifier.12/@ownedPortConnection.2/@ownedPropertyAssociation.0"/>
+        </ownedPropertyAssociation>
+        <connectionReference context="/0/@componentInstance.1/@componentInstance.6" source="/0/@componentInstance.1/@componentInstance.6/@componentInstance.0/@featureInstance.1" destination="/0/@componentInstance.1/@componentInstance.6/@featureInstance.1">
+          <connection xsi:type="aadl2:PortConnection" href="../microwave.aadl#/0/@ownedPublicSection/@ownedClassifier.18/@ownedPortConnection.3"/>
+        </connectionReference>
+        <connectionReference context="/0/@componentInstance.1" source="/0/@componentInstance.1/@componentInstance.6/@featureInstance.1" destination="/0/@componentInstance.1/@componentInstance.1/@featureInstance.0">
+          <connection xsi:type="aadl2:PortConnection" href="../microwave.aadl#/0/@ownedPublicSection/@ownedClassifier.12/@ownedPortConnection.2"/>
+        </connectionReference>
+      </connectionInstance>
+      <connectionInstance name="heatProcess.heatThread.turntableOut -> turntable.commandIn" complete="true" kind="portConnection" destination="/0/@componentInstance.1/@componentInstance.2/@featureInstance.0" source="/0/@componentInstance.1/@componentInstance.6/@componentInstance.0/@featureInstance.2">
+        <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+          <property href="platform:/plugin/org.osate.contribution.sei/resources/properties/SEI.aadl#SEI.BandWidthBudget"/>
+          <ownedValue>
+            <ownedValue xsi:type="aadl2:RealLiteral" value="0.01">
+              <unit href="platform:/plugin/org.osate.aadl2.contrib/resources/properties/Predeclared_Property_Sets/AADL_Project.aadl#/0/@ownedPropertyType.17/@ownedLiteral.2"/>
+            </ownedValue>
+          </ownedValue>
+          <propertyAssociation href="../microwave.aadl#/0/@ownedPublicSection/@ownedClassifier.12/@ownedPortConnection.3/@ownedPropertyAssociation.0"/>
+        </ownedPropertyAssociation>
+        <connectionReference context="/0/@componentInstance.1/@componentInstance.6" source="/0/@componentInstance.1/@componentInstance.6/@componentInstance.0/@featureInstance.2" destination="/0/@componentInstance.1/@componentInstance.6/@featureInstance.2">
+          <connection xsi:type="aadl2:PortConnection" href="../microwave.aadl#/0/@ownedPublicSection/@ownedClassifier.18/@ownedPortConnection.4"/>
+        </connectionReference>
+        <connectionReference context="/0/@componentInstance.1" source="/0/@componentInstance.1/@componentInstance.6/@featureInstance.2" destination="/0/@componentInstance.1/@componentInstance.2/@featureInstance.0">
+          <connection xsi:type="aadl2:PortConnection" href="../microwave.aadl#/0/@ownedPublicSection/@ownedClassifier.12/@ownedPortConnection.3"/>
+        </connectionReference>
+      </connectionInstance>
+      <connectionInstance name="heatCPU.heatBus -> heatBus" complete="true" kind="accessConnection" destination="/0/@componentInstance.1/@componentInstance.0" source="/0/@componentInstance.1/@componentInstance.7/@featureInstance.0">
+        <connectionReference context="/0/@componentInstance.1" source="/0/@componentInstance.1/@componentInstance.7/@featureInstance.0" destination="/0/@componentInstance.1/@componentInstance.0">
+          <connection xsi:type="aadl2:AccessConnection" href="../microwave.aadl#/0/@ownedPublicSection/@ownedClassifier.12/@ownedAccessConnection.4"/>
+        </connectionReference>
+      </connectionInstance>
+      <subcomponent xsi:type="aadl2:SystemSubcomponent" href="../microwave.aadl#/0/@ownedPublicSection/@ownedClassifier.8/@ownedSystemSubcomponent.1"/>
+      <index>0</index>
+      <classifier xsi:type="aadl2:SystemImplementation" href="../microwave.aadl#microwave.Heating_Subsystem.impl"/>
+    </componentInstance>
+    <connectionInstance name="uiSubsystem.uiProcess.uiThread.sendStartCommand -> heatingSubsystem.heatProcess.heatThread.receiveStartCommand" complete="true" kind="portConnection" destination="/0/@componentInstance.1/@componentInstance.6/@componentInstance.0/@featureInstance.4" source="/0/@componentInstance.0/@componentInstance.9/@componentInstance.0/@featureInstance.3">
+      <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+        <property href="platform:/plugin/org.osate.contribution.sei/resources/properties/SEI.aadl#SEI.BandWidthBudget"/>
+        <ownedValue>
+          <ownedValue xsi:type="aadl2:RealLiteral" value="0.01">
+            <unit href="platform:/plugin/org.osate.aadl2.contrib/resources/properties/Predeclared_Property_Sets/AADL_Project.aadl#/0/@ownedPropertyType.17/@ownedLiteral.2"/>
+          </ownedValue>
+        </ownedValue>
+        <propertyAssociation href="../microwave.aadl#/0/@ownedPublicSection/@ownedClassifier.10/@ownedPortConnection.4/@ownedPropertyAssociation.0"/>
+      </ownedPropertyAssociation>
+      <connectionReference context="/0/@componentInstance.0/@componentInstance.9" source="/0/@componentInstance.0/@componentInstance.9/@componentInstance.0/@featureInstance.3" destination="/0/@componentInstance.0/@componentInstance.9/@featureInstance.3">
+        <connection xsi:type="aadl2:PortConnection" href="../microwave.aadl#/0/@ownedPublicSection/@ownedClassifier.14/@ownedPortConnection.4"/>
+      </connectionReference>
+      <connectionReference context="/0/@componentInstance.0" source="/0/@componentInstance.0/@componentInstance.9/@featureInstance.3" destination="/0/@componentInstance.0/@featureInstance.0">
+        <connection xsi:type="aadl2:PortConnection" href="../microwave.aadl#/0/@ownedPublicSection/@ownedClassifier.10/@ownedPortConnection.4"/>
+      </connectionReference>
+      <connectionReference context="/0" source="/0/@componentInstance.0/@featureInstance.0" destination="/0/@componentInstance.1/@featureInstance.0">
+        <connection xsi:type="aadl2:PortConnection" href="../microwave.aadl#/0/@ownedPublicSection/@ownedClassifier.8/@ownedPortConnection.0"/>
+      </connectionReference>
+      <connectionReference context="/0/@componentInstance.1" source="/0/@componentInstance.1/@featureInstance.0" destination="/0/@componentInstance.1/@componentInstance.6/@featureInstance.4">
+        <connection xsi:type="aadl2:PortConnection" href="../microwave.aadl#/0/@ownedPublicSection/@ownedClassifier.12/@ownedPortConnection.5"/>
+      </connectionReference>
+      <connectionReference context="/0/@componentInstance.1/@componentInstance.6" source="/0/@componentInstance.1/@componentInstance.6/@featureInstance.4" destination="/0/@componentInstance.1/@componentInstance.6/@componentInstance.0/@featureInstance.4">
+        <connection xsi:type="aadl2:PortConnection" href="../microwave.aadl#/0/@ownedPublicSection/@ownedClassifier.18/@ownedPortConnection.1"/>
+      </connectionReference>
+    </connectionInstance>
+    <connectionInstance name="uiSubsystem.uiProcess.uiThread.sendTimeCommand -> heatingSubsystem.heatProcess.heatThread.receiveTimeCommand" complete="true" kind="portConnection" destination="/0/@componentInstance.1/@componentInstance.6/@componentInstance.0/@featureInstance.5" source="/0/@componentInstance.0/@componentInstance.9/@componentInstance.0/@featureInstance.4">
+      <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+        <property href="platform:/plugin/org.osate.contribution.sei/resources/properties/SEI.aadl#SEI.BandWidthBudget"/>
+        <ownedValue>
+          <ownedValue xsi:type="aadl2:RealLiteral" value="0.005">
+            <unit href="platform:/plugin/org.osate.aadl2.contrib/resources/properties/Predeclared_Property_Sets/AADL_Project.aadl#/0/@ownedPropertyType.17/@ownedLiteral.2"/>
+          </ownedValue>
+        </ownedValue>
+        <propertyAssociation href="../microwave.aadl#/0/@ownedPublicSection/@ownedClassifier.10/@ownedPortConnection.7/@ownedPropertyAssociation.0"/>
+      </ownedPropertyAssociation>
+      <connectionReference context="/0/@componentInstance.0/@componentInstance.9" source="/0/@componentInstance.0/@componentInstance.9/@componentInstance.0/@featureInstance.4" destination="/0/@componentInstance.0/@componentInstance.9/@featureInstance.4">
+        <connection xsi:type="aadl2:PortConnection" href="../microwave.aadl#/0/@ownedPublicSection/@ownedClassifier.14/@ownedPortConnection.7"/>
+      </connectionReference>
+      <connectionReference context="/0/@componentInstance.0" source="/0/@componentInstance.0/@componentInstance.9/@featureInstance.4" destination="/0/@componentInstance.0/@featureInstance.1">
+        <connection xsi:type="aadl2:PortConnection" href="../microwave.aadl#/0/@ownedPublicSection/@ownedClassifier.10/@ownedPortConnection.7"/>
+      </connectionReference>
+      <connectionReference context="/0" source="/0/@componentInstance.0/@featureInstance.1" destination="/0/@componentInstance.1/@featureInstance.1">
+        <connection xsi:type="aadl2:PortConnection" href="../microwave.aadl#/0/@ownedPublicSection/@ownedClassifier.8/@ownedPortConnection.2"/>
+      </connectionReference>
+      <connectionReference context="/0/@componentInstance.1" source="/0/@componentInstance.1/@featureInstance.1" destination="/0/@componentInstance.1/@componentInstance.6/@featureInstance.5">
+        <connection xsi:type="aadl2:PortConnection" href="../microwave.aadl#/0/@ownedPublicSection/@ownedClassifier.12/@ownedPortConnection.6"/>
+      </connectionReference>
+      <connectionReference context="/0/@componentInstance.1/@componentInstance.6" source="/0/@componentInstance.1/@componentInstance.6/@featureInstance.5" destination="/0/@componentInstance.1/@componentInstance.6/@componentInstance.0/@featureInstance.5">
+        <connection xsi:type="aadl2:PortConnection" href="../microwave.aadl#/0/@ownedPublicSection/@ownedClassifier.18/@ownedPortConnection.6"/>
+      </connectionReference>
+    </connectionInstance>
+    <connectionInstance name="uiSubsystem.uiProcess.uiThread.sendStopCommand -> heatingSubsystem.heatProcess.heatThread.stopCommand" complete="true" kind="portConnection" destination="/0/@componentInstance.1/@componentInstance.6/@componentInstance.0/@featureInstance.7" source="/0/@componentInstance.0/@componentInstance.9/@componentInstance.0/@featureInstance.10">
+      <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+        <property href="platform:/plugin/org.osate.contribution.sei/resources/properties/SEI.aadl#SEI.BandWidthBudget"/>
+        <ownedValue>
+          <ownedValue xsi:type="aadl2:RealLiteral" value="0.001">
+            <unit href="platform:/plugin/org.osate.aadl2.contrib/resources/properties/Predeclared_Property_Sets/AADL_Project.aadl#/0/@ownedPropertyType.17/@ownedLiteral.2"/>
+          </ownedValue>
+        </ownedValue>
+        <propertyAssociation href="../microwave.aadl#/0/@ownedPublicSection/@ownedClassifier.10/@ownedPortConnection.8/@ownedPropertyAssociation.0"/>
+      </ownedPropertyAssociation>
+      <connectionReference context="/0/@componentInstance.0/@componentInstance.9" source="/0/@componentInstance.0/@componentInstance.9/@componentInstance.0/@featureInstance.10" destination="/0/@componentInstance.0/@componentInstance.9/@featureInstance.10">
+        <connection xsi:type="aadl2:PortConnection" href="../microwave.aadl#/0/@ownedPublicSection/@ownedClassifier.14/@ownedPortConnection.8"/>
+      </connectionReference>
+      <connectionReference context="/0/@componentInstance.0" source="/0/@componentInstance.0/@componentInstance.9/@featureInstance.10" destination="/0/@componentInstance.0/@featureInstance.3">
+        <connection xsi:type="aadl2:PortConnection" href="../microwave.aadl#/0/@ownedPublicSection/@ownedClassifier.10/@ownedPortConnection.8"/>
+      </connectionReference>
+      <connectionReference context="/0" source="/0/@componentInstance.0/@featureInstance.3" destination="/0/@componentInstance.1/@featureInstance.3">
+        <connection xsi:type="aadl2:PortConnection" href="../microwave.aadl#/0/@ownedPublicSection/@ownedClassifier.8/@ownedPortConnection.3"/>
+      </connectionReference>
+      <connectionReference context="/0/@componentInstance.1" source="/0/@componentInstance.1/@featureInstance.3" destination="/0/@componentInstance.1/@componentInstance.6/@featureInstance.7">
+        <connection xsi:type="aadl2:PortConnection" href="../microwave.aadl#/0/@ownedPublicSection/@ownedClassifier.12/@ownedPortConnection.7"/>
+      </connectionReference>
+      <connectionReference context="/0/@componentInstance.1/@componentInstance.6" source="/0/@componentInstance.1/@componentInstance.6/@featureInstance.7" destination="/0/@componentInstance.1/@componentInstance.6/@componentInstance.0/@featureInstance.7">
+        <connection xsi:type="aadl2:PortConnection" href="../microwave.aadl#/0/@ownedPublicSection/@ownedClassifier.18/@ownedPortConnection.7"/>
+      </connectionReference>
+    </connectionInstance>
+    <connectionInstance name="heatingSubsystem.heatProcess.heatThread.statusOut -> uiSubsystem.uiProcess.uiThread.statusIn" complete="true" kind="portConnection" destination="/0/@componentInstance.0/@componentInstance.9/@componentInstance.0/@featureInstance.2" source="/0/@componentInstance.1/@componentInstance.6/@componentInstance.0/@featureInstance.3">
+      <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+        <property href="platform:/plugin/org.osate.contribution.sei/resources/properties/SEI.aadl#SEI.BandWidthBudget"/>
+        <ownedValue>
+          <ownedValue xsi:type="aadl2:RealLiteral" value="0.01">
+            <unit href="platform:/plugin/org.osate.aadl2.contrib/resources/properties/Predeclared_Property_Sets/AADL_Project.aadl#/0/@ownedPropertyType.17/@ownedLiteral.2"/>
+          </ownedValue>
+        </ownedValue>
+        <propertyAssociation href="../microwave.aadl#/0/@ownedPublicSection/@ownedClassifier.12/@ownedPortConnection.4/@ownedPropertyAssociation.0"/>
+      </ownedPropertyAssociation>
+      <connectionReference context="/0/@componentInstance.1/@componentInstance.6" source="/0/@componentInstance.1/@componentInstance.6/@componentInstance.0/@featureInstance.3" destination="/0/@componentInstance.1/@componentInstance.6/@featureInstance.3">
+        <connection xsi:type="aadl2:PortConnection" href="../microwave.aadl#/0/@ownedPublicSection/@ownedClassifier.18/@ownedPortConnection.5"/>
+      </connectionReference>
+      <connectionReference context="/0/@componentInstance.1" source="/0/@componentInstance.1/@componentInstance.6/@featureInstance.3" destination="/0/@componentInstance.1/@featureInstance.2">
+        <connection xsi:type="aadl2:PortConnection" href="../microwave.aadl#/0/@ownedPublicSection/@ownedClassifier.12/@ownedPortConnection.4"/>
+      </connectionReference>
+      <connectionReference context="/0" source="/0/@componentInstance.1/@featureInstance.2" destination="/0/@componentInstance.0/@featureInstance.2">
+        <connection xsi:type="aadl2:PortConnection" href="../microwave.aadl#/0/@ownedPublicSection/@ownedClassifier.8/@ownedPortConnection.1"/>
+      </connectionReference>
+      <connectionReference context="/0/@componentInstance.0" source="/0/@componentInstance.0/@featureInstance.2" destination="/0/@componentInstance.0/@componentInstance.9/@featureInstance.2">
+        <connection xsi:type="aadl2:PortConnection" href="../microwave.aadl#/0/@ownedPublicSection/@ownedClassifier.10/@ownedPortConnection.3"/>
+      </connectionReference>
+      <connectionReference context="/0/@componentInstance.0/@componentInstance.9" source="/0/@componentInstance.0/@componentInstance.9/@featureInstance.2" destination="/0/@componentInstance.0/@componentInstance.9/@componentInstance.0/@featureInstance.2">
+        <connection xsi:type="aadl2:PortConnection" href="../microwave.aadl#/0/@ownedPublicSection/@ownedClassifier.14/@ownedPortConnection.3"/>
+      </connectionReference>
+    </connectionInstance>
+    <classifier xsi:type="aadl2:SystemImplementation" href="../microwave.aadl#microwave.MicrowaveSystem.impl"/>
+    <systemOperationMode name="No Modes"/>
+    <componentImplementation xsi:type="aadl2:SystemImplementation" href="../microwave.aadl#microwave.MicrowaveSystem.impl"/>
+  </instance:SystemInstance>
+  <instance:ComponentInstance name="microwave::UIBus" category="bus">
+    <classifier xsi:type="aadl2:BusType" href="../microwave.aadl#microwave.UIBus"/>
+  </instance:ComponentInstance>
+  <instance:ComponentInstance name="microwave::DisplayText" category="data">
+    <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+      <property href="platform:/plugin/org.osate.contribution.sei/resources/properties/Data_Model.aadl#Data_Model.Data_Representation"/>
+      <ownedValue>
+        <ownedValue xsi:type="aadl2:NamedValue">
+          <namedValue xsi:type="aadl2:EnumerationLiteral" href="platform:/plugin/org.osate.contribution.sei/resources/properties/Data_Model.aadl#/0/@ownedProperty.4/@ownedPropertyType/@ownedLiteral.7"/>
+        </ownedValue>
+      </ownedValue>
+      <propertyAssociation href="../microwave.aadl#/0/@ownedPublicSection/@ownedClassifier.6/@ownedPropertyAssociation.0"/>
+    </ownedPropertyAssociation>
+    <classifier xsi:type="aadl2:DataType" href="../microwave.aadl#microwave.DisplayText"/>
+  </instance:ComponentInstance>
+  <instance:ComponentInstance name="microwave::TimeSetting" category="data">
+    <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+      <property href="platform:/plugin/org.osate.contribution.sei/resources/properties/Data_Model.aadl#Data_Model.Data_Representation"/>
+      <ownedValue>
+        <ownedValue xsi:type="aadl2:NamedValue">
+          <namedValue xsi:type="aadl2:EnumerationLiteral" href="platform:/plugin/org.osate.contribution.sei/resources/properties/Data_Model.aadl#/0/@ownedProperty.4/@ownedPropertyType/@ownedLiteral.6"/>
+        </ownedValue>
+      </ownedValue>
+      <propertyAssociation href="../microwave.aadl#/0/@ownedPublicSection/@ownedClassifier.5/@ownedPropertyAssociation.0"/>
+    </ownedPropertyAssociation>
+    <classifier xsi:type="aadl2:DataType" href="../microwave.aadl#microwave.TimeSetting"/>
+  </instance:ComponentInstance>
+  <instance:ComponentInstance name="microwave::MicrowaveCommand" category="data">
+    <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+      <property href="platform:/plugin/org.osate.contribution.sei/resources/properties/Data_Model.aadl#Data_Model.Data_Representation"/>
+      <ownedValue>
+        <ownedValue xsi:type="aadl2:NamedValue">
+          <namedValue xsi:type="aadl2:EnumerationLiteral" href="platform:/plugin/org.osate.contribution.sei/resources/properties/Data_Model.aadl#/0/@ownedProperty.4/@ownedPropertyType/@ownedLiteral.7"/>
+        </ownedValue>
+      </ownedValue>
+      <propertyAssociation href="../microwave.aadl#/0/@ownedPublicSection/@ownedClassifier.0/@ownedPropertyAssociation.0"/>
+    </ownedPropertyAssociation>
+    <classifier xsi:type="aadl2:DataType" href="../microwave.aadl#microwave.MicrowaveCommand"/>
+  </instance:ComponentInstance>
+  <instance:ComponentInstance name="microwave::MagnetronCommand" category="data">
+    <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+      <property href="platform:/plugin/org.osate.contribution.sei/resources/properties/Data_Model.aadl#Data_Model.Enumerators"/>
+      <ownedValue>
+        <ownedValue xsi:type="aadl2:ListValue">
+          <ownedListElement xsi:type="aadl2:StringLiteral" value="ON"/>
+          <ownedListElement xsi:type="aadl2:StringLiteral" value="OFF"/>
+        </ownedValue>
+      </ownedValue>
+      <propertyAssociation href="../microwave.aadl#/0/@ownedPublicSection/@ownedClassifier.4/@ownedPropertyAssociation.0"/>
+    </ownedPropertyAssociation>
+    <classifier xsi:type="aadl2:DataType" href="../microwave.aadl#microwave.MagnetronCommand"/>
+  </instance:ComponentInstance>
+  <instance:ComponentInstance name="microwave::HeatingBus" category="bus">
+    <classifier xsi:type="aadl2:BusType" href="../microwave.aadl#microwave.HeatingBus"/>
+  </instance:ComponentInstance>
+  <instance:ComponentInstance name="microwave::TurntableCommand" category="data">
+    <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+      <property href="platform:/plugin/org.osate.contribution.sei/resources/properties/Data_Model.aadl#Data_Model.Enumerators"/>
+      <ownedValue>
+        <ownedValue xsi:type="aadl2:ListValue">
+          <ownedListElement xsi:type="aadl2:StringLiteral" value="START"/>
+          <ownedListElement xsi:type="aadl2:StringLiteral" value="STOP"/>
+        </ownedValue>
+      </ownedValue>
+      <propertyAssociation href="../microwave.aadl#/0/@ownedPublicSection/@ownedClassifier.3/@ownedPropertyAssociation.0"/>
+    </ownedPropertyAssociation>
+    <classifier xsi:type="aadl2:DataType" href="../microwave.aadl#microwave.TurntableCommand"/>
+  </instance:ComponentInstance>
+  <instance:ComponentInstance name="microwave::TemperatureValue" category="data">
+    <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+      <property href="platform:/plugin/org.osate.contribution.sei/resources/properties/Data_Model.aadl#Data_Model.Data_Representation"/>
+      <ownedValue>
+        <ownedValue xsi:type="aadl2:NamedValue">
+          <namedValue xsi:type="aadl2:EnumerationLiteral" href="platform:/plugin/org.osate.contribution.sei/resources/properties/Data_Model.aadl#/0/@ownedProperty.4/@ownedPropertyType/@ownedLiteral.6"/>
+        </ownedValue>
+      </ownedValue>
+      <propertyAssociation href="../microwave.aadl#/0/@ownedPublicSection/@ownedClassifier.1/@ownedPropertyAssociation.0"/>
+    </ownedPropertyAssociation>
+    <classifier xsi:type="aadl2:DataType" href="../microwave.aadl#microwave.TemperatureValue"/>
+  </instance:ComponentInstance>
+  <instance:ComponentInstance name="microwave::DoorStatus" category="data">
+    <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+      <property href="platform:/plugin/org.osate.contribution.sei/resources/properties/Data_Model.aadl#Data_Model.Data_Representation"/>
+      <ownedValue>
+        <ownedValue xsi:type="aadl2:NamedValue">
+          <namedValue xsi:type="aadl2:EnumerationLiteral" href="platform:/plugin/org.osate.contribution.sei/resources/properties/Data_Model.aadl#/0/@ownedProperty.4/@ownedPropertyType/@ownedLiteral.1"/>
+        </ownedValue>
+      </ownedValue>
+      <propertyAssociation href="../microwave.aadl#/0/@ownedPublicSection/@ownedClassifier.2/@ownedPropertyAssociation.0"/>
+    </ownedPropertyAssociation>
+    <classifier xsi:type="aadl2:DataType" href="../microwave.aadl#microwave.DoorStatus"/>
+  </instance:ComponentInstance>
+</xmi:XMI>
