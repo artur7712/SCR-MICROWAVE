@@ -1,74 +1,81 @@
-# Systemy czasu rzeczywistego
+# Systemy czasu rzeczywistego – projekt
 
-## 1. Tytuł modelu:
-Mikrofalówka
+## Tytuł modelu:
 
-## 2. Dane studentów:
-```
-Błażej Dudek
-Artur Bogacki
-bdudek@student.agh.edu.pl
-abogacki@student.agh.edu.pl
-```
+**Kuchenka mikrofalowa**
 
-## 3. Opis modelowanego systemu
+## Dane studentów:
+
+Błażej Dudek - bdudek@student.agh.edu.pl
+Artur Bogacki - arturbogacki@student.agh.edu.pl
+
+---
+
+## Opis modelowanego systemu:
+
 ### Opis ogólny
-```Zamodelowany system to inteligentna mikrofalówka wyposażona w klasyczne funkcje podgrzewania, rozmrażania i grillowania, z dodatkowymi elementami bezpieczeństwa, czujnikami oraz interfejsem użytkownika. System uwzględnia detekcję obecności drzwi, monitorowanie temperatury, kontroli czasu pracy, a także uwzględnia możliwość zatrzymania pracy przez użytkownika w dowolnym momencie.```
+
+Zamodelowany system przedstawia działanie mikrofalówki jako złożonego systemu czasu rzeczywistego. Głównymi elementami systemu są interfejs użytkownika oraz system grzewczy. Użytkownik poprzez przyciski steruje pracą mikrofalówki (rozpoczęcie podgrzewania, ustawienie czasu, zatrzymanie pracy). System grzewczy odpowiada za fizyczne działanie lampy grzewczej oraz talerza obrotowego, a także za monitorowanie temperatury i stanu drzwi. 
+
+System zapewnia wzajemną komunikację między podsystemami za pomocą portów danych i zdarzeń oraz uwzględnia wymagania niskiego zużycia przepustowości oraz budżetu MIPS dla procesorów i pamięci.
+
+---
 
 ### Opis szczegółowy
-```System umożliwia przygotowanie potraw w trzech trybach: podgrzewanie mikrofalowe, grillowanie oraz tryb mieszany (mikrofale + grill). Użytkownik może wybrać tryb, czas, moc i wagę potrawy z poziomu panelu dotykowego. Po zatwierdzeniu parametrów mikrofalówka uruchamia wybrany proces.```
-```Bezpieczeństwo zapewniają czujniki otwarcia drzwi, czujniki temperatury oraz detektory obecności jedzenia. Praca mikrofalówki zostanie natychmiast zatrzymana w przypadku otwarcia drzwi lub przegrzania. W sytuacjach awaryjnych, takich jak iskrzenie czy dym, aktywowany jest tryb awaryjny, który wyłącza wszystkie źródła energii i uruchamia wentylację.```
-```System posiada funkcję inteligentnego rozmrażania, która automatycznie dobiera czas i moc na podstawie masy produktu, a także czujnik pary, który pozwala zakończyć gotowanie w momencie uzyskania pożądanej wilgotności potrawy.```
-```Czas pracy kontrolowany jest przez osobny wątek, który może zostać nadpisany np. przez naciśnięcie przycisku STOP lub przez system bezpieczeństwa.```
 
-## 4. Komponenty systemu:
+Użytkownik mikrofalówki może za pomocą przycisku Start rozpocząć proces podgrzewania potrawy. Wybór czasu podgrzewania realizowany jest przy pomocy selektora czasu. Informacje o stanie mikrofalówki (np. zakończenie podgrzewania) prezentowane są na wyświetlaczu oraz sygnalizowane za pomocą sygnału dźwiękowego (buzzer).
 
-### Główna logika sterująca
+System mikrofalówki automatycznie kontroluje bezpieczeństwo – np. blokuje drzwi w trakcie pracy lub nie pozwala na uruchomienie, gdy drzwi są otwarte. System grzewczy steruje lampą grzewczą oraz talerzem obrotowym i kontroluje temperaturę wewnątrz urządzenia. 
 
-    system MicrowaveController – główny komponent zarządzający pracą mikrofalówki, koordynuje komunikację i reakcje urządzeń.
+Dodatkowo czujniki temperatury i położenia drzwi umożliwiają dynamiczne dostosowanie działania mikrofalówki do aktualnych warunków w komorze grzewczej. 
 
-### Urządzenia fizyczne
+Wszystkie elementy są połączone z dedykowanymi procesorami, pamięcią i magistralami danych, co umożliwia wydajną i bezpieczną pracę systemu w czasie rzeczywistym.
 
-    device MicrowaveEmitter – generator mikrofal odpowiedzialny za podgrzewanie jedzenia.
+---
 
-    device GrillElement – element grzewczy do grillowania.
+## Komponenty:
 
-    device TurntableMotor – silnik obracający talerz.
+### data:
+- `MicrowaveCommand` – struktura danych reprezentująca polecenia przesyłane pomiędzy komponentami (`String`).
+- `TemperatureValue` – wartość temperatury odczytywana z czujnika temperatury (`Integer`).
+- `DoorStatus` – status drzwi mikrofalówki, informujący czy drzwi są otwarte lub zamknięte (`Boolean`).
+- `TurntableCommand` – komenda sterująca talerzem obrotowym; przyjmuje wartości `"START"` lub `"STOP"` (enumeracja).
+- `MagnetronCommand` – komenda sterująca magnetronem; przyjmuje wartości `"ON"` lub `"OFF"` (enumeracja).
+- `TimeSetting` – wartość ustawionego przez użytkownika czasu pracy mikrofalówki (`Integer`).
+- `DisplayText` – tekst wyświetlany na ekranie mikrofalówki (`String`).
 
-    device DoorSensor – czujnik zamknięcia drzwi (przerywa pracę przy otwartych drzwiach).
+### system:
+- `MicrowaveSystem` – system nadrzędny, integrujący podsystem interfejsu użytkownika i podsystem grzewczy.
+- `UI_Subsystem` – podsystem obsługujący interakcję z użytkownikiem.
+- `Heating_Subsystem` – podsystem odpowiedzialny za realizację procesu podgrzewania.
 
-    device TemperatureSensor – czujnik temperatury wewnątrz komory.
+### device:
+- `StartButton` – przycisk uruchamiający proces podgrzewania.
+- `StopButton` – przycisk zatrzymujący pracę mikrofalówki.
+- `TimeSelector` – selektor umożliwiający ustawienie czasu podgrzewania.
+- `Display` – wyświetlacz informujący użytkownika o stanie urządzenia.
+- `Buzzer` – sygnalizator dźwiękowy informujący o zakończeniu podgrzewania.
+- `LightLamp` – lampa wewnętrzna mikrofalówki.
+- `DoorLock` – mechanizm blokujący drzwi w czasie pracy.
+- `Magnetron` – lampa grzewcza.
+- `Turntable` – silnik obracający talerz wewnątrz mikrofalówki.
+- `TempSensor` – czujnik temperatury wewnątrz komory grzewczej.
+- `DoorSensor` – czujnik otwarcia drzwi.
 
-    device HumiditySensor – czujnik pary/wilgotności wewnątrz komory.
+### processor:
+- `UICPU` – procesor obsługujący podsystem interfejsu użytkownika.
+- `HeatingCPU` – procesor sterujący podsystemem grzewczym.
 
-    device SmokeDetector – detektor dymu wykrywający możliwe awarie (np. przypalenie).
+### memory:
+- `UIMemory` – pamięć wykorzystywana przez podsystem interfejsu użytkownika.
+- `HeatingMemory` – pamięć wykorzystywana przez podsystem grzewczy.
 
-    device FoodPresenceSensor – czujnik wykrywający obecność jedzenia w komorze.
+### bus:
+- `UIBus` – magistrala danych w podsystemie interfejsu użytkownika.
+- `HeatingBus` – magistrala danych w podsystemie grzewczym.
 
-    device WeightSensor – czujnik masy potrawy (dla automatycznego doboru parametrów).
+## Model - rysunek
 
-### Interfejs użytkownika
-
-    device TouchPanel – panel dotykowy do wprowadzania parametrów pracy.
-
-    device StartButton – przycisk uruchamiający pracę mikrofalówki.
-
-    device StopButton – przycisk natychmiastowego zatrzymania pracy.
-
-    device DisplayScreen – ekran wyświetlający ustawienia i komunikaty.
-
-    device LEDIndicator – wskaźnik stanu (np. gotowe, praca, błąd).
-
-### Funkcje i wątki pomocnicze
-
-    thread CookingTimer – wątek odliczający czas pracy mikrofalówki.
-
-    thread SafetyMonitor – wątek stale monitorujący temperaturę, drzwi i inne czujniki.
-
-    thread SteamDetectorControl – kontrola zakończenia gotowania na podstawie pary.
-
-    thread EmergencyShutdown – natychmiastowe zatrzymanie działania w przypadku awarii.
-
-### Komunikacja
-
-    bus CommunicationBus – magistrala komunikacyjna łącząca wszystkie komponenty systemu.
+### Cały system - MicrowaveSystem:
+### Podsystem interfejsu - UI_Subsystem
+### Podsystem grzewczy - Heating_Subsystem
