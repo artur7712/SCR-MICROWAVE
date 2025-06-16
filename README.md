@@ -77,5 +77,269 @@ Wszystkie elementy są połączone z dedykowanymi procesorami, pamięcią i magi
 ## Model - rysunek
 
 ### Cały system - MicrowaveSystem:
+![image](https://github.com/user-attachments/assets/62e8e175-607b-490f-9448-b2ff00f51de3)
+
 ### Podsystem interfejsu - UI_Subsystem
+![image](https://github.com/user-attachments/assets/bc8ce8e2-497d-40eb-913a-18d0f8ad2085)
+
 ### Podsystem grzewczy - Heating_Subsystem
+![image](https://github.com/user-attachments/assets/b3dd1a7c-ba00-4047-a3bd-dd1f514d61be)
+
+
+## Analizy
+### BoundResourceBudgets:
+Processor Summary Report: 
+  Processor uiSubsystem.uiCPU: Total MIPS 5,000 MIPS of bound tasks within MIPS capacity 50,000 MIPS of uiSubsystem.uiCPU
+  Processor heatingSubsystem.heatCPU: Total MIPS 10,000 MIPS of bound tasks within MIPS capacity 50,000 MIPS of heatingSubsystem.heatCPU
+
+Memory Summary Report: 
+  Total RAM 0.0 KB of bound tasks within Memory capacity 64.0 KB of uiSubsystem.uiMem
+  Total ROM 0.0 KB of bound tasks within Memory capacity 256.0 KB of uiSubsystem.uiMem
+  Total RAM 0.0 KB of bound tasks within Memory capacity 64.0 KB of heatingSubsystem.heatMem
+  Total ROM 0.0 KB of bound tasks within Memory capacity 256.0 KB of heatingSubsystem.heatMem
+
+
+Detailed Workload Report:  for Processor uiSubsystem.uiCPU with Capacity 50,000 MIPS
+
+Component,Budget,Actual
+  thread uiSubsystem.uiProcess.uiThread,   5,000 MIPS,  0,000 MIPS,thread MicrowaveSystem_impl_Instance.uiSubsystem.uiProcess.uiThread total 0,000 MIPS below budget 5,000 MIPS (100,0 % slack)
+process uiSubsystem.uiProcess, 0,000 MIPS,5,000 MIPS,
+Total,,5,000 MIPS
+
+
+Detailed Workload Report:  for Processor heatingSubsystem.heatCPU with Capacity 50,000 MIPS
+
+Component,Budget,Actual
+  thread heatingSubsystem.heatProcess.heatThread,   10,000 MIPS,  0,000 MIPS,thread MicrowaveSystem_impl_Instance.heatingSubsystem.heatProcess.heatThread total 0,000 MIPS below budget 10,000 MIPS (100,0 % slack)
+process heatingSubsystem.heatProcess, 0,000 MIPS,10,000 MIPS,
+Total,,10,000 MIPS
+
+
+Detailed Workload Report:  for memory uiSubsystem.uiMem with Capacity 64,000 KBYTE
+
+Component,Budget,Actual
+Total, ,0,000 KBYTE,
+
+
+Detailed Workload Report:  for memory uiSubsystem.uiMem with Capacity 256,000 KBYTE
+
+Component,Budget,Actual
+Total, ,0,000 KBYTE,
+
+
+Detailed Workload Report:  for memory heatingSubsystem.heatMem with Capacity 64,000 KBYTE
+
+Component,Budget,Actual
+Total, ,0,000 KBYTE,
+
+
+Detailed Workload Report:  for memory heatingSubsystem.heatMem with Capacity 256,000 KBYTE
+
+Component,Budget,Actual
+Total, ,0,000 KBYTE,
+
+### BusLoad:
+"Physical Bus","Capacity (KB/s)","Budget (KB/s)","Required Budget (KB/s)","Actual (KB/s)"
+"uiBus","12500.0","25.0","3.75","0.0"
+"heatBus","12500.0","25.0","3.875","0.0"
+
+"Bus uiBus has data overhead of 0 bytes"
+"Bound Virtual Bus/Connection","Capacity (KB/s)","Budget (KB/s)","Required Budget (KB/s)","Actual (KB/s)"
+"startButton.pressOut -> uiProcess.uiThread.startRequest","","0.125","","0.0"
+"timeSelector.timeOut -> uiProcess.uiThread.timeSelectIn","","0.625","","0.0"
+"stopButton.pressOut -> uiProcess.uiThread.stopRequest","","0.125","","0.0"
+"uiProcess.uiThread.displayOut -> display.displayIn","","2.5","","0.0"
+"uiProcess.uiThread.lightLampOut -> lightLamp.lightIn","","0.125","","0.0"
+"uiProcess.uiThread.doorLockOut -> doorLock.lockIn","","0.125","","0.0"
+"uiProcess.uiThread.buzzerOut -> buzzer.buzzerIn","","0.125","","0.0"
+
+"Bus heatBus has data overhead of 0 bytes"
+"Bound Virtual Bus/Connection","Capacity (KB/s)","Budget (KB/s)","Required Budget (KB/s)","Actual (KB/s)"
+"tempsensor.tempOut -> heatProcess.heatThread.tempIn","","1.25","","0.0"
+"doorSensor.doorOpen -> heatProcess.heatThread.doorStatus","","0.125","","0.0"
+"heatProcess.heatThread.magnetronOut -> magnetron.commandIn","","1.25","","0.0"
+"heatProcess.heatThread.turntableOut -> turntable.commandIn","","1.25","","0.0"
+
+### BoundResourceBudgets:
+Processor Summary Report: 
+  Processor uiSubsystem.uiCPU: Total MIPS 5,000 MIPS of bound tasks within MIPS capacity 50,000 MIPS of uiSubsystem.uiCPU
+  Processor heatingSubsystem.heatCPU: Total MIPS 10,000 MIPS of bound tasks within MIPS capacity 50,000 MIPS of heatingSubsystem.heatCPU
+
+Memory Summary Report: 
+  Total RAM 0.0 KB of bound tasks within Memory capacity 64.0 KB of uiSubsystem.uiMem
+  Total ROM 0.0 KB of bound tasks within Memory capacity 256.0 KB of uiSubsystem.uiMem
+  Total RAM 0.0 KB of bound tasks within Memory capacity 64.0 KB of heatingSubsystem.heatMem
+  Total ROM 0.0 KB of bound tasks within Memory capacity 256.0 KB of heatingSubsystem.heatMem
+
+
+Detailed Workload Report:  for Processor uiSubsystem.uiCPU with Capacity 50,000 MIPS
+
+Component,Budget,Actual
+  thread uiSubsystem.uiProcess.uiThread,   5,000 MIPS,  0,000 MIPS,thread MicrowaveSystem_impl_Instance.uiSubsystem.uiProcess.uiThread total 0,000 MIPS below budget 5,000 MIPS (100,0 % slack)
+process uiSubsystem.uiProcess, 0,000 MIPS,5,000 MIPS,
+Total,,5,000 MIPS
+
+
+Detailed Workload Report:  for Processor heatingSubsystem.heatCPU with Capacity 50,000 MIPS
+
+Component,Budget,Actual
+  thread heatingSubsystem.heatProcess.heatThread,   10,000 MIPS,  0,000 MIPS,thread MicrowaveSystem_impl_Instance.heatingSubsystem.heatProcess.heatThread total 0,000 MIPS below budget 10,000 MIPS (100,0 % slack)
+process heatingSubsystem.heatProcess, 0,000 MIPS,10,000 MIPS,
+Total,,10,000 MIPS
+
+
+Detailed Workload Report:  for memory uiSubsystem.uiMem with Capacity 64,000 KBYTE
+
+Component,Budget,Actual
+Total, ,0,000 KBYTE,
+
+
+Detailed Workload Report:  for memory uiSubsystem.uiMem with Capacity 256,000 KBYTE
+
+Component,Budget,Actual
+Total, ,0,000 KBYTE,
+
+
+Detailed Workload Report:  for memory heatingSubsystem.heatMem with Capacity 64,000 KBYTE
+
+Component,Budget,Actual
+Total, ,0,000 KBYTE,
+
+
+Detailed Workload Report:  for memory heatingSubsystem.heatMem with Capacity 256,000 KBYTE
+
+Component,Budget,Actual
+Total, ,0,000 KBYTE,
+
+### WeightAnalysis
+uiBus: [L] Sum of weights / gross weight is 0,010 kg (no limit specified)
+startButton: [L] Sum of weights / gross weight is 0,050 kg (no limit specified)
+display: [L] Sum of weights / gross weight is 0,150 kg (no limit specified)
+buzzer: [L] Sum of weights / gross weight is 0,050 kg (no limit specified)
+timeSelector: [L] Sum of weights / gross weight is 0,020 kg (no limit specified)
+stopButton: [L] Sum of weights / gross weight is 0,050 kg (no limit specified)
+lightLamp: [L] Sum of weights / gross weight is 0,100 kg (no limit specified)
+doorLock: [L] Sum of weights / gross weight is 0,200 kg (no limit specified)
+uiMem: [L] Sum of weights / gross weight is 0,020 kg (no limit specified)
+uiCPU: [L] Sum of weights / gross weight is 0,050 kg (no limit specified)
+uiSubsystem: [L] Sum of weights / gross weight is 0,700 kg (no limit specified)
+heatBus: [L] Sum of weights / gross weight is 0,010 kg (no limit specified)
+magnetron: [L] Sum of weights / gross weight is 2,500 kg (no limit specified)
+turntable: [L] Sum of weights / gross weight is 0,800 kg (no limit specified)
+tempsensor: [L] Sum of weights / gross weight is 0,030 kg (no limit specified)
+doorSensor: [L] Sum of weights / gross weight is 0,040 kg (no limit specified)
+heatMem: [L] Sum of weights / gross weight is 0,020 kg (no limit specified)
+heatCPU: [L] Sum of weights / gross weight is 0,050 kg (no limit specified)
+heatingSubsystem: [L] Sum of weights / gross weight is 3,450 kg (no limit specified)
+MicrowaveSystem_impl_Instance: [L] Sum of weights / gross weight is 4,150 kg (no limit specified)
+
+### NotBoundResourceBudgets:
+Resource Summary: 
+  MIPS capacity 100,000 MIPS : MIPS budget 15,000 MIPS
+  2 out of 2 with MIPS capacity
+  6 out of 6 with MIPS budget
+
+  RAM capacity 128,000 KBYTE : RAM budget 12,000 KBYTE
+  4 out of 4 with RAM capacity
+  6 out of 6 with RAM budget
+
+  ROM capacity 512,000 KBYTE : ROM budget 48,000 KBYTE
+  4 out of 4 with ROM capacity
+  6 out of 6 with ROM budget
+
+
+
+Detailed Processor MIPS Capacity Report 
+
+Component,Capacity
+processor uiSubsystem.uiCPU, 50,000 MIPS,
+processor heatingSubsystem.heatCPU, 50,000 MIPS,
+Total, 100,000 MIPS,
+
+
+Detailed MIPS Budget Report 
+
+Component,Budget,Actual,Notes
+  device uiSubsystem.startButton,   0,000 MIPS,  0,000 MIPS,
+  device uiSubsystem.display,   0,000 MIPS,  0,000 MIPS,
+  device uiSubsystem.buzzer,   0,000 MIPS,  0,000 MIPS,
+  device uiSubsystem.timeSelector,   0,000 MIPS,  0,000 MIPS,
+  device uiSubsystem.stopButton,   0,000 MIPS,  0,000 MIPS,
+  device uiSubsystem.lightLamp,   0,000 MIPS,  0,000 MIPS,
+  device uiSubsystem.doorLock,   0,000 MIPS,  0,000 MIPS,
+    thread uiSubsystem.uiProcess.uiThread,     5,000 MIPS,    0,000 MIPS,thread MicrowaveSystem_impl_Instance.uiSubsystem.uiProcess.uiThread total 0,000 MIPS below budget 5,000 MIPS (100,0 % slack)
+  process uiSubsystem.uiProcess,   0,000 MIPS,  5,000 MIPS,
+system uiSubsystem, 0,000 MIPS,5,000 MIPS,
+  device heatingSubsystem.magnetron,   0,000 MIPS,  0,000 MIPS,
+  device heatingSubsystem.turntable,   0,000 MIPS,  0,000 MIPS,
+  device heatingSubsystem.tempsensor,   0,000 MIPS,  0,000 MIPS,
+  device heatingSubsystem.doorSensor,   0,000 MIPS,  0,000 MIPS,
+    thread heatingSubsystem.heatProcess.heatThread,     10,000 MIPS,    0,000 MIPS,thread MicrowaveSystem_impl_Instance.heatingSubsystem.heatProcess.heatThread total 0,000 MIPS below budget 10,000 MIPS (100,0 % slack)
+  process heatingSubsystem.heatProcess,   0,000 MIPS,  10,000 MIPS,
+system heatingSubsystem, 0,000 MIPS,10,000 MIPS,
+Total, ,15,000 MIPS,
+
+
+Detailed RAM Capacity Report 
+
+Component,Capacity
+memory uiSubsystem.uiMem, 64,000 KBYTE,
+memory heatingSubsystem.heatMem, 64,000 KBYTE,
+Total, 128,000 KBYTE,
+
+
+Detailed RAM Budget Report 
+
+Component,Budget,Actual,Notes
+  device uiSubsystem.startButton,   0,000 KBYTE,  0,000 KBYTE,
+  device uiSubsystem.display,   0,000 KBYTE,  0,000 KBYTE,
+  device uiSubsystem.buzzer,   0,000 KBYTE,  0,000 KBYTE,
+  device uiSubsystem.timeSelector,   0,000 KBYTE,  0,000 KBYTE,
+  device uiSubsystem.stopButton,   0,000 KBYTE,  0,000 KBYTE,
+  device uiSubsystem.lightLamp,   0,000 KBYTE,  0,000 KBYTE,
+  device uiSubsystem.doorLock,   0,000 KBYTE,  0,000 KBYTE,
+    thread uiSubsystem.uiProcess.uiThread,     4,000 KBYTE,    0,000 KBYTE,thread MicrowaveSystem_impl_Instance.uiSubsystem.uiProcess.uiThread total 0,000 KBYTE below budget 4,000 KBYTE (100,0 % slack)
+  process uiSubsystem.uiProcess,   0,000 KBYTE,  4,000 KBYTE,
+system uiSubsystem, 0,000 KBYTE,4,000 KBYTE,
+  device heatingSubsystem.magnetron,   0,000 KBYTE,  0,000 KBYTE,
+  device heatingSubsystem.turntable,   0,000 KBYTE,  0,000 KBYTE,
+  device heatingSubsystem.tempsensor,   0,000 KBYTE,  0,000 KBYTE,
+  device heatingSubsystem.doorSensor,   0,000 KBYTE,  0,000 KBYTE,
+    thread heatingSubsystem.heatProcess.heatThread,     8,000 KBYTE,    0,000 KBYTE,thread MicrowaveSystem_impl_Instance.heatingSubsystem.heatProcess.heatThread total 0,000 KBYTE below budget 8,000 KBYTE (100,0 % slack)
+  process heatingSubsystem.heatProcess,   0,000 KBYTE,  8,000 KBYTE,
+system heatingSubsystem, 0,000 KBYTE,8,000 KBYTE,
+Total, ,12,000 KBYTE,
+
+
+Detailed ROM Capacity Report 
+
+Component,Capacity
+memory uiSubsystem.uiMem, 256,000 KBYTE,
+memory heatingSubsystem.heatMem, 256,000 KBYTE,
+Total, 512,000 KBYTE,
+
+
+Detailed ROM Budget Report 
+
+Component,Budget,Actual,Notes
+  device uiSubsystem.startButton,   0,000 KBYTE,  0,000 KBYTE,
+  device uiSubsystem.display,   0,000 KBYTE,  0,000 KBYTE,
+  device uiSubsystem.buzzer,   0,000 KBYTE,  0,000 KBYTE,
+  device uiSubsystem.timeSelector,   0,000 KBYTE,  0,000 KBYTE,
+  device uiSubsystem.stopButton,   0,000 KBYTE,  0,000 KBYTE,
+  device uiSubsystem.lightLamp,   0,000 KBYTE,  0,000 KBYTE,
+  device uiSubsystem.doorLock,   0,000 KBYTE,  0,000 KBYTE,
+    thread uiSubsystem.uiProcess.uiThread,     16,000 KBYTE,    0,000 KBYTE,thread MicrowaveSystem_impl_Instance.uiSubsystem.uiProcess.uiThread total 0,000 KBYTE below budget 16,000 KBYTE (100,0 % slack)
+  process uiSubsystem.uiProcess,   0,000 KBYTE,  16,000 KBYTE,
+system uiSubsystem, 0,000 KBYTE,16,000 KBYTE,
+  device heatingSubsystem.magnetron,   0,000 KBYTE,  0,000 KBYTE,
+  device heatingSubsystem.turntable,   0,000 KBYTE,  0,000 KBYTE,
+  device heatingSubsystem.tempsensor,   0,000 KBYTE,  0,000 KBYTE,
+  device heatingSubsystem.doorSensor,   0,000 KBYTE,  0,000 KBYTE,
+    thread heatingSubsystem.heatProcess.heatThread,     32,000 KBYTE,    0,000 KBYTE,thread MicrowaveSystem_impl_Instance.heatingSubsystem.heatProcess.heatThread total 0,000 KBYTE below budget 32,000 KBYTE (100,0 % slack)
+  process heatingSubsystem.heatProcess,   0,000 KBYTE,  32,000 KBYTE,
+system heatingSubsystem, 0,000 KBYTE,32,000 KBYTE,
+Total, ,48,000 KBYTE,
+
+
+
