@@ -77,13 +77,15 @@ Wszystkie elementy są połączone z dedykowanymi procesorami, pamięcią i magi
 ## Model - rysunek
 
 ### Cały system - MicrowaveSystem:
-![image](https://github.com/user-attachments/assets/62e8e175-607b-490f-9448-b2ff00f51de3)
+![image](https://github.com/user-attachments/assets/0a4d409c-41ec-4df2-9310-4884d1947401)
 
 ### Podsystem interfejsu - UI_Subsystem
-![image](https://github.com/user-attachments/assets/bc8ce8e2-497d-40eb-913a-18d0f8ad2085)
+![image](https://github.com/user-attachments/assets/f4b9ee8f-e93e-471a-a83a-27e7c16d418a)
+
 
 ### Podsystem grzewczy - Heating_Subsystem
-![image](https://github.com/user-attachments/assets/b3dd1a7c-ba00-4047-a3bd-dd1f514d61be)
+![image](https://github.com/user-attachments/assets/71101a2a-2c22-4bb0-b33c-650cb86e8fdc)
+
 
 
 ## Analizy
